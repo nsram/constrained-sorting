@@ -48,7 +48,7 @@
       <h1>Constrained Sorting</h1>
       <p>Sorting cards is a low-cost way to find out how experts organize what they know. An agreed sort can then give beginners a benchmark. Constrained Sorting turns that idea into a game.</p>
       <nav class="links" aria-label="Project links">
-        <a href="index.html">Play Constrained Sorting</a>
+        <a href="index.html">Project home</a>
         <a href="constrained-sorting-git-diffs.zip" download>Download historical diffs</a>
       </nav>
     </div>
@@ -59,6 +59,7 @@
       <a href="#expertise">Expertise and consensus</a>
       <a href="#game">Designing the game</a>
       <a href="#release">First release</a>
+      <a href="#second-commit">Second commit</a>
       <a href="#archive">Technical history</a>
     </nav>
 
@@ -77,7 +78,7 @@
 
     <section id="game">
       <h2>Designing the game</h2>
-      <p>In November 2026, Sriram Natarajan returned to the project with <a href="https://nsram.github.io/prime-factor-64/prime-factor-64.html">Prime Factor 64</a> and Fog Sweep 64 as examples of short, portable learning games. The work began with a small prototype that could be tried quickly and changed in response to what felt awkward.</p>
+      <p>In November 2026, Sriram Natarajan returned to the project with <a href="https://nsram.github.io/prime-factor-64/prime-factor-64.html">Prime Factor 64</a> and <a href="https://nsram.github.io/prime-factor-64/fog-sweep-64.html">Fog Sweep 64</a> as examples of short, portable learning games. The work began with a small prototype that could be tried quickly and changed in response to what felt awkward.</p>
 
       <h3>A small board to learn from</h3>
       <p>The early “Bass” deck used twelve words and three groups. Bass could suggest either a fish or an instrument, which made it a useful test of how the rest of the board informs a choice. Early conversations explored a 3 × 4 layout, groups with uneven lengths, multiselect, and ways to remove cards from a group. Muse’s notes drew attention to the 1999 interface. As items came together, the board itself showed the progress of the sort.</p>
@@ -106,9 +107,16 @@
       <p>Sriram Natarajan supplied the research background, chose the direction, and playtested the interface. Sol (GPT-6.1 Sol Extra High) implemented the web versions.</p>
     </section>
 
+    <section id="second-commit">
+      <h2>Second commit</h2>
+      <p>The project got its own home page, following the layout of Prime Factor 64. It gives the Quick demo and each cricket deck a direct link. The home and game pages use a smaller title and a logo showing a card above a sorting tray. A screenshot from the India Tests deck shows the game in play. The rules now use the same language for every deck and explain how to select items, move them, and return them to the tray.</p>
+      <p>The IPL deck grew from 63 to 99 players by adding 36 overseas players. The Test deck grew from 59 to 76, including Gundappa Viswanath, MAK Pataudi, and all four members of India’s classic spin quartet. The Test deck uses a Left-arm Orthodox category for bowlers such as Bishan Singh Bedi and a Wrist Spinner category that includes both Bhagwat Chandrasekhar and Kuldeep Yadav.</p>
+    </section>
+
     <section id="archive">
       <h2>Technical history</h2>
       <p>The <a href="constrained-sorting-git-diffs.zip" download>historical diff archive</a> lets you reconstruct eight stages of the web game, from early board layouts to the first release. It identifies which versions were saved directly and which were recovered from test copies.</p>
+      <p>The public repository starts with the playable app and cricket decks in <a href="https://github.com/nsram/constrained-sorting/commit/070d7a344d6d498de7b65046e9a9c741a749fa76">the initial push</a>. From that release onward, you can follow changes in the <a href="https://github.com/nsram/constrained-sorting/commits/main/">GitHub commit history</a>.</p>
     </section>
   </main>
 </body>

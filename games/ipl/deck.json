@@ -51,6 +51,26 @@
     [
       "Mayank",
       "Agarwal"
+    ],
+    [
+      "Chris",
+      "Gayle"
+    ],
+    [
+      "David",
+      "Warner"
+    ],
+    [
+      "Faf",
+      "du Plessis"
+    ],
+    [
+      "Travis",
+      "Head"
+    ],
+    [
+      "Dwayne",
+      "Smith"
     ]
   ],
   "Middle Order": [
@@ -89,6 +109,30 @@
     [
       "Rajat",
       "Patidar"
+    ],
+    [
+      "Abraham Benjamin",
+      "de Villiers"
+    ],
+    [
+      "David",
+      "Miller"
+    ],
+    [
+      "Shimron",
+      "Hetmyer"
+    ],
+    [
+      "Eoin",
+      "Morgan"
+    ],
+    [
+      "Steven",
+      "Smith"
+    ],
+    [
+      "Kane",
+      "Williamson"
     ]
   ],
   "Wicketkeeper": [
@@ -127,6 +171,26 @@
     [
       "Robin",
       "Uthappa"
+    ],
+    [
+      "Jos",
+      "Buttler"
+    ],
+    [
+      "Quinton",
+      "de Kock"
+    ],
+    [
+      "Nicholas",
+      "Pooran"
+    ],
+    [
+      "Heinrich",
+      "Klaasen"
+    ],
+    [
+      "Adam",
+      "Gilchrist"
     ]
   ],
   "All-rounder": [
@@ -165,6 +229,34 @@
     [
       "Riyan",
       "Parag"
+    ],
+    [
+      "Andre",
+      "Russell"
+    ],
+    [
+      "Shane",
+      "Watson"
+    ],
+    [
+      "Kieron",
+      "Pollard"
+    ],
+    [
+      "Dwayne",
+      "Bravo"
+    ],
+    [
+      "Ben",
+      "Stokes"
+    ],
+    [
+      "Glenn",
+      "Maxwell"
+    ],
+    [
+      "Jacques",
+      "Kallis"
     ]
   ],
   "Pacer": [
@@ -223,6 +315,34 @@
     [
       "Mohit",
       "Sharma"
+    ],
+    [
+      "Lasith",
+      "Malinga"
+    ],
+    [
+      "Dale",
+      "Steyn"
+    ],
+    [
+      "Trent",
+      "Boult"
+    ],
+    [
+      "Mitchell",
+      "Starc"
+    ],
+    [
+      "Pat",
+      "Cummins"
+    ],
+    [
+      "Kagiso",
+      "Rabada"
+    ],
+    [
+      "Jofra",
+      "Archer"
     ]
   ],
   "Off Spinner": [
@@ -237,6 +357,18 @@
     [
       "Washington",
       "Sundar"
+    ],
+    [
+      "Sunil",
+      "Narine"
+    ],
+    [
+      "Muttiah",
+      "Muralitharan"
+    ],
+    [
+      "Maheesh",
+      "Theekshana"
     ]
   ],
   "Leg Spinner": [
@@ -263,6 +395,18 @@
     [
       "Karn",
       "Sharma"
+    ],
+    [
+      "Shane",
+      "Warne"
+    ],
+    [
+      "Rashid",
+      "Khan"
+    ],
+    [
+      "Imran",
+      "Tahir"
     ]
   ]
 }

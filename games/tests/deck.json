@@ -43,6 +43,14 @@
     [
       "Yashasvi",
       "Jaiswal"
+    ],
+    [
+      "Krishnamachari",
+      "Srikkanth"
+    ],
+    [
+      "Mayank",
+      "Agarwal"
     ]
   ],
   "Middle Order": [
@@ -85,6 +93,34 @@
     [
       "Sanjay",
       "Manjrekar"
+    ],
+    [
+      "Gundappa",
+      "Viswanath"
+    ],
+    [
+      "Mohinder",
+      "Amarnath"
+    ],
+    [
+      "Ajit",
+      "Wadekar"
+    ],
+    [
+      "MAK",
+      "Pataudi"
+    ],
+    [
+      "Shubman",
+      "Gill"
+    ],
+    [
+      "Yuvraj",
+      "Singh"
+    ],
+    [
+      "Sandeep",
+      "Patil"
     ]
   ],
   "Wicketkeeper": [
@@ -207,6 +243,14 @@
     [
       "Ajit",
       "Agarkar"
+    ],
+    [
+      "Chetan",
+      "Sharma"
+    ],
+    [
+      "Karsan",
+      "Ghavri"
     ]
   ],
   "Off Spinner": [
@@ -229,9 +273,17 @@
     [
       "Arshad",
       "Ayub"
+    ],
+    [
+      "Erapalli",
+      "Prasanna"
+    ],
+    [
+      "Srinivas",
+      "Venkataraghavan"
     ]
   ],
-  "Leg Spinner": [
+  "Wrist Spinner": [
     [
       "Anil",
       "Kumble"
@@ -247,6 +299,24 @@
     [
       "Amit",
       "Mishra"
+    ],
+    [
+      "Bhagwat",
+      "Chandrasekhar"
+    ],
+    [
+      "Kuldeep",
+      "Yadav"
+    ]
+  ],
+  "Left-arm Orthodox": [
+    [
+      "Bishan Singh",
+      "Bedi"
+    ],
+    [
+      "Venkatapathy",
+      "Raju"
     ]
   ]
 }

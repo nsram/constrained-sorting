@@ -2,6 +2,7 @@
 """Build the single-file UI demo from the app and its small JSON deck."""
 
 import argparse
+from base64 import b64encode
 import json
 import re
 from pathlib import Path
@@ -12,7 +13,9 @@ def main():
     parser.add_argument("output", type=Path, help="Destination HTML file")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
-    app = (root / "index.html").read_text(encoding="utf-8")
+    app = (root / "play.html").read_text(encoding="utf-8")
+    logo = b64encode((root / "consort-mark.svg").read_bytes()).decode("ascii")
+    app = app.replace('"consort-mark.svg"', f'"data:image/svg+xml;base64,{logo}"')
     deck = json.loads((root / "games/demo/deck.json").read_text(encoding="utf-8"))
     embedded = json.dumps(deck, ensure_ascii=False).replace("<", "\\u003c")
     app, count = re.subn(
@@ -30,10 +33,7 @@ def main():
         '  <script>\n    "use strict";',
         1,
     )
-    app = app.replace(
-        '      <p class="detail"><a href="constrained-sorting-history.html">Project history</a></p>\n',
-        "",
-    )
+    app = re.sub(r'^      <p class="detail" id="project-links">.*</p>\n', "", app, flags=re.M)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(app, encoding="utf-8")
     print(args.output.resolve())
