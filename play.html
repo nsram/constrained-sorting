@@ -152,7 +152,23 @@
     .deck-status:empty { display: none; }
     .rules { max-width: 42ch; }
     .rules summary { width: fit-content; cursor: pointer; }
-    .rules p { margin-top: 4px; }
+    .rules p { margin-top: .55rem; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .project-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 4px 12px;
+      border: 1px solid #b6c9bb;
+      border-radius: 8px;
+      background: var(--paper);
+      color: #355b47;
+      font-size: .8rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .project-links a:hover { background: #e8eee4; }
+    .project-links a:focus-visible { outline: 2px solid #a46118; outline-offset: 3px; }
     .play-field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 12px 0 17px; }
     .cricket-board { --card-width: 6.25rem; }
     .cricket-board #tray-cards {
@@ -393,11 +409,15 @@
       </div>
       <details class="detail rules">
         <summary>Rules</summary>
-        <p>Select one or more items in the tray, then click or tap a category box to move them there. Each item has one target category.</p>
-        <p>To move an item again, select it and choose another category or the tray. With nothing selected, click or tap a category heading to select all its items.</p>
-        <p>An item in the right category earns 2 points if it got there on the first move, 1 on the second, and 0 after that. Efficiency is the number of items currently in categories divided by the total number of moves. Each item moved counts separately.</p>
+        <p>Pick one or more items in the tray, then tap a category box to put them there. Each item belongs in exactly one category.</p>
+        <p>To move an item again, select it and tap a different category, or tap the tray to take it back. If nothing is selected, tapping a category heading selects every item in that category.</p>
+        <p>Scoring: an item in the right category scores 2 points if you got it there on your first move, 1 point on your second move, and 0 after that.</p>
+        <p>Efficiency is the number of items currently placed in categories divided by your total moves. Each item you move counts as its own move.</p>
       </details>
-      <p class="detail" id="project-links"><a href="index.html">Project home</a> · <a href="constrained-sorting-history.html">Project history</a></p>
+      <nav class="project-links" id="project-links" aria-label="Project links">
+        <a href="index.html">Project home</a>
+        <a href="constrained-sorting-history.html">Project history</a>
+      </nav>
     </section>
   </main>
 

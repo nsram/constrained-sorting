@@ -53,7 +53,7 @@
       "Agarwal"
     ]
   ],
-  "Middle Order": [
+  "Middle": [
     [
       "Sachin",
       "Tendulkar"
@@ -123,7 +123,7 @@
       "Patil"
     ]
   ],
-  "Wicketkeeper": [
+  "Keeper": [
     [
       "Mahendra Singh",
       "Dhoni"
@@ -199,7 +199,7 @@
       "Lal"
     ]
   ],
-  "Pacer": [
+  "R-arm Pace": [
     [
       "Jasprit",
       "Bumrah"
@@ -207,10 +207,6 @@
     [
       "Mohammed",
       "Shami"
-    ],
-    [
-      "Zaheer",
-      "Khan"
     ],
     [
       "Javagal",
@@ -237,23 +233,29 @@
       "Siraj"
     ],
     [
-      "Ashish",
-      "Nehra"
-    ],
-    [
       "Ajit",
       "Agarkar"
     ],
     [
       "Chetan",
       "Sharma"
+    ]
+  ],
+  "L-arm Pace": [
+    [
+      "Zaheer",
+      "Khan"
+    ],
+    [
+      "Ashish",
+      "Nehra"
     ],
     [
       "Karsan",
       "Ghavri"
     ]
   ],
-  "Off Spinner": [
+  "Finger Spin": [
     [
       "Ravichandran",
       "Ashwin"
@@ -281,9 +283,17 @@
     [
       "Srinivas",
       "Venkataraghavan"
+    ],
+    [
+      "Bishan Singh",
+      "Bedi"
+    ],
+    [
+      "Venkatapathy",
+      "Raju"
     ]
   ],
-  "Wrist Spinner": [
+  "Wrist Spin": [
     [
       "Anil",
       "Kumble"
@@ -307,16 +317,6 @@
     [
       "Kuldeep",
       "Yadav"
-    ]
-  ],
-  "Left-arm Orthodox": [
-    [
-      "Bishan Singh",
-      "Bedi"
-    ],
-    [
-      "Venkatapathy",
-      "Raju"
     ]
   ]
 }

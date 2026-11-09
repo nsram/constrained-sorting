@@ -33,7 +33,7 @@ def main():
         '  <script>\n    "use strict";',
         1,
     )
-    app = re.sub(r'^      <p class="detail" id="project-links">.*</p>\n', "", app, flags=re.M)
+    app = re.sub(r'      <nav class="project-links"[^>]*>.*?</nav>\n', "", app, count=1, flags=re.S)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(app, encoding="utf-8")
     print(args.output.resolve())
