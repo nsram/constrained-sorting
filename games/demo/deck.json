@@ -1,0 +1,20 @@
+{
+  "Fish": [
+    "bass",
+    "trout",
+    "salmon",
+    "cod"
+  ],
+  "Instruments": [
+    "flute",
+    "cello",
+    "clarinet",
+    "trumpet"
+  ],
+  "Birds": [
+    "robin",
+    "heron",
+    "sparrow",
+    "finch"
+  ]
+}

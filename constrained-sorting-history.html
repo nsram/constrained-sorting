@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173831">
+  <title>Constrained Sorting · Project history</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f9f7ef;
+      --ink: #23392f;
+      --line: #d6ded0;
+      --pine: #173831;
+      --gold: #f2cc78;
+      background: var(--paper);
+      color: var(--ink);
+      font: 16px/1.62 system-ui, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: #215b48; text-underline-offset: .2em; }
+    a:focus-visible { outline: 2px solid #97591d; outline-offset: 3px; }
+    .shell { width: min(100% - 32px, 940px); margin-inline: auto; }
+    .hero { background: var(--pine); color: #fffaf0; padding: 2.3rem 0 2.6rem; }
+    .hero a { color: var(--gold); }
+    .kicker { color: var(--gold); font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1, h2, h3 { font-family: Georgia, serif; font-weight: 500; line-height: 1.13; }
+    h1 { font-size: clamp(2.4rem, 7vw, 4.6rem); margin: .45rem 0 1rem; letter-spacing: -.05em; }
+    h2 { font-size: clamp(1.65rem, 4vw, 2.2rem); margin: 0 0 .7rem; }
+    h3 { font-size: 1.3rem; margin: 1.25rem 0 .35rem; }
+    p { margin: .65rem 0; max-width: 74ch; }
+    .hero p { max-width: 60ch; }
+    .links { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; margin-top: 1.1rem; }
+    main { padding: 1.6rem 0 3rem; }
+    .contents { display: flex; flex-wrap: wrap; gap: .35rem 1rem; border-bottom: 1px solid var(--line); padding-bottom: 1rem; }
+    section { margin: 2.2rem 0; scroll-margin-top: 1rem; }
+    .release-shot { margin: 1.2rem 0; max-width: 860px; }
+    .release-shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: .65rem; }
+    .release-shot figcaption { margin-top: .45rem; color: #4c6156; font-size: .88rem; }
+    code { font-size: .82em; overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell">
+      <p class="kicker">Project history · 1999 to November 9, 2026</p>
+      <h1>Constrained Sorting</h1>
+      <p>Sorting cards is a low-cost way to find out how experts organize what they know. An agreed sort can then give beginners a benchmark. Constrained Sorting turns that idea into a game.</p>
+      <nav class="links" aria-label="Project links">
+        <a href="index.html">Play Constrained Sorting</a>
+        <a href="constrained-sorting-git-diffs.zip" download>Download historical diffs</a>
+      </nav>
+    </div>
+  </header>
+  <main class="shell">
+    <nav class="contents" aria-label="Contents">
+      <a href="#research">The 1999 research</a>
+      <a href="#expertise">Expertise and consensus</a>
+      <a href="#game">Designing the game</a>
+      <a href="#release">First release</a>
+      <a href="#archive">Technical history</a>
+    </nav>
+
+    <section id="research">
+      <h2>The 1999 research</h2>
+      <p>In 1999, Sriram Natarajan worked with students at the National University of Singapore on the research described in the unpublished paper <cite>The Method of Constrained Sorting</cite>. The computer program let people select and regroup words on a single screen.</p>
+      <p>In a free sort, people decide what belongs together. The same set of countries could be grouped by region, population, or political system. A constrained sort gives people a structure to work toward by naming the categories, showing how close their groups are to a reference sort, or both.</p>
+      <p>Across two studies, category names and feedback helped people sort closer to the reference groups. Feedback also encouraged people to keep trying. When both forms of guidance were available, people’s performance was more consistent across sorting tasks.</p>
+    </section>
+
+    <section id="expertise">
+      <h2>Expertise and consensus</h2>
+      <p>Ask several experts to sort the same cards independently and you have an inexpensive way to see how they organize a subject. Experts can disagree because they notice different features or because an item genuinely fits more than one group. Counting how often each pair lands together shows where views agree and differ. Those counts can also be used to build a consensus tree, with smaller groups nested inside broader ones.</p>
+      <p>Where agreement is strong, an idealized expert sort can serve as a benchmark for novices. For example, a beginner’s first placements in a cricket sort can show which playing roles they recognize. Their revisions show how they use feedback. That gives a window into how they organize their knowledge of cricket, alongside other skills such as explaining a choice or judging a match situation.</p>
+    </section>
+
+    <section id="game">
+      <h2>Designing the game</h2>
+      <p>In November 2026, Sriram Natarajan returned to the project with <a href="https://nsram.github.io/prime-factor-64/prime-factor-64.html">Prime Factor 64</a> and Fog Sweep 64 as examples of short, portable learning games. The work began with a small prototype that could be tried quickly and changed in response to what felt awkward.</p>
+
+      <h3>A small board to learn from</h3>
+      <p>The early “Bass” deck used twelve words and three groups. Bass could suggest either a fish or an instrument, which made it a useful test of how the rest of the board informs a choice. Early conversations explored a 3 × 4 layout, groups with uneven lengths, multiselect, and ways to remove cards from a group. Muse’s notes drew attention to the 1999 interface. As items came together, the board itself showed the progress of the sort.</p>
+      <p>Layout took several rounds of testing on phones and wider screens. A group that fit on a desktop could wrap awkwardly on a phone once a scrollbar or group handle took up space. The board eventually used the full width for the Tray and let groups wrap to fit. When cards moved, a short animation showed where they landed.</p>
+
+      <h3>From discovering groups to applying knowledge</h3>
+      <p>Giving players the category names up front shifted the task toward applying what they knew. Separate controls for grouping and moving cards gave way to a direct action. Select one or more cards, then tap the category box to place them. To bring a card back, select it and tap the Tray. The same actions work for one card or a batch.</p>
+      <p>Feedback became immediate. Cards turn pine green or clay red as soon as they land, so players can see which placements to revisit. A correct placement earns two points on the first move, one on the second, and zero after that. We also introduced <strong>move efficiency</strong>, the percentage you get by dividing the number of cards currently placed by the number of card moves made. Moving three cards together counts as three card moves.</p>
+      <p>The sound design went through its own revisions. A quiet tap marks selection, and short placement sounds distinguish correct and incorrect moves. A batch plays one cue, so moving several cards at once stays quiet. A fully correct board earns a rising fanfare that resolves into a sustained chord.</p>
+
+      <h3>Indian men’s cricket</h3>
+      <p>Cricket was a natural first subject. Sriram Natarajan follows the game, as do many of his Indian friends, who were likely to try the app.</p>
+      <p>The first large deck used 49 players and seven uneven groups. It grew into four format-specific decks. Some assignments change with the format, such as Sachin Tendulkar in the Test middle order and among the ODI openers. The rosters favor recognizable players from 1971 onward and use the roles most useful for this particular sort. Feedback on Jayant Yadav led to placing him among the Test all-rounders. That discussion is a good example of why a deck’s answer key deserves review.</p>
+      <p>The shared category order is Opener, Middle Order, Wicketkeeper, All-rounder, Pacer, Off Spinner, and Leg Spinner. The first-push decks contain 59 Test, 62 ODI, 52 T20I, and 63 Indian IPL players.</p>
+    </section>
+
+    <section id="release">
+      <h2>First release</h2>
+      <p>Quick demo comes first in the picker and shows how to select one or more cards. The empty Tray disappears and reappears as a return target when a placed card is selected. A compact finish card lets the player review the finished arrangement and play again.</p>
+      <figure class="release-shot">
+        <img src="constrained-sorting-first-release.jpg" width="1004" height="699" alt="An India T20I round with a full-width tray above seven role boxes. Correctly placed cards are green and one card is red.">
+        <figcaption>A T20I round in the first release. Green cards are in their intended roles. The red card can be moved.</figcaption>
+      </figure>
+      <p>For the first release, we moved the deck data out of the app and into separate JSON files under <code>games/</code>. The app loads the deck the player chooses, and each deck can be edited independently. A small build script also makes a standalone page with just the Quick demo deck for interface reviews.</p>
+      <p>To propose a deck, start with the twelve-card example used in Quick demo. Its category names and card lists are the template for new decks. <a href="games/demo/deck.json" download="bass-demo.json">Download the Bass sample JSON</a></p>
+      <p>Sriram Natarajan supplied the research background, chose the direction, and playtested the interface. Sol (GPT-6.1 Sol Extra High) implemented the web versions.</p>
+    </section>
+
+    <section id="archive">
+      <h2>Technical history</h2>
+      <p>The <a href="constrained-sorting-git-diffs.zip" download>historical diff archive</a> lets you reconstruct eight stages of the web game, from early board layouts to the first release. It identifies which versions were saved directly and which were recovered from test copies.</p>
+    </section>
+  </main>
+</body>
+</html>

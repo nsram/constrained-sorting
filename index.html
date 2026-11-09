@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173831">
+  <title>Constrained Sorting</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f2efe7;
+      --paper: #fcfaf5;
+      --ink: #1e352f;
+      --quiet: #4d6158;
+      --green: #173831;
+      --gold: #f2cc78;
+      --gold-soft: #f9edcd;
+      --card-width: 3.75rem;
+      --group-gap: 6px;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      background: var(--page);
+      color: var(--ink);
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    body { margin: 0; }
+    button { font: inherit; cursor: pointer; }
+    button:disabled { cursor: default; }
+    button:focus-visible { outline: 3px solid #a46118; outline-offset: 3px; }
+    h1, h2, h3, p { margin: 0; }
+
+    .shell { width: min(100% - 40px, 960px); margin-inline: auto; }
+    .masthead { background: var(--green); color: white; padding: 18px 0; }
+    .masthead .shell {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 24px;
+    }
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 500;
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+    .domain-picker {
+      max-width: 100%;
+      min-height: 40px;
+      padding: 5px 9px;
+      border: 1px solid #94afa1;
+      border-radius: 6px;
+      background: #254b40;
+      color: white;
+      font: 650 .85rem system-ui, sans-serif;
+    }
+    .domain-picker:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+    main { padding: 23px 0 42px; }
+    .sticky-bar {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--page);
+      padding: 10px 0;
+    }
+    .scoreboard {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px clamp(8px, 3vw, 24px);
+      margin-bottom: 8px;
+      padding: 6px 10px;
+      border: 1px solid #dde2d6;
+      border-radius: 9px;
+      background: var(--paper);
+      font-variant-numeric: tabular-nums;
+    }
+    .stat-label {
+      color: var(--quiet);
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .score { min-width: 5.75rem; }
+    .score-value { line-height: 1; }
+    .score-value strong {
+      color: var(--green);
+      font-size: 1.85rem;
+      letter-spacing: -.045em;
+    }
+    .score-value span { color: var(--quiet); font-size: .85rem; }
+    .stat-value { font-size: 1rem; font-weight: 700; }
+    .sound-toggle {
+      display: grid;
+      place-items: center;
+      flex: none;
+      width: 44px;
+      margin-inline-start: auto;
+      padding: 0;
+      color: var(--green);
+    }
+    .sound-toggle svg { width: 19px; height: 19px; }
+    .sound-toggle[aria-pressed="false"] { color: var(--quiet); }
+    .sound-toggle[aria-pressed="true"] .sound-slash,
+    .sound-toggle[aria-pressed="false"] .sound-waves { display: none; }
+    .score-meter {
+      display: block;
+      width: 100%;
+      height: 4px;
+      margin-top: 5px;
+      border: 0;
+      border-radius: 4px;
+      background: #dbe4d9;
+      appearance: none;
+    }
+    .score-meter::-webkit-meter-bar { background: #dbe4d9; border: 0; border-radius: 4px; }
+    .score-meter::-webkit-meter-optimum-value { background: #3b705b; border-radius: 4px; }
+    .score-meter::-moz-meter-bar { background: #3b705b; border-radius: 4px; }
+    .round-result {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px 10px;
+      width: fit-content;
+      max-width: 100%;
+    }
+    .round-result[data-solved="true"] {
+      padding: 3px 6px 3px 10px;
+      border: 1px solid #cbdacf;
+      border-radius: 9px;
+      background: #e8eee4;
+      box-shadow: inset 3px 0 #719182;
+    }
+    .round-message {
+      color: #234737;
+      font: 500 1.25rem/1.12 Georgia, "Times New Roman", serif;
+      letter-spacing: -.025em;
+    }
+    .round-message:empty { position: absolute; }
+    .detail { font-size: .88rem; color: var(--quiet); }
+    .deck-status { margin-top: 8px; }
+    .deck-status:empty { display: none; }
+    .rules { max-width: 42ch; }
+    .rules summary { width: fit-content; cursor: pointer; }
+    .rules p { margin-top: 4px; }
+    .play-field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 12px 0 17px; }
+    .cricket-board { --card-width: 6.25rem; }
+    .cricket-board #tray-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 5.25rem), 1fr));
+      padding: 4px;
+      border-radius: 6px;
+      background: #e8eae0;
+    }
+    .cricket-board #tray-cards .card { width: 100%; }
+    .cricket-board .card-face {
+      grid-template-columns: minmax(0, 1fr);
+      align-content: center;
+      gap: 1px;
+      padding-inline: 2px;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    .card-given { font-size: .69rem; }
+    .card-name-long { font-size: .68rem; letter-spacing: -.015em; }
+    .card-list, .categories { display: flex; flex-wrap: wrap; gap: 8px var(--group-gap); }
+    .categories { gap: 10px; align-items: flex-start; }
+    .category-name { font-size: 1rem; margin-bottom: 6px; }
+    .pool, .category {
+      position: relative;
+      isolation: isolate;
+      min-height: 44px;
+    }
+    .tray-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 2px 10px;
+      padding-bottom: 6px;
+      pointer-events: none;
+    }
+    .tray-heading .category-name { margin: 0; }
+    .card-list { pointer-events: none; }
+    .category {
+      flex: 0 0 auto;
+      width: max(8rem, calc(var(--card-count) * var(--card-width) + 6px));
+      max-width: 100%;
+      padding: 0 3px 3px;
+      border-radius: 5px;
+      background: #253a31;
+      color: #fffaf0;
+    }
+    .category-heading {
+      min-height: 28px;
+      padding: 5px;
+      pointer-events: none;
+    }
+    .category .category-name {
+      font-size: .71rem;
+      font-weight: 780;
+      letter-spacing: .07em;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .category .card-list { gap: 0; }
+    .category .card {
+      border-radius: 0;
+      color: #fff;
+    }
+    .card[data-placement="correct"] {
+      --tile-light: #3b705b;
+      --tile-dark: #2e5a49;
+    }
+    .card[data-placement="incorrect"] {
+      --tile-light: #984f49;
+      --tile-dark: #7c403c;
+    }
+    .category .card-face {
+      border: 1px solid #0005;
+      border-radius: 1px;
+      background: linear-gradient(145deg, var(--tile-light), var(--tile-dark));
+      box-shadow: inset 1px 1px #ffffff26, inset -1px -1px #0004;
+    }
+    .box-target {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      width: 100%;
+      padding: 0;
+      border: 1px solid transparent;
+      border-radius: inherit;
+      background: transparent;
+    }
+    .category .box-target[data-can-place],
+    .box-target[aria-pressed="true"],
+    .box-target[aria-pressed="mixed"] {
+      box-shadow: inset 0 0 0 2px var(--gold);
+    }
+    .pool .box-target[data-can-place] { outline: 2px solid #719182; outline-offset: 2px; }
+    .pool .box-target:focus-visible { outline: 3px solid #a46118; outline-offset: 3px; }
+    .card {
+      display: grid;
+      pointer-events: auto;
+      position: relative;
+      flex: none;
+      width: var(--card-width);
+      padding: 0;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: var(--ink);
+      font-family: "Avenir Next", system-ui, sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+    .card-face {
+      display: grid;
+      place-items: center;
+      min-width: 0;
+      min-height: 2.25rem;
+      padding: 4px;
+      border: 1px solid #bdc9bd;
+      border-radius: inherit;
+      background: var(--paper);
+      box-shadow: 0 2px 4px #1e352f19;
+      overflow-wrap: anywhere;
+      pointer-events: none;
+      transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+    }
+    .pool .card[aria-pressed="true"] .card-face {
+      background: var(--gold-soft);
+      border-color: #976420;
+      outline: 2px solid #a97730;
+      outline-offset: 1px;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 9px #42361c30;
+    }
+    .category .card[aria-pressed="true"] .card-face {
+      outline: 2px solid #fff0bd;
+      outline-offset: -3px;
+      box-shadow: inset 2px 2px #fff6, inset -2px -2px #0003;
+    }
+    .card:focus-visible { outline: 3px solid #a46118; outline-offset: 3px; }
+    .category .card:focus-visible { outline-offset: -3px; z-index: 1; }
+    .button {
+      min-height: 44px;
+      padding: 6px 13px;
+      border: 1px solid #aebfb1;
+      border-radius: 9px;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: .88rem;
+      font-weight: 720;
+    }
+    .button.primary { background: var(--green); border-color: var(--green); color: white; }
+    .button.replay {
+      min-height: 34px;
+      padding: 3px 8px;
+      border-color: #b6c9bb;
+      background: #f7faf5;
+      color: #355b47;
+      font-size: .78rem;
+      font-weight: 640;
+    }
+    .button:disabled { background: #e7e9df; border-color: #d6dbce; color: #56675e; }
+    @media (pointer: coarse) {
+      .card-face { min-height: 2.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .card-face { transition: none; }
+    }
+
+    @media (hover: hover) {
+      .button:not(:disabled):hover { box-shadow: inset 0 0 0 1px currentColor; }
+      .card:not(:disabled):hover .card-face { border-color: var(--quiet); }
+    }
+    @media (max-width: 660px) {
+      .shell { width: calc(100% - 16px); }
+      .masthead { padding: 12px 0; }
+      main { padding-top: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="shell">
+      <h1>Constrained Sorting</h1>
+      <select class="domain-picker" id="domain" aria-label="Domain">
+        <option value="demo">Quick demo</option>
+        <optgroup label="Indian men’s cricket">
+          <option value="tests">India · Tests</option>
+          <option value="odi">India · ODIs</option>
+          <option value="t20i">India · T20Is</option>
+          <option value="ipl">IPL · Indian players</option>
+        </optgroup>
+      </select>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="board" aria-label="Sorting board">
+      <div class="sticky-bar">
+        <div class="scoreboard">
+          <div class="score">
+            <p class="stat-label">Score</p>
+            <p class="score-value" aria-live="polite" aria-atomic="true">
+              <strong id="points">0</strong> <span id="points-max"></span>
+            </p>
+            <meter class="score-meter" id="points-meter" value="0" aria-hidden="true"></meter>
+          </div>
+          <div>
+            <p class="stat-label">Efficiency</p>
+            <p class="stat-value" id="efficiency-value" aria-live="polite">—</p>
+          </div>
+          <div>
+            <p class="stat-label">Time</p>
+            <p class="stat-value" id="elapsed">0:00</p>
+          </div>
+          <button class="button sound-toggle" id="sound" type="button" aria-label="Sound" aria-pressed="true" title="Sound on">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9h4l5-4v14l-5-4H3z"/>
+              <path class="sound-waves" d="M15.5 9a4 4 0 0 1 0 6m2.5-9a8 8 0 0 1 0 12"/>
+              <path class="sound-slash" d="m16 10 5 5m0-5-5 5"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <p class="detail deck-status" id="deck-status" role="status"></p>
+      <div id="field" class="play-field" role="group" aria-label="Sorting cards">
+        <section class="pool" id="tray" aria-label="Card tray" hidden>
+          <button class="box-target" type="button" data-destination="-1" aria-label="Move selected cards to Tray" disabled></button>
+          <div class="tray-heading">
+            <h2 class="category-name" id="tray-title">Tray</h2>
+            <p class="detail" id="tray-hint">Select one or more cards, then tap a category.</p>
+          </div>
+          <div class="card-list" id="tray-cards"></div>
+        </section>
+        <div class="round-result" id="round-result" hidden>
+          <p class="round-message" id="round-message" role="status"></p>
+          <button class="button replay" id="retry" type="button">Play again</button>
+        </div>
+        <div class="categories" id="categories"></div>
+      </div>
+      <details class="detail rules">
+        <summary>Rules</summary>
+        <p>Tap the Tray to return selected cards. With nothing selected, tap a filled category to select its cards.</p>
+        <p>Correct placement earns 2 points on the first move and 1 on the second. Efficiency is cards placed divided by moves.</p>
+        <p id="cricket-note">Use the player’s role in the selected format. Each card has one intended answer, even when a player has filled several roles.</p>
+      </details>
+      <p class="detail"><a href="constrained-sorting-history.html">Project history</a></p>
+    </section>
+  </main>
+
+  <script>
+    "use strict";
+
+    const $ = id => document.getElementById(id);
+    const embeddedDemo = $("embedded-demo");
+    const domainPicker = $("domain");
+    const unassigned = -1;
+    const maxPointsPerCard = 2;
+    const field = $("field");
+    let categories;
+    let cardDetails;
+    let activeDomain;
+    const soundButton = $("sound");
+    const soundPreferenceKey = "constrained-sorting:sound";
+    // Each note is pitch, start offset, duration, peak, and optional pitch glide.
+    const notesByCue = {
+      pick: [[392, 0, .045, .032, .75]],
+      tray: [[330, 0, .075, .05, .7]],
+      miss: [[196, 0, .105, .085, .82]],
+      mixed: [[196, 0, .072, .067, .85], [523.25, .06, .09, .048]],
+      match: [[523.25, 0, .08, .07], [659.25, .055, .115, .075]],
+      correct: [[392, 0, .07, .052], [523.25, .055, .105, .058]],
+      // A rising arpeggio resolves into a sustained C-major chord.
+      finish: [
+        [261.63, 0, .22, .067], [392, .09, .2, .069], [523.25, .18, .21, .072],
+        [659.25, .27, .22, .077], [783.99, .36, .21, .082],
+        [196, .43, .28, .061], [987.77, .45, .24, .078], [1174.66, .54, .17, .073],
+        [130.81, .71, 1.08, .086], [196, .71, 1.02, .038], [261.63, .71, 1.02, .044],
+        [329.63, .71, .97, .048], [392, .71, .96, .043], [523.25, .71, .88, .052],
+        [1046.5, .71, .91, .081], [1567.98, .82, .6, .025]
+      ]
+    };
+    let state;
+    let clock;
+    let soundEnabled = true;
+    let audioContext;
+    let activeCue;
+    let cueRequest = 0;
+
+    try {
+      soundEnabled = localStorage.getItem(soundPreferenceKey) !== "off";
+    } catch {
+      // Some local previews block access to storage.
+    }
+
+    function paintSoundControl() {
+      soundButton.setAttribute("aria-pressed", soundEnabled);
+      soundButton.title = soundEnabled ? "Sound on" : "Sound off";
+    }
+
+    function stopCue() {
+      cueRequest++;
+      if (activeCue) {
+        activeCue.gain.setTargetAtTime(0, audioContext.currentTime, .006);
+        activeCue = null;
+      }
+    }
+
+    async function playCue(cue) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!soundEnabled || !AudioContext) return;
+      try {
+        const context = audioContext ??= new AudioContext();
+        stopCue();
+        const request = cueRequest;
+        if (context.state !== "running") await context.resume();
+        if (request !== cueRequest || context.state !== "running") return;
+
+        const output = context.createGain();
+        output.connect(context.destination);
+        activeCue = output;
+        const cueStart = context.currentTime + .008;
+        const notes = notesByCue[cue];
+        let remaining = notes.length;
+        for (const [pitch, offset, duration, peak, glide = 1] of notes) {
+          const start = cueStart + offset;
+          const end = start + duration;
+          const tone = context.createOscillator();
+          const envelope = context.createGain();
+          tone.type = pitch < 250 ? "sine" : "triangle";
+          tone.frequency.setValueAtTime(pitch, start);
+          if (glide !== 1) tone.frequency.exponentialRampToValueAtTime(pitch * glide, end);
+          envelope.gain.setValueAtTime(.001, start);
+          envelope.gain.linearRampToValueAtTime(peak, start + .007);
+          if (cue === "finish" && duration > .5) {
+            envelope.gain.exponentialRampToValueAtTime(peak * .55, start + duration * .36);
+          }
+          envelope.gain.exponentialRampToValueAtTime(.001, end);
+          tone.connect(envelope);
+          envelope.connect(output);
+          tone.onended = () => {
+            tone.disconnect();
+            envelope.disconnect();
+            if (--remaining === 0) {
+              output.disconnect();
+              if (activeCue === output) activeCue = null;
+            }
+          };
+          tone.start(start);
+          tone.stop(end);
+        }
+      } catch {
+        // Playback is optional when the browser blocks or lacks audio.
+      }
+    }
+
+    function element(tag, className, label) {
+      const item = document.createElement(tag);
+      if (className) item.className = className;
+      if (label !== undefined) item.textContent = label;
+      return item;
+    }
+
+    function shuffledDeck() {
+      const deck = [...cardDetails.keys()];
+      for (let index = deck.length - 1; index > 0; index--) {
+        const other = Math.floor(Math.random() * (index + 1));
+        [deck[index], deck[other]] = [deck[other], deck[index]];
+      }
+      if (state && deck.length > 1 && deck.every((card, index) => card === state.deck[index])) {
+        deck.push(deck.shift());
+      }
+      return deck;
+    }
+
+    function newPlay() {
+      clearInterval(clock);
+      stopCue();
+      state = {
+        deck: shuffledDeck(),
+        assigned: new Map(),
+        selected: new Set(),
+        cardMoves: new Map(),
+        moves: 0,
+        startedAt: null,
+        allPlacedAt: null,
+        celebrated: false
+      };
+      paintTimer();
+      renderBoard();
+    }
+
+    async function chooseDomain() {
+      const domain = domainPicker.value;
+      const status = $("deck-status");
+      domainPicker.disabled = true;
+      field.inert = true;
+      status.textContent = "";
+      try {
+        let target;
+        if (embeddedDemo) {
+          target = JSON.parse(embeddedDemo.textContent);
+        } else {
+          const response = await fetch(`games/${domain}/deck.json`);
+          if (!response.ok) throw new Error("Deck request failed");
+          target = await response.json();
+        }
+        const names = Object.keys(target);
+        const cards = new Map();
+        for (const [category, name] of names.entries()) {
+          const entries = target[name];
+          if (!name.trim() || !Array.isArray(entries) || !entries.length) throw new Error("Invalid category");
+          for (const entry of entries) {
+            const nameParts = Array.isArray(entry) ? entry : null;
+            const parts = nameParts ?? [entry];
+            if ((nameParts && nameParts.length !== 2) ||
+                parts.some(part => typeof part !== "string" || !part.trim())) throw new Error("Invalid card");
+            const label = parts.join(" ");
+            if (cards.has(label)) throw new Error("Duplicate card");
+            cards.set(label, { category, nameParts });
+          }
+        }
+        if (!cards.size) throw new Error("Empty deck");
+        categories = names;
+        cardDetails = cards;
+        const cricket = domain !== "demo";
+        $("board").classList.toggle("cricket-board", cricket);
+        $("cricket-note").hidden = !cricket;
+        $("points-max").textContent = `/ ${cards.size * maxPointsPerCard}`;
+        $("points-meter").max = cards.size * maxPointsPerCard;
+        state = null;
+        newPlay();
+        activeDomain = domain;
+      } catch {
+        if (activeDomain) domainPicker.value = activeDomain;
+        status.textContent = location.protocol === "file:"
+          ? "Serve the project over HTTP to load its decks. The standalone demo opens directly."
+          : "Couldn’t load that deck. Choose it again or reload to retry.";
+      } finally {
+        domainPicker.disabled = false;
+        field.inert = false;
+      }
+    }
+
+    function destinationOf(card) {
+      return state.assigned.get(card) ?? unassigned;
+    }
+
+    function cardsIn(destination) {
+      return state.deck.filter(card => destinationOf(card) === destination);
+    }
+
+    function paintTimer() {
+      const seconds = state.startedAt === null ? 0
+        : Math.floor(((state.allPlacedAt ?? performance.now()) - state.startedAt) / 1000);
+      $("elapsed").textContent = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+    }
+
+    function updateMetrics(groups) {
+      const placed = state.assigned.size;
+      const total = cardDetails.size;
+      const correct = groups.reduce((sum, group) => sum + group.correct, 0);
+      const points = groups.reduce((sum, group) => sum + group.points, 0);
+
+      $("points-meter").value = points;
+      $("points").textContent = points;
+      $("efficiency-value").textContent = state.moves ? `${Math.round(100 * placed / state.moves)}%` : "—";
+      const result = $("round-result");
+      const solved = correct === total;
+      result.hidden = placed !== total;
+      result.dataset.solved = solved;
+      const message = $("round-message");
+      const nextMessage = solved ? "Perfect sort" : "";
+      if (message.textContent !== nextMessage) message.textContent = nextMessage;
+    }
+
+    function paintSelection(changedCards = field.querySelectorAll("[data-card]")) {
+      for (const card of changedCards) {
+        card.setAttribute("aria-pressed", state.selected.has(card.dataset.card));
+      }
+      const selected = [...state.selected];
+      const emptyTray = state.assigned.size === cardDetails.size;
+      $("tray").hidden = emptyTray && !selected.length;
+      $("tray-title").textContent = emptyTray ? "Return to tray" : "Tray";
+      $("tray-hint").hidden = emptyTray;
+      for (const button of field.querySelectorAll("[data-destination]")) {
+        const destination = Number(button.dataset.destination);
+        const name = categories[destination] ?? "Tray";
+        const canPlace = selected.some(card => destinationOf(card) !== destination);
+        button.toggleAttribute("data-can-place", canPlace);
+        if (canPlace || destination === unassigned) {
+          button.disabled = !canPlace;
+          button.removeAttribute("aria-pressed");
+          button.setAttribute("aria-label", `Move selected cards to ${name}`);
+          continue;
+        }
+        const cards = cardsIn(destination);
+        const count = cards.filter(card => state.selected.has(card)).length;
+        const allSelected = cards.length > 0 && count === cards.length;
+        button.disabled = !cards.length;
+        button.setAttribute("aria-pressed", allSelected ? "true" : count ? "mixed" : "false");
+        button.setAttribute("aria-label", `${allSelected ? "Deselect" : "Select"} all cards in ${name}`);
+      }
+    }
+
+    function cardButton(card) {
+      const button = element("button", "card");
+      button.type = "button";
+      button.dataset.card = card;
+      const info = cardDetails.get(card);
+      const face = element("span", "card-face");
+      if (info.nameParts) {
+        const [given, last] = info.nameParts;
+        const lastClass = last.length > 15 ? "card-name-long" : "";
+        face.append(element("span", "card-given", given), element("span", lastClass, last));
+        button.setAttribute("aria-label", card);
+      } else {
+        face.textContent = card;
+      }
+      const destination = destinationOf(card);
+      if (destination !== unassigned) {
+        const placement = info.category === destination ? "correct" : "incorrect";
+        button.dataset.placement = placement;
+        button.setAttribute("aria-label", `${card}, ${placement} placement`);
+      }
+      button.append(face);
+      return button;
+    }
+
+    function cardList(cards) {
+      const list = element("div", "card-list");
+      list.append(...cards.map(cardButton));
+      return list;
+    }
+
+    function categoryPanel({ name, index, cards }) {
+      const section = element("section", "category");
+      section.dataset.category = index;
+      section.setAttribute("aria-label", name);
+      section.style.setProperty("--card-count", cards.length);
+      const target = element("button", "box-target");
+      target.type = "button";
+      target.dataset.destination = index;
+      const heading = element("div", "category-heading");
+      heading.append(element("h2", "category-name", name));
+      section.append(target, heading, cardList(cards));
+      return section;
+    }
+
+    function renderBoard(previous = new Map()) {
+      const trayCards = cardsIn(unassigned);
+      $("tray-cards").replaceChildren(...trayCards.map(cardButton));
+      const groups = categories.map((name, index) => {
+        const cards = cardsIn(index);
+        const correctCards = cards.filter(card => cardDetails.get(card).category === index);
+        const correct = correctCards.length;
+        const points = correctCards.reduce((sum, card) =>
+          sum + Math.max(0, maxPointsPerCard + 1 - state.cardMoves.get(card)), 0);
+        return { name, index, cards, correct, points };
+      });
+      updateMetrics(groups);
+      $("categories").replaceChildren(...groups.map(categoryPanel));
+      paintSelection();
+
+      for (const card of field.querySelectorAll("[data-card]")) {
+        const before = previous.get(card.dataset.card);
+        if (!before) continue;
+        const face = card.firstElementChild;
+        const after = face.getBoundingClientRect();
+        const x = before.left - after.left;
+        const y = before.top - after.top;
+        if (x || y) {
+          face.animate(
+            [{ transform: `translate(${x}px, ${y}px)` }, { transform: "none" }],
+            { duration: 200, easing: "ease-out" }
+          );
+        }
+      }
+    }
+
+    function assignSelection(destination, focusAfterMove = false) {
+      const moved = [...state.selected].filter(card => destinationOf(card) !== destination);
+      if (!moved.length) return;
+      const previous = new Map();
+      // Skip board-wide animation on large decks to keep batch moves responsive.
+      if (cardDetails.size <= 120 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        for (const card of field.querySelectorAll("[data-card]")) {
+          previous.set(card.dataset.card, card.firstElementChild.getBoundingClientRect());
+        }
+      }
+      if (state.startedAt === null) {
+        state.startedAt = performance.now();
+        clock = setInterval(paintTimer, 250);
+      }
+      for (const card of moved) {
+        state.cardMoves.set(card, (state.cardMoves.get(card) ?? 0) + 1);
+        if (destination === unassigned) state.assigned.delete(card);
+        else state.assigned.set(card, destination);
+      }
+      state.moves += moved.length;
+      state.selected.clear();
+      if (state.allPlacedAt === null && state.assigned.size === cardDetails.size) {
+        state.allPlacedAt = performance.now();
+        clearInterval(clock);
+        paintTimer();
+      }
+      renderBoard(previous);
+      if (focusAfterMove) {
+        const target = field.querySelector(`[data-destination="${destination}"]`);
+        const focus = target?.disabled
+          ? field.querySelector(`[data-card="${CSS.escape(moved[0])}"]`)
+          : target;
+        focus?.focus();
+      }
+      if (!state.celebrated && state.assigned.size === cardDetails.size &&
+          state.deck.every(card => destinationOf(card) === cardDetails.get(card).category)) {
+        state.celebrated = true;
+        playCue("finish");
+      } else if (destination === unassigned) {
+        playCue("tray");
+      } else {
+        const correct = moved.filter(card => cardDetails.get(card).category === destination);
+        if (!correct.length) playCue("miss");
+        else if (correct.length !== moved.length) playCue("mixed");
+        else playCue(correct.every(card => state.cardMoves.get(card) === 1) ? "match" : "correct");
+      }
+    }
+
+    function toggleCategory(index) {
+      const cards = cardsIn(index);
+      const allSelected = cards.every(card => state.selected.has(card));
+      for (const card of cards) {
+        if (allSelected) state.selected.delete(card);
+        else state.selected.add(card);
+      }
+    }
+
+    field.addEventListener("click", event => {
+      const card = event.target.closest("[data-card]");
+      const target = event.target.closest("[data-destination]");
+      if (!card && (!target || target.disabled)) return;
+      if (card) {
+        const name = card.dataset.card;
+        if (state.selected.has(name)) state.selected.delete(name);
+        else state.selected.add(name);
+      } else {
+        const destination = Number(target.dataset.destination);
+        if (target.hasAttribute("data-can-place")) {
+          assignSelection(destination, event.detail === 0);
+          return;
+        }
+        toggleCategory(destination);
+      }
+      paintSelection(card ? [card] : target.closest(".category").querySelectorAll("[data-card]"));
+      playCue("pick");
+    });
+    $("retry").addEventListener("click", () => {
+      newPlay();
+      window.scrollTo(0, 0);
+      field.querySelector("[data-card]")?.focus({ preventScroll: true });
+    });
+    soundButton.addEventListener("click", () => {
+      soundEnabled = !soundEnabled;
+      paintSoundControl();
+      try {
+        localStorage.setItem(soundPreferenceKey, soundEnabled ? "on" : "off");
+      } catch {
+        // The setting still applies until the page closes.
+      }
+      if (soundEnabled) playCue("pick");
+      else stopCue();
+    });
+
+    domainPicker.addEventListener("change", chooseDomain);
+    paintSoundControl();
+    chooseDomain();
+  </script>
+</body>
+</html>
