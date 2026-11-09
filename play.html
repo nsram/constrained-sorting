@@ -55,10 +55,12 @@
     .domain-picker {
       max-width: 100%;
       min-height: 40px;
-      padding: 5px 9px;
+      padding: 5px 28px 5px 9px;
       border: 1px solid #94afa1;
       border-radius: 6px;
-      background: #254b40;
+      -webkit-appearance: none;
+      appearance: none;
+      background: #254b40 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='m2.5 4.5 3.5 3 3.5-3' fill='none' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 9px center / 12px;
       color: white;
       font: 650 .85rem system-ui, sans-serif;
     }
@@ -170,7 +172,11 @@
     .project-links a:hover { background: #e8eee4; }
     .project-links a:focus-visible { outline: 2px solid #a46118; outline-offset: 3px; }
     .play-field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 12px 0 17px; }
-    .cricket-board { --card-width: 6.25rem; }
+    .cricket-board {
+      --card-width: 6.25rem;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
     .cricket-board #tray-cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 5.25rem), 1fr));
@@ -180,15 +186,27 @@
     }
     .cricket-board #tray-cards .card { width: 100%; }
     .cricket-board .card-face {
+      container-type: inline-size;
       grid-template-columns: minmax(0, 1fr);
       align-content: center;
       gap: 1px;
       padding-inline: 2px;
       font-weight: 500;
       line-height: 1.1;
+      overflow-wrap: normal;
     }
     .card-given { font-size: .69rem; }
-    .card-name-long { font-size: .65rem; letter-spacing: -.02em; }
+    .card-surname {
+      max-inline-size: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .card-name-long {
+      font-size: .58rem;
+      font-size: min(.75rem, calc(165cqi / var(--surname-length)));
+      letter-spacing: -.02em;
+    }
     .card-list, .categories { display: flex; flex-wrap: wrap; gap: 8px var(--group-gap); }
     .categories { gap: 10px; align-items: flex-start; }
     .category-name { font-size: 1rem; margin-bottom: 6px; }
@@ -344,6 +362,14 @@
     @media (max-width: 660px) {
       .shell { width: calc(100% - 16px); }
       main { padding-top: 12px; }
+    }
+    @media (orientation: landscape) and (max-height: 500px) {
+      .masthead { padding-block: 6px; }
+      main { padding-top: 6px; }
+      .sticky-bar { padding-block: 4px; }
+      .scoreboard { margin-bottom: 0; }
+      .play-field { row-gap: 6px; padding-top: 6px; }
+      .cricket-board #tray-cards { row-gap: 4px; }
     }
   </style>
 </head>
@@ -683,8 +709,12 @@
       const face = element("span", "card-face");
       if (info.nameParts) {
         const [given, last] = info.nameParts;
-        const lastClass = last.length >= 15 ? "card-name-long" : "";
-        face.append(element("span", "card-given", given), element("span", lastClass, last));
+        const surname = element("span", "card-surname", last);
+        if (last.length >= 13) {
+          surname.classList.add("card-name-long");
+          surname.style.setProperty("--surname-length", last.length);
+        }
+        face.append(element("span", "card-given", given), surname);
         button.setAttribute("aria-label", card);
       } else {
         face.textContent = card;
