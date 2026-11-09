@@ -172,20 +172,20 @@
     .project-links a:hover { background: #e8eee4; }
     .project-links a:focus-visible { outline: 2px solid #a46118; outline-offset: 3px; }
     .play-field { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; padding: 12px 0 17px; }
-    .cricket-board {
+    .wide-card-board {
       --card-width: 6.25rem;
       -webkit-text-size-adjust: 100%;
       text-size-adjust: 100%;
     }
-    .cricket-board #tray-cards {
+    .wide-card-board #tray-cards {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(min(100%, 5.25rem), 1fr));
       padding: 4px;
       border-radius: 6px;
       background: #e8eae0;
     }
-    .cricket-board #tray-cards .card { width: 100%; }
-    .cricket-board .card-face {
+    .wide-card-board #tray-cards .card { width: 100%; }
+    .wide-card-board .card-face {
       container-type: inline-size;
       grid-template-columns: minmax(0, 1fr);
       align-content: center;
@@ -369,7 +369,7 @@
       .sticky-bar { padding-block: 4px; }
       .scoreboard { margin-bottom: 0; }
       .play-field { row-gap: 6px; padding-top: 6px; }
-      .cricket-board #tray-cards { row-gap: 4px; }
+      .wide-card-board #tray-cards { row-gap: 4px; }
     }
   </style>
 </head>
@@ -379,6 +379,7 @@
       <h1><img src="consort-mark.svg" width="48" height="48" alt="">Constrained Sorting</h1>
       <select class="domain-picker" id="domain" aria-label="Domain">
         <option value="demo">Quick demo</option>
+        <option value="singapore">Singapore · Which Neighbourhood?</option>
         <optgroup label="Indian men’s cricket">
           <option value="tests">India · Tests</option>
           <option value="odi">India · ODIs</option>
@@ -622,8 +623,7 @@
         if (!cards.size) throw new Error("Empty deck");
         categories = names;
         cardDetails = cards;
-        const cricket = domain !== "demo";
-        $("board").classList.toggle("cricket-board", cricket);
+        $("board").classList.toggle("wide-card-board", domain !== "demo");
         $("points-max").textContent = `/ ${cards.size * maxPointsPerCard}`;
         $("points-meter").max = cards.size * maxPointsPerCard;
         state = null;

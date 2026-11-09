@@ -8,7 +8,7 @@ Select one or more cards, then click or tap a category box. Select a placed card
 
 A card scores two points when correctly placed on its first move, one on its second, and zero thereafter. Moving a card out of its correct category removes its points. Efficiency is the number currently placed divided by the number of card moves. The clock starts on the first placement and stops the first time every card is placed.
 
-The project home links directly to Quick demo and each cricket deck. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended role per player. Switching decks starts a fresh round.
+The project home links directly to Quick demo, Which Neighbourhood?, and each cricket deck. Which Neighbourhood? has 30 Singapore landmarks across six neighbourhoods. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended category per card. Switching decks starts a fresh round.
 
 ## Run locally
 
@@ -34,6 +34,7 @@ python3 tools/build-demo.py ../constrained-sorting-demo.html
 | `play.html` | Game UI, scoring, interaction, and synthesized audio |
 | `consort-mark.svg` | Sorting-card logo and browser icon |
 | `games/demo/deck.json` | Quick demo |
+| `games/singapore/deck.json` | Which Neighbourhood? Singapore landmarks |
 | `games/tests/deck.json`, `games/odi/deck.json`, `games/t20i/deck.json`, `games/ipl/deck.json` | Four cricket decks |
 | `tools/build-demo.py` | Generates the standalone demo from the app and demo JSON |
 | `constrained-sorting-history.html` | Research background, design decisions, and technical checkpoints |
@@ -42,6 +43,13 @@ python3 tools/build-demo.py ../constrained-sorting-demo.html
 | `constrained-sorting-git-diffs.zip` | Replayable prototype-to-release diffs and checksums |
 
 Each `deck.json` is an object whose keys are the category labels in display order. Each value is an array of unique card labels, written either as a single string or as a two-string name split for display. A card label belongs to one category per deck. Edit the relevant deck file to revise its answer key.
+
+## Singapore deck sources
+
+- Bedok draws on the [Bedok Heritage Trail](https://www.roots.gov.sg/-/media/Roots/Files/bedok-trail/nhb_bedok-heritage-trail_v3.pdf), the [NEA hawker-centre listing](https://www.nea.gov.sg/our-services/hawker-management/overview), and [Golden Village's account of the former Princess Theatre](https://media.gv.com.sg/Booking/movies/images/press/GOLDEN_VILLAGE_BEDOK.pdf).
+- Queenstown, Tiong Bahru, and Toa Payoh draw on their [Queenstown](https://www.roots.gov.sg/places/places-landing/trails/my-queenstown-heritage-trail), [Tiong Bahru](https://www.roots.gov.sg/places/places-landing/trails/tiong-bahru-heritage-trail), and [Toa Payoh](https://www.roots.gov.sg/places/places-landing/trails/Toa%20Payoh%20Heritage%20Trail) heritage trails.
+- Serangoon Gardens draws on [NHB's Chomp Chomp history](https://www.roots.gov.sg/stories-landing/stories/Hawker-Centres/Chomp-Chomp-Food-Centre), [DP Architects' myVillage profile](https://www.dpa.com.sg/projects/myvillage-serangoon-garden/), and the sites for the [Church of St Francis Xavier](https://www.sfxchurch.sg/) and [Chartwell Drive Park](https://www.nparks.gov.sg/visit/parks/park-detail/chartwell-drive-park).
+- Tampines draws on the [Tampines heritage trail booklet](https://www.roots.gov.sg/-/media/Roots/Files/tampines-heritage-trail/nhb_tampines_trail-booklet.ashx) and [NParks' Sun Plaza Park profile](https://www.nparks.gov.sg/visit/parks/park-detail/sun-plaza-park).
 
 ## Contribute a deck
 

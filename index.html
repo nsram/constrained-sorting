@@ -53,6 +53,7 @@
     .tile h3 { text-decoration: underline; text-underline-offset: .18em; }
     .tile:hover { border-color: #769184; background: #fff; }
     .tile p { color: var(--quiet); font-size: .91rem; }
+    #singapore .tile { max-width: 32rem; }
     @media (max-width: 750px) {
       .hero { grid-template-columns: 1fr; gap: 1.4rem; }
       figure { max-width: 34rem; }
@@ -72,6 +73,7 @@
         <img src="consort-mark.svg" width="48" height="48" alt="">
         Constrained Sorting
       </a>
+      <a href="#singapore">Singapore</a>
       <a href="#cricket">Cricket decks</a>
       <a href="constrained-sorting-history.html">Project history</a>
     </nav>
@@ -90,6 +92,10 @@
         <a href="constrained-sorting-tests.jpg"><img src="constrained-sorting-tests.jpg" width="1000" height="706" alt="An India Tests round in progress, with unplaced players in the tray and green and red cards in the role boxes."></a>
         <figcaption>India Tests in play. Select the image for a closer look.</figcaption>
       </figure>
+    </section>
+    <section id="singapore" aria-labelledby="singapore-title">
+      <h2 id="singapore-title">Singapore</h2>
+      <a class="tile" href="play.html?deck=singapore"><h3>Which Neighbourhood?</h3><p>Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods.</p></a>
     </section>
     <section id="cricket" aria-labelledby="cricket-title">
       <h2 id="cricket-title">Cricket decks</h2>
