@@ -39,9 +39,13 @@
     [
       "Ajinkya",
       "Rahane"
+    ],
+    [
+      "Vaibhav",
+      "Sooryavanshi"
     ]
   ],
-  "Middle Order": [
+  "Middle": [
     [
       "Virat",
       "Kohli"
@@ -79,7 +83,7 @@
       "Uthappa"
     ]
   ],
-  "Wicketkeeper": [
+  "Keeper": [
     [
       "Mahendra Singh",
       "Dhoni"
@@ -187,9 +191,21 @@
     [
       "Avesh",
       "Khan"
+    ],
+    [
+      "RP",
+      "Singh"
+    ],
+    [
+      "S",
+      "Sreesanth"
+    ],
+    [
+      "Joginder",
+      "Sharma"
     ]
   ],
-  "Off Spinner": [
+  "Finger Spin": [
     [
       "Ravichandran",
       "Ashwin"
@@ -203,7 +219,7 @@
       "Sundar"
     ]
   ],
-  "Leg Spinner": [
+  "Wrist Spin": [
     [
       "Yuzvendra",
       "Chahal"
@@ -219,6 +235,14 @@
     [
       "Piyush",
       "Chawla"
+    ],
+    [
+      "Kuldeep",
+      "Yadav"
+    ],
+    [
+      "Varun",
+      "Chakaravarthy"
     ]
   ]
 }

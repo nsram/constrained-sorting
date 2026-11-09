@@ -41,7 +41,7 @@
       "Sidhu"
     ]
   ],
-  "Middle Order": [
+  "Middle": [
     [
       "Virat",
       "Kohli"
@@ -77,9 +77,13 @@
     [
       "Vinod",
       "Kambli"
+    ],
+    [
+      "VVS",
+      "Laxman"
     ]
   ],
-  "Wicketkeeper": [
+  "Keeper": [
     [
       "Mahendra Singh",
       "Dhoni"
@@ -111,6 +115,10 @@
     [
       "Lokesh",
       "Rahul"
+    ],
+    [
+      "Ishan",
+      "Kishan"
     ]
   ],
   "All-rounder": [
@@ -157,6 +165,14 @@
     [
       "Madan",
       "Lal"
+    ],
+    [
+      "Mohinder",
+      "Amarnath"
+    ],
+    [
+      "Robin",
+      "Singh"
     ]
   ],
   "Pacer": [
@@ -207,9 +223,17 @@
     [
       "Praveen",
       "Kumar"
+    ],
+    [
+      "Chetan",
+      "Sharma"
+    ],
+    [
+      "Munaf",
+      "Patel"
     ]
   ],
-  "Off Spinner": [
+  "Finger Spin": [
     [
       "Ravichandran",
       "Ashwin"
@@ -235,7 +259,7 @@
       "Ayub"
     ]
   ],
-  "Leg Spinner": [
+  "Wrist Spin": [
     [
       "Anil",
       "Kumble"
@@ -259,6 +283,14 @@
     [
       "Laxman",
       "Sivaramakrishnan"
+    ],
+    [
+      "Kuldeep",
+      "Yadav"
+    ],
+    [
+      "Varun",
+      "Chakaravarthy"
     ]
   ]
 }

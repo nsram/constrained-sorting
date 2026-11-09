@@ -8,7 +8,7 @@ Select one or more cards, then click or tap a category box. Select a placed card
 
 A card scores two points when correctly placed on its first move, one on its second, and zero thereafter. Moving a card out of its correct category removes its points. Efficiency is the number currently placed divided by the number of card moves. The clock starts on the first placement and stops the first time every card is placed.
 
-The project home links directly to Quick demo and each cricket deck. The four cricket decks contain 76 Test, 62 ODI, 52 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended role per player. Switching decks starts a fresh round.
+The project home links directly to Quick demo and each cricket deck. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended role per player. Switching decks starts a fresh round.
 
 ## Run locally
 

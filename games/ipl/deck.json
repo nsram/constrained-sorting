@@ -73,7 +73,7 @@
       "Smith"
     ]
   ],
-  "Middle Order": [
+  "Middle": [
     [
       "Suryakumar",
       "Yadav"
@@ -135,7 +135,7 @@
       "Williamson"
     ]
   ],
-  "Wicketkeeper": [
+  "Keeper": [
     [
       "Mahendra Singh",
       "Dhoni"
@@ -345,7 +345,7 @@
       "Archer"
     ]
   ],
-  "Off Spinner": [
+  "Finger Spin": [
     [
       "Ravichandran",
       "Ashwin"
@@ -371,7 +371,7 @@
       "Theekshana"
     ]
   ],
-  "Leg Spinner": [
+  "Wrist Spin": [
     [
       "Yuzvendra",
       "Chahal"
