@@ -1,0 +1,72 @@
+{
+  "Arsenal": [
+    ["David", "Raya"],
+    ["Martin", "Ødegaard"],
+    ["Bukayo", "Saka"],
+    ["Declan", "Rice"],
+    ["Viktor", "Gyökeres"]
+  ],
+  "Brighton": [
+    ["Bart", "Verbruggen"],
+    ["Lewis", "Dunk"],
+    ["Pascal", "Groß"],
+    ["Diego", "Gómez"],
+    ["Charalampos", "Kostoulas"]
+  ],
+  "Man City": [
+    ["Gianluigi", "Donnarumma"],
+    ["Rúben", "Dias"],
+    ["Erling", "Haaland"],
+    ["Rayan", "Cherki"],
+    ["Phil", "Foden"]
+  ],
+  "Liverpool": [
+    ["Alisson", "Becker"],
+    ["Virgil", "van Dijk"],
+    ["Alexander", "Isak"],
+    ["Florian", "Wirtz"],
+    ["Dominik", "Szoboszlai"]
+  ],
+  "Chelsea": [
+    ["Mike", "Penders"],
+    ["Reece", "James"],
+    ["Cole", "Palmer"],
+    ["João", "Pedro"],
+    ["Morgan", "Rogers"]
+  ],
+  "Everton": [
+    ["Jordan", "Pickford"],
+    ["James", "Tarkowski"],
+    ["Thierno", "Barry"],
+    ["Jarrad", "Branthwaite"],
+    ["Kiernan", "Dewsbury-Hall"]
+  ],
+  "Bournemouth": [
+    ["Đorđe", "Petrović"],
+    ["Adam", "Smith"],
+    "Evanilson",
+    ["Marcus", "Tavernier"],
+    ["Tyler", "Adams"]
+  ],
+  "Brentford": [
+    ["Caoimhín", "Kelleher"],
+    ["Nathan", "Collins"],
+    ["Igor", "Thiago"],
+    ["Mikkel", "Damsgaard"],
+    ["Dango", "Ouattara"]
+  ],
+  "Leeds United": [
+    ["James", "Trafford"],
+    ["Ethan", "Ampadu"],
+    ["Dominic", "Calvert-Lewin"],
+    ["Ao", "Tanaka"],
+    ["Jayden", "Bogle"]
+  ],
+  "Aston Villa": [
+    ["Zion", "Suzuki"],
+    ["John", "McGinn"],
+    ["Nicolas", "Jackson"],
+    ["Leon", "Goretzka"],
+    ["Pau", "Torres"]
+  ]
+}

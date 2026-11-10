@@ -8,7 +8,7 @@ Select one or more cards, then click or tap a category box. Select a placed card
 
 A card scores two points when correctly placed on its first move, one on its second, and zero thereafter. Moving a card out of its correct category removes its points. Efficiency is the number currently placed divided by the number of card moves. The clock starts on the first placement and stops the first time every card is placed.
 
-The project home links directly to Quick demo, Which Neighbourhood?, and each cricket deck. Which Neighbourhood? has 30 Singapore landmarks across six neighbourhoods. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended category per card. Switching decks starts a fresh round.
+The project home links directly to Quick demo, the Singapore and soccer decks, and each cricket deck. Which Neighbourhood? has 30 Singapore landmarks across six neighbourhoods. Soccer - Premier League A has 50 players from 10 clubs. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended category per card. Switching decks starts a fresh round.
 
 ## Run locally
 
@@ -35,6 +35,7 @@ python3 tools/build-demo.py ../constrained-sorting-demo.html
 | `consort-mark.svg` | Sorting-card logo and browser icon |
 | `games/demo/deck.json` | Quick demo |
 | `games/singapore/deck.json` | Which Neighbourhood? Singapore landmarks |
+| `games/premier-league-a/deck.json` | Soccer - Premier League A |
 | `games/tests/deck.json`, `games/odi/deck.json`, `games/t20i/deck.json`, `games/ipl/deck.json` | Four cricket decks |
 | `tools/build-demo.py` | Generates the standalone demo from the app and demo JSON |
 | `constrained-sorting-history.html` | Research background, design decisions, and technical checkpoints |
@@ -50,6 +51,10 @@ Each `deck.json` is an object whose keys are the category labels in display orde
 - Queenstown, Tiong Bahru, and Toa Payoh draw on their [Queenstown](https://www.roots.gov.sg/places/places-landing/trails/my-queenstown-heritage-trail), [Tiong Bahru](https://www.roots.gov.sg/places/places-landing/trails/tiong-bahru-heritage-trail), and [Toa Payoh](https://www.roots.gov.sg/places/places-landing/trails/Toa%20Payoh%20Heritage%20Trail) heritage trails.
 - Serangoon Gardens draws on [NHB's Chomp Chomp history](https://www.roots.gov.sg/stories-landing/stories/Hawker-Centres/Chomp-Chomp-Food-Centre), [DP Architects' myVillage profile](https://www.dpa.com.sg/projects/myvillage-serangoon-garden/), and the sites for the [Church of St Francis Xavier](https://www.sfxchurch.sg/) and [Chartwell Drive Park](https://www.nparks.gov.sg/visit/parks/park-detail/chartwell-drive-park).
 - Tampines draws on the [Tampines heritage trail booklet](https://www.roots.gov.sg/-/media/Roots/Files/tampines-heritage-trail/nhb_tampines_trail-booklet.ashx) and [NParks' Sun Plaza Park profile](https://www.nparks.gov.sg/visit/parks/park-detail/sun-plaza-park).
+
+## Premier League deck sources
+
+The club order comes from the 2026–27 standings after Matchweek 10, as of 9 November 2026. Each club has its designated captain, a goalkeeper, and three selected first-team players. The answer key uses this season's squads and stays fixed when the table or squads change. See the [Matchweek 10 standings](https://sport-minute.com/en/football/premier-league-2026-27-matchweek-10), the [Premier League squad numbers](https://www.premierleague.com/en/news/4725682/all-20-premier-league-clubs-squad-numbers-for-202627-season), and the [league’s captain list](https://www.premierleague.com/en/news/4706912/premier-league-club-captains-for-202627-season).
 
 ## Contribute a deck
 
