@@ -8,7 +8,7 @@ Select one or more cards, then click or tap a category box. Select a placed card
 
 A card scores two points when correctly placed on its first move, one on its second, and zero thereafter. Moving a card out of its correct category removes its points. Efficiency is the number currently placed divided by the number of card moves. The clock starts on the first placement and stops the first time every card is placed.
 
-The project home links directly to Quick demo, the Singapore and soccer decks, and each cricket deck. Which Neighbourhood? has 30 Singapore landmarks across six neighbourhoods. Soccer - Premier League A has 50 players from 10 clubs. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended category per card. Switching decks starts a fresh round.
+The project home links directly to Quick demo, the Singapore and soccer decks, and each cricket deck. Which Neighbourhood? has 30 Singapore landmarks across six neighbourhoods. Soccer - Premier League A has 50 players from 10 clubs. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended category per card. Use **Browse decks** to return to the project home and choose another deck.
 
 ## Run locally
 
@@ -30,14 +30,16 @@ python3 tools/build-demo.py ../constrained-sorting-demo.html
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Project home with direct deck links |
+| `index.html` | Project home with static links generated from the catalog |
 | `play.html` | Game UI, scoring, interaction, and synthesized audio |
+| `decks.json` | Deck IDs, titles, descriptions, and directory sections |
 | `consort-mark.svg` | Sorting-card logo and browser icon |
 | `games/demo/deck.json` | Quick demo |
 | `games/singapore/deck.json` | Which Neighbourhood? Singapore landmarks |
 | `games/premier-league-a/deck.json` | Soccer - Premier League A |
 | `games/tests/deck.json`, `games/odi/deck.json`, `games/t20i/deck.json`, `games/ipl/deck.json` | Four cricket decks |
 | `tools/build-demo.py` | Generates the standalone demo from the app and demo JSON |
+| `tools/build-index.py` | Regenerates the deck links in the home page |
 | `constrained-sorting-history.html` | Research background, design decisions, and technical checkpoints |
 | `constrained-sorting-first-release.jpg` | First-release screenshot displayed on the history page |
 | `constrained-sorting-tests.jpg` | India Tests screenshot displayed on the home page |
@@ -68,9 +70,10 @@ Start with the [Bass demo JSON](games/demo/deck.json), the same twelve cards use
 }
 ```
 
-1. Save your deck as `games/<deck-name>/deck.json`, using a short folder name such as `garden-birds`.
-2. To try it, use a separate local copy of the project. Put your JSON at `games/demo/deck.json`, run the local server described above, and play it through in **Quick demo**.
-3. Submit your new deck folder in a pull request. Include a proposed display title, a short description of the subject, and any sources or reasoning that would help a reviewer understand the categories.
+1. Save your deck as `games/<deck-id>/deck.json`, using a short ID such as `garden-birds`.
+2. Add that ID under `decks` in `decks.json`, with a `title`, a short `description`, and a `section` ID. To introduce a new section, add its ID and display heading under `sections`.
+3. Run `python3 tools/build-index.py` to refresh the links in `index.html`. Serve the project locally and play through the new deck from the home page or directly at `play.html?deck=<deck-id>`.
+4. Submit the deck, catalog, and regenerated home page in a pull request. Include any sources or reasoning that would help a reviewer understand the categories.
 
 ## Historical diffs
 

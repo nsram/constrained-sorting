@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "singapore": "Singapore",
+    "soccer": "Soccer",
+    "cricket": "Cricket decks"
+  },
+  "decks": {
+    "demo": {
+      "title": "Quick demo"
+    },
+    "singapore": {
+      "title": "Which Neighbourhood?",
+      "playTitle": "Singapore · Which Neighbourhood?",
+      "section": "singapore",
+      "description": "Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods."
+    },
+    "premier-league-a": {
+      "title": "Soccer - Premier League A",
+      "section": "soccer",
+      "description": "Sort 50 players into the top 10 clubs after Matchweek 10 of the 2026–27 season."
+    },
+    "tests": {
+      "title": "India · Tests",
+      "section": "cricket",
+      "description": "76 players"
+    },
+    "odi": {
+      "title": "India · ODIs",
+      "section": "cricket",
+      "description": "70 players"
+    },
+    "t20i": {
+      "title": "India · T20Is",
+      "section": "cricket",
+      "description": "58 players"
+    },
+    "ipl": {
+      "title": "IPL",
+      "section": "cricket",
+      "description": "99 Indian and overseas players"
+    }
+  }
+}

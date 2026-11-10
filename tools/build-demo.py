@@ -17,16 +17,10 @@ def main():
     logo = b64encode((root / "consort-mark.svg").read_bytes()).decode("ascii")
     app = app.replace('"consort-mark.svg"', f'"data:image/svg+xml;base64,{logo}"')
     deck = json.loads((root / "games/demo/deck.json").read_text(encoding="utf-8"))
-    embedded = json.dumps(deck, ensure_ascii=False).replace("<", "\\u003c")
-    app, count = re.subn(
-        r'(<select[^>]+id="domain"[^>]*>).*?(</select>)',
-        r'\1\n        <option value="demo">Quick demo</option>\n      \2',
-        app,
-        count=1,
-        flags=re.S,
-    )
-    if count != 1:
-        raise ValueError("Domain picker was not found")
+    catalog = json.loads((root / "decks.json").read_text(encoding="utf-8"))
+    title = catalog["decks"]["demo"]["title"]
+    embedded = json.dumps({"title": title, "deck": deck}, ensure_ascii=False).replace("<", "\\u003c")
+    app = re.sub(r'        <a class="browse-decks"[^>]*>.*?</a>\n', "", app, count=1)
     app = app.replace(
         "  <script>\n    \"use strict\";",
         f'  <script type="application/json" id="embedded-demo">{embedded}</script>\n'
