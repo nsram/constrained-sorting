@@ -478,6 +478,7 @@
     const rewardSeen = new Set();
     const rewardCompletedGroups = new Set();
     const rewardPeek = document.getElementById("reward-peek");
+    const stickyBar = document.querySelector(".sticky-bar");
     const rewardReview = document.getElementById("reward-review");
     const rewardReviewHint = document.getElementById("reward-review-hint");
     const rewardRevisit = document.getElementById("reward-revisit");
@@ -605,7 +606,17 @@
           rewardSeen.add(name);
           latest = name;
         }
-        if (latest) rewardPeek.replaceChildren(rewardCard(latest));
+        if (latest) {
+          rewardPeek.replaceChildren(rewardCard(latest));
+          const { top, bottom } = rewardPeek.getBoundingClientRect();
+          const stickyHeight = stickyBar.getBoundingClientRect().height;
+          if (top < stickyHeight || bottom > window.innerHeight) {
+            window.scrollBy({
+              top: top - stickyHeight - 8,
+              behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"
+            });
+          }
+        }
       } else {
         rewardPeek.replaceChildren();
         rewardPeek.hidden = true;
@@ -957,7 +968,6 @@
         paintTimer();
       }
       renderBoard(previous);
-      const groupCompleted = rewardMove(moved, destination);
       if (focusAfterMove) {
         const target = field.querySelector(`[data-destination="${destination}"]`);
         const focus = target?.disabled
@@ -965,6 +975,7 @@
           : target;
         focus?.focus();
       }
+      const groupCompleted = rewardMove(moved, destination);
       if (!state.celebrated && state.assigned.size === cardDetails.size &&
           state.deck.every(card => destinationOf(card) === cardDetails.get(card).category)) {
         state.celebrated = true;
