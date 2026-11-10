@@ -385,7 +385,7 @@
         min-width: 0;
         cursor: zoom-in;
       }
-      #reward-peek .reward-card strong::after {
+      #reward-peek .reward-card > div::after {
         content: "";
         display: inline-block;
         width: .9em;
@@ -521,7 +521,7 @@
       return name[0].toUpperCase() + name.slice(1);
     }
 
-    function rewardCard(name) {
+    function rewardCard(name, { zoomCue = false } = {}) {
       const [src, facts] = rewardData[name];
       const row = document.createElement("div");
       row.className = "reward-card";
@@ -533,7 +533,8 @@
       const label = document.createElement("div");
       const title = document.createElement("strong");
       title.textContent = rewardName(name);
-      label.append(title, document.createTextNode(" · " + facts));
+      const caption = zoomCue ? facts.replace(/\.$/, "") : facts;
+      label.append(title, document.createTextNode(" · " + caption));
       row.append(image, label);
       return row;
     }
@@ -641,7 +642,7 @@
           preview.className = "reward-preview";
           preview.src = rewardData[latest][0];
           preview.alt = "";
-          rewardPeek.replaceChildren(rewardCard(latest), preview);
+          rewardPeek.replaceChildren(rewardCard(latest, { zoomCue: true }), preview);
           const { top, bottom } = rewardPeek.getBoundingClientRect();
           const stickyHeight = stickyBar.getBoundingClientRect().height;
           if (top < stickyHeight || bottom > window.innerHeight) {
