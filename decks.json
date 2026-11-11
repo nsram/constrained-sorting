@@ -1,12 +1,19 @@
 {
   "sections": {
+    "cricket": "Cricket",
+    "wildlife": "Wildlife",
     "singapore": "Singapore",
-    "soccer": "Soccer",
-    "cricket": "Cricket decks"
+    "soccer": "Soccer"
   },
   "decks": {
     "demo": {
-      "title": "Quick demo"
+      "title": "Quick demo",
+      "rewards": "games/demo/rewards.json",
+      "preview": [
+        "bass",
+        "cello",
+        "robin"
+      ]
     },
     "singapore": {
       "title": "Which Neighbourhood?",
@@ -22,22 +29,53 @@
     "tests": {
       "title": "India · Tests",
       "section": "cricket",
-      "description": "76 players"
+      "description": "76 players",
+      "rewards": "games/tests/rewards.json",
+      "preview": [
+        "Sunil Gavaskar"
+      ]
     },
     "odi": {
       "title": "India · ODIs",
       "section": "cricket",
-      "description": "70 players"
+      "description": "70 players",
+      "rewards": "games/odi/rewards.json",
+      "preview": [
+        "Kapil Dev"
+      ]
     },
     "t20i": {
       "title": "India · T20Is",
       "section": "cricket",
-      "description": "58 players"
+      "description": "58 players",
+      "rewards": "games/t20i/rewards.json",
+      "preview": [
+        "Jasprit Bumrah"
+      ]
     },
     "ipl": {
       "title": "IPL",
       "section": "cricket",
-      "description": "99 Indian and overseas players"
+      "description": "99 Indian and overseas players",
+      "rewards": "games/ipl/rewards.json",
+      "preview": [
+        "Chris Gayle"
+      ]
+    },
+    "game-animals-of-north-america": {
+      "title": "Game Animals of North America",
+      "section": "wildlife",
+      "description": "Sort 43 game animals across four hunting-experience tiers.",
+      "categoryDescriptions": {
+        "Beginner": "Common, approachable pursuits",
+        "Core": "Mainstays of North American hunting",
+        "Advanced": "Regional, more specialized pursuits",
+        "Elite": "Demanding pursuits, including remote trophy hunts"
+      },
+      "rewards": "games/game-animals-of-north-america/rewards.json",
+      "preview": [
+        "Bison"
+      ]
     }
   }
 }

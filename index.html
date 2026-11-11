@@ -4,129 +4,272 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#173831">
-  <meta name="description" content="A sorting game about what you know. Try the twelve-card demo or sort cricketers by playing role.">
+  <meta name="description" content="Sort cards, see how you did, and discover the facts behind them. Play Constrained Sorting.">
   <title>Constrained Sorting</title>
   <link rel="icon" type="image/svg+xml" href="consort-mark.svg">
   <style>
     :root {
       color-scheme: light;
-      --paper: #f9f7ef;
-      --ink: #23392f;
-      --quiet: #4c6156;
+      --paper: #f6f4eb;
+      --ink: #182f28;
+      --quiet: #4a6057;
       --pine: #173831;
       --gold: #f2cc78;
-      --line: #d6ded0;
+      --line: #d7ddd1;
+      --card: #fffdf7;
       color: var(--ink);
       background: var(--paper);
-      font: 16px/1.55 system-ui, sans-serif;
+      font: 16px/1.5 system-ui, sans-serif;
     }
-    * { box-sizing: border-box; }
-    body { margin: 0; }
-    a { color: #215b48; text-underline-offset: .2em; }
-    a:focus-visible { outline: 2px solid #97591d; outline-offset: 4px; }
-    .shell { width: min(100% - 32px, 1080px); margin-inline: auto; }
-    header { background: var(--pine); color: #fffaf0; }
-    header nav { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem 1.2rem; padding: .9rem 0; }
-    header a { color: #fffaf0; }
-    .brand { display: inline-flex; align-items: center; gap: .55rem; margin-right: auto; font-weight: 650; text-decoration: none; }
-    .brand img { width: 1.9rem; height: 1.9rem; }
-    header a:focus-visible { outline-color: var(--gold); }
-    main { padding: 2.5rem 0 3rem; }
-    h1, h2, h3 { font-family: Georgia, serif; font-weight: 500; line-height: 1.08; }
-    h1 { font-size: clamp(2rem, 4.6vw, 3.5rem); letter-spacing: -.045em; margin: .45rem 0 .8rem; }
-    h2 { font-size: clamp(1.65rem, 4vw, 2.2rem); margin: 0 0 .8rem; }
-    h3 { font-size: 1.36rem; margin: .25rem 0 .45rem; }
-    p { margin: 0; }
-    .hero { display: grid; grid-template-columns: .95fr 1.05fr; gap: 2rem; align-items: center; }
-    .eyebrow { color: #6b4b20; font-size: .73rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
-    .lede { max-width: 38ch; font-size: 1.08rem; }
-    .actions { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.15rem; margin-top: 1.3rem; }
-    .button { display: inline-block; border-radius: .4rem; padding: .68rem 1rem; background: var(--pine); color: #fffaf0; text-decoration: none; font-weight: 650; }
-    .button:hover { background: #245143; }
-    figure { margin: 0; }
-    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: .65rem; }
-    figcaption { margin-top: .45rem; color: var(--quiet); font-size: .87rem; }
-    main > section + section { margin-top: 2.1rem; border-top: 1px solid var(--line); padding-top: 1.5rem; }
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
-    .decks { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .tile { display: block; border: 1px solid var(--line); border-radius: .6rem; padding: .9rem 1rem; background: #fffdf8; text-decoration: none; }
-    .tile h3 { text-decoration: underline; text-underline-offset: .18em; }
-    .tile:hover { border-color: #769184; background: #fff; }
-    .tile p { color: var(--quiet); font-size: .91rem; }
-    #singapore .tile, #soccer .tile { max-width: 32rem; }
-    @media (max-width: 750px) {
-      .hero { grid-template-columns: 1fr; gap: 1.4rem; }
-      figure { max-width: 34rem; }
-      .decks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    *, *::before, *::after { box-sizing: border-box; }
+    body, p, figure, h1, h2, h3 { margin: 0; }
+    a { color: inherit; text-underline-offset: .2em; }
+    a:focus-visible { outline: 2px solid #92501f; outline-offset: 4px; }
+    img { display: block; }
+    .shell { width: min(100% - 32px, 1120px); margin-inline: auto; }
+    .masthead { border-bottom: 1px solid var(--line); }
+    .masthead nav {
+      display: flex; align-items: center; flex-wrap: wrap; gap: .25rem 1.15rem;
+      min-height: 64px; padding-block: .5rem;
     }
-    @media (max-width: 460px) {
-      .brand { flex-basis: 100%; }
-      main { padding-top: 1.6rem; }
-      .resources { grid-template-columns: 1fr; }
+    .masthead a { font-size: .9rem; font-weight: 650; text-decoration: none; }
+    .masthead a:hover, .section-nav a:hover { text-decoration: underline; }
+    .brand { display: flex; gap: .55rem; align-items: center; margin-right: auto; }
+    .brand img { width: 34px; height: 34px; }
+    h1, h2, h3 { font-family: Georgia, serif; font-weight: 500; line-height: 1.1; }
+    .hero {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      gap: clamp(1.4rem, 4vw, 3rem); align-items: center;
+      margin-top: clamp(1rem, 3vw, 2rem); padding: clamp(1.35rem, 4.5vw, 3.25rem);
+      background: var(--pine); color: #fffdf2; border-radius: 18px;
+    }
+    h1 { font-size: clamp(2.5rem, 5.5vw, 4.6rem); letter-spacing: -.055em; line-height: .98; }
+    .lede { max-width: 34ch; margin-top: 1.1rem; color: #e1eae0; }
+    .demo-link {
+      display: inline-flex; align-items: center; gap: 1rem; min-height: 44px;
+      padding: .65rem .9rem; margin-top: 1.35rem; border-radius: 7px;
+      background: var(--gold); color: #1b332b; font-weight: 700; text-decoration: none;
+    }
+    .demo-link:hover { background: #ffe0a0; }
+    .demo-link:focus-visible { outline-color: #fffdf2; }
+    .sample-tray {
+      border: 1px solid #e3dac1; border-radius: 11px;
+      padding: clamp(.7rem, 1.8vw, 1.15rem); background: #f0ecdf; color: var(--ink);
+    }
+    .sample-tray h2 { margin-bottom: .75rem; font-size: 1.25rem; }
+    .demo-samples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.35rem, 1vw, .65rem); }
+    .demo-sample { display: flex; flex-direction: column; padding: .45rem; border-radius: 7px; background: var(--card); }
+    .demo-sample img { align-self: center; width: min(100%, 112px); height: auto; aspect-ratio: 1; object-fit: contain; }
+    .demo-sample figcaption { padding: .2rem .15rem .3rem; }
+    .preview-name { display: block; font-weight: 700; font-size: .88rem; }
+    .preview-fact { display: block; color: var(--quiet); font-size: .81rem; line-height: 1.35; margin-top: .15rem; }
+    .directory { margin-block: clamp(1.8rem, 4vw, 3rem) 2.5rem; }
+    .directory-head {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline;
+      gap: .55rem 1rem; padding-bottom: .75rem; border-bottom: 1px solid var(--line);
+    }
+    .directory-head h2 { font-size: clamp(1.8rem, 4vw, 2.45rem); letter-spacing: -.04em; }
+    .section-nav { display: flex; flex-wrap: wrap; gap: .35rem 1rem; }
+    .section-nav a { color: var(--quiet); font-size: .86rem; font-weight: 650; text-decoration: none; }
+    .deck-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.55rem 1rem; margin-top: 1.25rem; }
+    .deck-section { min-width: 0; scroll-margin-top: .8rem; }
+    .deck-section--wide { grid-column: 1 / -1; }
+    .deck-section h3 { font-size: 1.55rem; margin-bottom: .55rem; letter-spacing: -.022em; }
+    .deck-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+    .deck-tile {
+      position: relative; display: flex; align-items: center; gap: clamp(.75rem, 2vw, 1.25rem);
+      min-height: 108px; height: 100%; padding: .75rem 2.25rem .75rem .8rem;
+      border: 1px solid var(--line); border-radius: 10px;
+      background: var(--card); text-decoration: none;
+    }
+    .deck-tile:hover { background: #fff; border-color: #7c9a87; }
+    .deck-tile > div { min-width: 0; }
+    .deck-tile h4 { margin: 0; font: 500 1.28rem/1.15 Georgia, serif; }
+    .deck-tile .description { color: var(--quiet); font-size: .84rem; margin-top: .24rem; }
+    .deck-tile .preview-name { margin-top: .65rem; }
+    .tile-art { flex: none; width: clamp(75px, 13vw, 122px); height: auto; aspect-ratio: 1; object-fit: contain; border-radius: 6px; background: #efefe4; }
+    #wildlife .tile-art { width: clamp(92px, 17vw, 150px); }
+    .tile-arrow { position: absolute; inset: .75rem .75rem auto auto; color: #285b47; }
+    .scoring {
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start;
+      gap: 1.15rem 2rem; margin-bottom: 2.5rem; padding: clamp(1rem, 3vw, 1.65rem);
+      border: 1px solid var(--line); border-radius: 11px; background: #eeeee3;
+      scroll-margin-top: .8rem;
+    }
+    .scoring h2 { font-size: clamp(1.55rem, 4vw, 2rem); margin-bottom: .65rem; }
+    .scoring p { color: var(--quiet); font-size: .93rem; }
+    .scoring p + p { margin-top: .65rem; }
+    .scoring table { border-collapse: collapse; width: 100%; font-size: .87rem; font-variant-numeric: tabular-nums; }
+    .scoring caption { text-align: left; font-weight: 700; margin-bottom: .3rem; }
+    .scoring th, .scoring td { padding: .38rem .35rem; text-align: left; border-bottom: 1px solid var(--line); }
+    .scoring thead th { color: var(--quiet); font-size: .8rem; }
+    .scoring tbody th { font-weight: 600; }
+    .scoring table + p { margin-top: .6rem; font-size: .83rem; }
+    .footer { border-top: 1px solid var(--line); padding: 1rem 0 1.75rem; }
+    .footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; font-size: .86rem; color: var(--quiet); }
+    @media (max-width: 790px) {
+      .hero, .scoring { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 540px) {
+      .deck-directory, .deck-grid { grid-template-columns: minmax(0, 1fr); }
+      .deck-tile h4 { font-size: 1.2rem; }
+      .hero { border-radius: 12px; }
+    }
+    @media (max-width: 350px) {
+      .hero { padding-inline: .85rem; }
+      .sample-tray { padding-inline: .45rem; }
+      .demo-sample { padding: .2rem; }
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="masthead">
     <nav class="shell" aria-label="Project navigation">
       <a class="brand" href="index.html" aria-current="page">
-        <img src="consort-mark.svg" width="48" height="48" alt="">
+        <img src="consort-mark.svg" width="34" height="34" alt="">
         Constrained Sorting
       </a>
-      <!-- deck-navigation:start -->
-      <a href="#singapore">Singapore</a>
-      <a href="#soccer">Soccer</a>
-      <a href="#cricket">Cricket decks</a>
-      <!-- deck-navigation:end -->
-      <a href="constrained-sorting-history.html">Project history</a>
+      <a href="#decks">Decks</a>
+      <a href="#scoring">Scoring</a>
+      <a href="constrained-sorting-history.html">History</a>
     </nav>
   </header>
   <main class="shell">
     <section class="hero" aria-labelledby="home-title">
       <div>
-        <p class="eyebrow">A game about what you know</p>
         <h1 id="home-title">Constrained Sorting</h1>
-        <p class="lede">Sort items into named categories and see right away how your choices compare with the deck’s answer key. The twelve-item demo takes you through the basics.</p>
-        <div class="actions">
-          <!-- deck-demo:start -->
-          <a class="button" href="play.html?deck=demo">Play Quick demo</a>
-          <!-- deck-demo:end -->
-          <a href="constrained-sorting-rewards-demo.html">Illustrated Demo</a>
-          <a href="game-animals-of-north-america.html">Game Animals of North America</a>
+        <p class="lede">Sort cards into categories for a basic check of your expertise in a subject. Explore the illustrations and facts to learn more as you play and review.</p>
+        <!-- deck-demo:start -->
+        <a class="demo-link" href="play.html?deck=demo">Play the quick demo <span aria-hidden="true">→</span></a>
+        <!-- deck-demo:end -->
+      </div>
+      <section class="sample-tray" aria-labelledby="sample-title">
+        <h2 id="sample-title">From the quick demo</h2>
+        <div class="demo-samples">
+          <!-- demo-previews:start -->
+          <figure class="demo-sample"><img src="games/demo/images/bass.webp" width="128" height="128" alt="" decoding="async"><figcaption><span class="preview-name">Bass</span><span class="preview-fact">16″ length · 2 lb weight</span></figcaption></figure>
+          <figure class="demo-sample"><img src="games/demo/images/cello.webp" width="128" height="128" alt="" decoding="async"><figcaption><span class="preview-name">Cello</span><span class="preview-fact">30″ body length · 4 strings</span></figcaption></figure>
+          <figure class="demo-sample"><img src="games/demo/images/robin.webp" width="128" height="128" alt="" decoding="async"><figcaption><span class="preview-name">Robin</span><span class="preview-fact">10″ length · 14″ wingspan</span></figcaption></figure>
+          <!-- demo-previews:end -->
         </div>
+      </section>
+    </section>
+
+    <section id="decks" class="directory" aria-labelledby="deck-title">
+      <div class="directory-head">
+        <h2 id="deck-title">Browse decks</h2>
+        <nav class="section-nav" aria-label="Deck topics">
+          <!-- deck-navigation:start -->
+          <a href="#cricket">Cricket</a>
+          <a href="#wildlife">Wildlife</a>
+          <a href="#singapore">Singapore</a>
+          <a href="#soccer">Soccer</a>
+          <!-- deck-navigation:end -->
+        </nav>
       </div>
-      <figure>
-        <a href="constrained-sorting-tests.jpg"><img src="constrained-sorting-tests.jpg" width="1000" height="706" alt="An India Tests round in progress, with unplaced players in the tray and green and red cards in the role boxes."></a>
-        <figcaption>India Tests in play. Select the image for a closer look.</figcaption>
-      </figure>
-    </section>
-    <!-- deck-sections:start -->
-    <section id="singapore" aria-labelledby="singapore-title">
-      <h2 id="singapore-title">Singapore</h2>
-      <a class="tile" href="play.html?deck=singapore"><h3>Which Neighbourhood?</h3><p>Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods.</p></a>
-    </section>
-    <section id="soccer" aria-labelledby="soccer-title">
-      <h2 id="soccer-title">Soccer</h2>
-      <a class="tile" href="play.html?deck=premier-league-a"><h3>Soccer - Premier League A</h3><p>Sort 50 players into the top 10 clubs after Matchweek 10 of the 2026–27 season.</p></a>
-    </section>
-    <section id="cricket" aria-labelledby="cricket-title">
-      <h2 id="cricket-title">Cricket decks</h2>
-      <div class="grid decks">
-        <a class="tile" href="play.html?deck=tests"><h3>India · Tests</h3><p>76 players</p></a>
-        <a class="tile" href="play.html?deck=odi"><h3>India · ODIs</h3><p>70 players</p></a>
-        <a class="tile" href="play.html?deck=t20i"><h3>India · T20Is</h3><p>58 players</p></a>
-        <a class="tile" href="play.html?deck=ipl"><h3>IPL</h3><p>99 Indian and overseas players</p></a>
+      <div class="deck-directory">
+        <!-- deck-sections:start -->
+        <section class="deck-section deck-section--wide" id="cricket" aria-labelledby="cricket-title">
+          <h3 id="cricket-title">Cricket</h3>
+          <div class="deck-grid">
+            <a class="deck-tile" href="play.html?deck=tests">
+              <img class="tile-art" src="games/tests/images/sunil-gavaskar.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+              <div>
+                <h4>India · Tests</h4>
+                <p class="description">76 players</p>
+                <p><span class="preview-name">Sunil Gavaskar</span><span class="preview-fact">10,122 runs · 34 centuries</span></p>
+              </div>
+              <span class="tile-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="deck-tile" href="play.html?deck=odi">
+              <img class="tile-art" src="games/odi/images/kapil-dev.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+              <div>
+                <h4>India · ODIs</h4>
+                <p class="description">70 players</p>
+                <p><span class="preview-name">Kapil Dev</span><span class="preview-fact">3,783 runs · 253 wickets</span></p>
+              </div>
+              <span class="tile-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="deck-tile" href="play.html?deck=t20i">
+              <img class="tile-art" src="games/t20i/images/jasprit-bumrah.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+              <div>
+                <h4>India · T20Is</h4>
+                <p class="description">58 players</p>
+                <p><span class="preview-name">Jasprit Bumrah</span><span class="preview-fact">126 wickets · best 4 for 15</span></p>
+              </div>
+              <span class="tile-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="deck-tile" href="play.html?deck=ipl">
+              <img class="tile-art" src="games/ipl/images/chris-gayle.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+              <div>
+                <h4>IPL</h4>
+                <p class="description">99 Indian and overseas players</p>
+                <p><span class="preview-name">Chris Gayle</span><span class="preview-fact">175 not out · six IPL centuries</span></p>
+              </div>
+              <span class="tile-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+        <section class="deck-section deck-section--wide" id="wildlife" aria-labelledby="wildlife-title">
+          <h3 id="wildlife-title">Wildlife</h3>
+          <a class="deck-tile" href="play.html?deck=game-animals-of-north-america">
+            <img class="tile-art" src="games/game-animals-of-north-america/images/bison.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+            <div>
+              <h4>Game Animals of North America</h4>
+              <p class="description">Sort 43 game animals across four hunting-experience tiers.</p>
+              <p><span class="preview-name">Bison</span><span class="preview-fact">Sweeps snow aside to graze · Bulls can reach 2,000 lb.</span></p>
+            </div>
+            <span class="tile-arrow" aria-hidden="true">↗</span>
+          </a>
+        </section>
+        <section class="deck-section" id="singapore" aria-labelledby="singapore-title">
+          <h3 id="singapore-title">Singapore</h3>
+          <a class="deck-tile" href="play.html?deck=singapore">
+            <div>
+              <h4>Which Neighbourhood?</h4>
+              <p class="description">Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods.</p>
+            </div>
+            <span class="tile-arrow" aria-hidden="true">↗</span>
+          </a>
+        </section>
+        <section class="deck-section" id="soccer" aria-labelledby="soccer-title">
+          <h3 id="soccer-title">Soccer</h3>
+          <a class="deck-tile" href="play.html?deck=premier-league-a">
+            <div>
+              <h4>Soccer - Premier League A</h4>
+              <p class="description">Sort 50 players into the top 10 clubs after Matchweek 10 of the 2026–27 season.</p>
+            </div>
+            <span class="tile-arrow" aria-hidden="true">↗</span>
+          </a>
+        </section>
+        <!-- deck-sections:end -->
       </div>
     </section>
-    <!-- deck-sections:end -->
-    <section aria-labelledby="more-title">
-      <h2 id="more-title">Project history and related games</h2>
-      <div class="grid resources">
-        <a class="tile" href="constrained-sorting-history.html"><h3>Project history</h3><p>From the 1999 sorting studies to the web game.</p></a>
-        <a class="tile" href="https://nsram.github.io/prime-factor-64/prime-factor-64.html"><h3>Prime Factor 64</h3><p>Match products and practice mental multiplication.</p></a>
-        <a class="tile" href="https://nsram.github.io/prime-factor-64/fog-sweep-64.html"><h3>Fog Sweep 64</h3><p>Reveal the board as you recall the same 64 facts.</p></a>
+    <section id="scoring" class="scoring" aria-labelledby="scoring-title">
+      <div>
+        <h2 id="scoring-title">Accuracy and efficiency</h2>
+        <p><strong>Accuracy</strong> is the share of cards in the correct category. <strong>Efficiency</strong> is the number of cards placed divided by the number of moves. Moving a card again adds a move. Two players can make the same number of moves and get different numbers of cards right.</p>
+        <p><strong>Score</strong> combines correctness with how you got there. A correctly placed card earns two points on its first move, one on its second, and zero after that.</p>
+      </div>
+      <div>
+        <table>
+          <caption>Example with 12 cards</caption>
+          <thead><tr><th scope="col">Stage</th><th scope="col">Correct</th><th scope="col">Moves</th><th scope="col">Efficiency</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">First sort</th><td>8 of 12</td><td>12</td><td>100%</td></tr>
+            <tr><th scope="row">After fixes</th><td>12 of 12</td><td>16</td><td>75%</td></tr>
+          </tbody>
+        </table>
+        <p>Fixing four cards raises accuracy to 100% and lowers efficiency to 75%.</p>
       </div>
     </section>
   </main>
+  <footer class="footer">
+    <nav class="shell" aria-label="Project and related games">
+      <a href="constrained-sorting-history.html">Project history</a>
+      <a href="https://nsram.github.io/prime-factor-64/prime-factor-64.html">Prime Factor 64</a>
+      <a href="https://nsram.github.io/prime-factor-64/fog-sweep-64.html">Fog Sweep 64</a>
+    </nav>
+  </footer>
 </body>
 </html>

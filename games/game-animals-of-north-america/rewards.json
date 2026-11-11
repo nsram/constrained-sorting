@@ -1,0 +1,174 @@
+{
+  "Cottontail Rabbit": {
+    "image": "images/cottontail-rabbit.webp",
+    "fact": "Freezes, then bolts in a zigzag."
+  },
+  "Gray Squirrel": {
+    "image": "images/gray-squirrel.webp",
+    "fact": "Freezes at danger, then darts up a tree."
+  },
+  "Mourning Dove": {
+    "image": "images/mourning-dove.webp",
+    "fact": "Feeds on open ground · Wings whistle in flight."
+  },
+  "Ring-necked Pheasant": {
+    "image": "images/ring-necked-pheasant.webp",
+    "fact": "Usually runs · Flies when disturbed."
+  },
+  "Bobwhite Quail": {
+    "image": "images/bobwhite-quail.webp",
+    "fact": "Coveys burst from cover · Whistled bob-white call."
+  },
+  "Raccoon": {
+    "image": "images/raccoon.webp",
+    "fact": "Active at night · Often rests in hollow trees."
+  },
+  "Opossum": {
+    "image": "images/opossum.webp",
+    "fact": "Plays dead when threatened."
+  },
+  "Groundhog": {
+    "image": "images/groundhog.webp",
+    "fact": "Sits upright on watch · Dives into its burrow."
+  },
+  "Prairie Dog": {
+    "image": "images/prairie-dog.webp",
+    "fact": "Barks alarm calls across its burrow colony."
+  },
+  "White-tailed Deer": {
+    "image": "images/white-tailed-deer.webp",
+    "fact": "Snorts and flags its white tail when alarmed."
+  },
+  "Wild Turkey": {
+    "image": "images/wild-turkey.webp",
+    "fact": "Gobblers fan their tails, strut, and gobble."
+  },
+  "Feral Hog": {
+    "image": "images/feral-hog.webp",
+    "fact": "Sows and piglets travel in groups called sounders."
+  },
+  "Wild Boar": {
+    "image": "images/wild-boar.webp",
+    "fact": "Mature males usually roam alone."
+  },
+  "Canada Goose": {
+    "image": "images/canada-goose.webp",
+    "fact": "Often flies in a honking V."
+  },
+  "Mallard": {
+    "image": "images/mallard.webp",
+    "fact": "Hens quack · Drakes give a quieter rasp."
+  },
+  "Green-winged Teal": {
+    "image": "images/green-winged-teal.webp",
+    "fact": "Dabbles in shallows · Flashes green wing patches in flight."
+  },
+  "Wood Duck": {
+    "image": "images/wood-duck.webp",
+    "fact": "Nests in tree cavities."
+  },
+  "Red Fox": {
+    "image": "images/red-fox.webp",
+    "fact": "Hunts mostly at night · Uses dens to raise young."
+  },
+  "Coyote": {
+    "image": "images/coyote.webp",
+    "fact": "Yips and howls · Adapts to suburban life."
+  },
+  "Mule Deer": {
+    "image": "images/mule-deer.webp",
+    "fact": "Stots when fleeing, pushing off with all four hooves."
+  },
+  "Black-tailed Deer": {
+    "image": "images/black-tailed-deer.webp",
+    "fact": "Elusive in dense coastal cover."
+  },
+  "Black Bear": {
+    "image": "images/black-bear.webp",
+    "fact": "Usually avoids people · Can grow bold around food."
+  },
+  "Pronghorn": {
+    "image": "images/pronghorn.webp",
+    "fact": "Outruns predators across open country."
+  },
+  "Ruffed Grouse": {
+    "image": "images/ruffed-grouse.webp",
+    "fact": "Males drum from logs with rapid wingbeats."
+  },
+  "Greater Sage-Grouse": {
+    "image": "images/greater-sage-grouse.webp",
+    "fact": "Males strut on leks and pop their chest sacs."
+  },
+  "Sharp-tailed Grouse": {
+    "image": "images/sharp-tailed-grouse.webp",
+    "fact": "Males stamp their feet in a courtship dance."
+  },
+  "California Quail": {
+    "image": "images/california-quail.webp",
+    "fact": "Travels in coveys · Bursts into short flights."
+  },
+  "Northern Pintail": {
+    "image": "images/northern-pintail.webp",
+    "fact": "Tips tail-up to feed in shallow water."
+  },
+  "Snow Goose": {
+    "image": "images/snow-goose.webp",
+    "fact": "Flies in huge flocks with near-constant calls."
+  },
+  "Snowshoe Hare": {
+    "image": "images/snowshoe-hare.webp",
+    "fact": "Turns white in winter · Wide feet help it travel on snow."
+  },
+  "Bobcat": {
+    "image": "images/bobcat.webp",
+    "fact": "Solitary ambush hunter · Often active around dusk."
+  },
+  "Elk": {
+    "image": "images/elk.webp",
+    "fact": "Bulls bugle during the rut."
+  },
+  "Moose": {
+    "image": "images/moose.webp",
+    "fact": "Wades to feed · One Alaska bull weighed about 1,700 lb."
+  },
+  "Caribou": {
+    "image": "images/caribou.webp",
+    "fact": "Many herds migrate long distances."
+  },
+  "Mountain Goat": {
+    "image": "images/mountain-goat.webp",
+    "fact": "Rubbery hoof pads grip steep rock."
+  },
+  "Bighorn Sheep": {
+    "image": "images/bighorn-sheep.webp",
+    "fact": "Rams clash horns during the rut."
+  },
+  "Dall Sheep": {
+    "image": "images/dall-sheep.webp",
+    "fact": "Uses steep alpine rock as escape terrain."
+  },
+  "Grizzly Bear": {
+    "image": "images/grizzly-bear.webp",
+    "fact": "Yellowstone males: 700+ lb · Alaska coast: up to 1,500 lb"
+  },
+  "Ptarmigan": {
+    "image": "images/ptarmigan.webp",
+    "fact": "Turns white in winter for camouflage."
+  },
+  "Chukar": {
+    "image": "images/chukar.webp",
+    "fact": "Runs uphill · Calls chuk-chuk on rocky slopes."
+  },
+  "Gray Partridge": {
+    "image": "images/gray-partridge.webp",
+    "fact": "Forages in coveys · Flushes with a noisy burst."
+  },
+  "Bison": {
+    "image": "images/bison.webp",
+    "fact": "Sweeps snow aside to graze · Bulls can reach 2,000 lb."
+  },
+  "Muskox": {
+    "image": "images/muskox.webp",
+    "fact": "Herd forms a defensive ring around its calves."
+  }
+}

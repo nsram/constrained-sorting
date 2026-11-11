@@ -1,0 +1,53 @@
+{
+  "Beginner": [
+    "Cottontail Rabbit",
+    "Gray Squirrel",
+    "Mourning Dove",
+    "Ring-necked Pheasant",
+    "Bobwhite Quail",
+    "Raccoon",
+    "Opossum",
+    "Groundhog",
+    "Prairie Dog"
+  ],
+  "Core": [
+    "White-tailed Deer",
+    "Wild Turkey",
+    "Feral Hog",
+    "Wild Boar",
+    "Canada Goose",
+    "Mallard",
+    "Green-winged Teal",
+    "Wood Duck",
+    "Red Fox",
+    "Coyote"
+  ],
+  "Advanced": [
+    "Mule Deer",
+    "Black-tailed Deer",
+    "Black Bear",
+    "Pronghorn",
+    "Ruffed Grouse",
+    "Greater Sage-Grouse",
+    "Sharp-tailed Grouse",
+    "California Quail",
+    "Northern Pintail",
+    "Snow Goose",
+    "Snowshoe Hare",
+    "Bobcat"
+  ],
+  "Elite": [
+    "Elk",
+    "Moose",
+    "Caribou",
+    "Mountain Goat",
+    "Bighorn Sheep",
+    "Dall Sheep",
+    "Grizzly Bear",
+    "Ptarmigan",
+    "Chukar",
+    "Gray Partridge",
+    "Bison",
+    "Muskox"
+  ]
+}

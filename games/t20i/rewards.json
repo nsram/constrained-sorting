@@ -1,0 +1,350 @@
+{
+  "Rohit Sharma": {
+    "fact": "4,231 runs · 5 T20I centuries",
+    "detail": "2007–2024 · 159 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "image": "images/rohit-sharma.webp"
+  },
+  "Shikhar Dhawan": {
+    "fact": "1,759 runs · best 92",
+    "detail": "2011–2021 · 68 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Shikhar_Dhawan",
+    "image": "images/shikhar-dhawan.webp"
+  },
+  "Gautam Gambhir": {
+    "fact": "932 runs · best 75",
+    "detail": "2007–2012 · 37 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Gautam_Gambhir",
+    "image": "images/gautam-gambhir.webp"
+  },
+  "Lokesh Rahul": {
+    "fact": "2,265 runs · 2 T20I centuries",
+    "detail": "2016–2022 · 72 T20Is · Last played 2022",
+    "profile": "https://en.wikipedia.org/wiki/KL_Rahul",
+    "image": "images/lokesh-rahul.webp"
+  },
+  "Yashasvi Jaiswal": {
+    "fact": "723 runs · best 100",
+    "detail": "2023–2024 · 23 T20Is · Last played 2024",
+    "profile": "https://en.wikipedia.org/wiki/Yashasvi_Jaiswal",
+    "image": "images/yashasvi-jaiswal.webp"
+  },
+  "Shubman Gill": {
+    "fact": "869 runs · best 126 not out",
+    "detail": "2023–2025 · 36 T20Is · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Shubman_Gill",
+    "image": "images/shubman-gill.webp"
+  },
+  "Abhishek Sharma": {
+    "fact": "2,268 runs · 4 T20I centuries",
+    "detail": "2024–2026 · 72 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Abhishek_Sharma",
+    "image": "images/abhishek-sharma.webp"
+  },
+  "Ruturaj Gaikwad": {
+    "fact": "633 runs · best 123 not out",
+    "detail": "2021–2024 · 23 T20Is · Last played 2024",
+    "profile": "https://en.wikipedia.org/wiki/Ruturaj_Gaikwad",
+    "image": "images/ruturaj-gaikwad.webp"
+  },
+  "Virender Sehwag": {
+    "fact": "394 runs · best 68",
+    "detail": "2006–2012 · 19 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Virender_Sehwag",
+    "image": "images/virender-sehwag.webp"
+  },
+  "Ajinkya Rahane": {
+    "fact": "375 runs · best 61",
+    "detail": "2011–2016 · 20 T20Is · Last played 2016",
+    "profile": "https://en.wikipedia.org/wiki/Ajinkya_Rahane",
+    "image": "images/ajinkya-rahane.webp"
+  },
+  "Vaibhav Sooryavanshi": {
+    "fact": "295 runs · best 81",
+    "detail": "2026 · 10 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Vaibhav_Sooryavanshi",
+    "image": "images/vaibhav-sooryavanshi.webp"
+  },
+  "Virat Kohli": {
+    "fact": "4,188 runs · best 122 not out",
+    "detail": "2010–2024 · 125 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "image": "images/virat-kohli.webp"
+  },
+  "Suryakumar Yadav": {
+    "fact": "3,272 runs · 4 T20I centuries",
+    "detail": "2021–2026 · 113 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Suryakumar_Yadav",
+    "image": "images/suryakumar-yadav.webp"
+  },
+  "Suresh Raina": {
+    "fact": "1,605 runs · best 101",
+    "detail": "2006–2018 · 78 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Suresh_Raina",
+    "image": "images/suresh-raina.webp"
+  },
+  "Tilak Varma": {
+    "fact": "1,894 runs · 2 T20I centuries",
+    "detail": "2023–2026 · 70 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Tilak_Varma",
+    "image": "images/tilak-varma.webp"
+  },
+  "Rinku Singh": {
+    "fact": "702 runs · best 69 not out",
+    "detail": "2023–2026 · 48 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Rinku_Singh_(cricketer)",
+    "image": "images/rinku-singh.webp"
+  },
+  "Shreyas Iyer": {
+    "fact": "1,820 runs · best 102 not out",
+    "detail": "2017–2026 · 77 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Shreyas_Iyer",
+    "image": "images/shreyas-iyer.webp"
+  },
+  "Manish Pandey": {
+    "fact": "709 runs · best 79 not out",
+    "detail": "2015–2020 · 39 T20Is · Last played 2020",
+    "profile": "https://en.wikipedia.org/wiki/Manish_Pandey",
+    "image": "images/manish-pandey.webp"
+  },
+  "Yuvraj Singh": {
+    "fact": "Hit six sixes in one over at the 2007 T20 World Cup",
+    "detail": "2007–2017 · 58 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Yuvraj_Singh",
+    "image": "images/yuvraj-singh.webp"
+  },
+  "Robin Uthappa": {
+    "fact": "249 runs · best 50",
+    "detail": "2007–2015 · 13 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Robin_Uthappa",
+    "image": "images/robin-uthappa.webp"
+  },
+  "Mahendra Singh Dhoni": {
+    "fact": "1,617 runs · 34 stumpings",
+    "detail": "2006–2019 · 98 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "image": "images/mahendra-singh-dhoni.webp"
+  },
+  "Dinesh Karthik": {
+    "fact": "686 runs · 8 stumpings",
+    "detail": "2006–2022 · 59 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Dinesh_Karthik",
+    "image": "images/dinesh-karthik.webp"
+  },
+  "Rishabh Pant": {
+    "fact": "1,209 runs · 11 stumpings",
+    "detail": "2017–2024 · 76 T20Is · Last played 2024",
+    "profile": "https://en.wikipedia.org/wiki/Rishabh_Pant",
+    "image": "images/rishabh-pant.webp"
+  },
+  "Sanju Samson": {
+    "fact": "1,842 runs · 7 stumpings",
+    "detail": "2015–2026 · 82 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Sanju_Samson",
+    "image": "images/sanju-samson.webp"
+  },
+  "Ishan Kishan": {
+    "fact": "2,016 runs · 5 stumpings",
+    "detail": "2021–2026 · 69 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Ishan_Kishan",
+    "image": "images/ishan-kishan.webp"
+  },
+  "Jitesh Sharma": {
+    "fact": "162 runs · 2 stumpings",
+    "detail": "2023–2025 · 16 T20Is · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Jitesh_Sharma",
+    "image": "images/jitesh-sharma.webp"
+  },
+  "Hardik Pandya": {
+    "fact": "2,289 runs · 114 wickets",
+    "detail": "2016–2026 · 138 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Hardik_Pandya",
+    "image": "images/hardik-pandya.webp"
+  },
+  "Ravindra Jadeja": {
+    "fact": "515 runs · 54 wickets",
+    "detail": "2009–2024 · 74 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "image": "images/ravindra-jadeja.webp"
+  },
+  "Axar Patel": {
+    "fact": "829 runs · 116 wickets",
+    "detail": "2015–2026 · 116 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Axar_Patel",
+    "image": "images/axar-patel.webp"
+  },
+  "Irfan Pathan": {
+    "fact": "172 runs · 28 wickets",
+    "detail": "2006–2012 · 24 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Irfan_Pathan",
+    "image": "images/irfan-pathan.webp"
+  },
+  "Yusuf Pathan": {
+    "fact": "236 runs · 13 wickets",
+    "detail": "2007–2012 · 22 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Yusuf_Pathan",
+    "image": "images/yusuf-pathan.webp"
+  },
+  "Shivam Dube": {
+    "fact": "1,178 runs · 40 wickets",
+    "detail": "2019–2026 · 82 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Shivam_Dube",
+    "image": "images/shivam-dube.webp"
+  },
+  "Krunal Pandya": {
+    "fact": "124 runs · 15 wickets",
+    "detail": "2018–2021 · 19 T20Is · Last played 2021",
+    "profile": "https://en.wikipedia.org/wiki/Krunal_Pandya",
+    "image": "images/krunal-pandya.webp"
+  },
+  "Deepak Hooda": {
+    "fact": "368 runs · 6 wickets",
+    "detail": "2022–2023 · 21 T20Is · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Deepak_Hooda",
+    "image": "images/deepak-hooda.webp"
+  },
+  "Jasprit Bumrah": {
+    "fact": "126 wickets · best 4 for 15",
+    "detail": "2016–2026 · 100 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "image": "images/jasprit-bumrah.webp"
+  },
+  "Bhuvneshwar Kumar": {
+    "fact": "91 wickets · best 5 for 4",
+    "detail": "2012–2026 · 92 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Bhuvneshwar_Kumar",
+    "image": "images/bhuvneshwar-kumar.webp"
+  },
+  "Mohammed Shami": {
+    "fact": "27 wickets · best 3 for 15",
+    "detail": "2014–2025 · 25 T20Is · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Mohammed_Shami",
+    "image": "images/mohammed-shami.webp"
+  },
+  "Arshdeep Singh": {
+    "fact": "151 wickets · first India men’s bowler to reach 150",
+    "detail": "2022–2026 · 104 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Arshdeep_Singh_(cricketer)",
+    "image": "images/arshdeep-singh.webp"
+  },
+  "Ashish Nehra": {
+    "fact": "34 wickets · best 3 for 19",
+    "detail": "2009–2017 · 27 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Ashish_Nehra",
+    "image": "images/ashish-nehra.webp"
+  },
+  "Deepak Chahar": {
+    "fact": "Took 6 for 7 against Bangladesh in Nagpur",
+    "detail": "2018–2023 · 25 T20Is · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Deepak_Chahar",
+    "image": "images/deepak-chahar.webp"
+  },
+  "Harshal Patel": {
+    "fact": "29 wickets · best 4 for 25",
+    "detail": "2021–2023 · 25 T20Is · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Harshal_Patel",
+    "image": "images/harshal-patel.webp"
+  },
+  "Mohammed Siraj": {
+    "fact": "17 wickets · best 4 for 17",
+    "detail": "2017–2026 · 17 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Mohammed_Siraj",
+    "image": "images/mohammed-siraj.webp"
+  },
+  "Zaheer Khan": {
+    "fact": "17 wickets · best 4 for 19",
+    "detail": "2006–2012 · 17 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Zaheer_Khan",
+    "image": "images/zaheer-khan.webp"
+  },
+  "Shardul Thakur": {
+    "fact": "33 wickets · best 4 for 27",
+    "detail": "2018–2022 · 25 T20Is · Last played 2022",
+    "profile": "https://en.wikipedia.org/wiki/Shardul_Thakur",
+    "image": "images/shardul-thakur.webp"
+  },
+  "Khaleel Ahmed": {
+    "fact": "16 wickets · best 2 for 27",
+    "detail": "2018–2024 · 18 T20Is · Last played 2024",
+    "profile": "https://en.wikipedia.org/wiki/Khaleel_Ahmed",
+    "image": "images/khaleel-ahmed.webp"
+  },
+  "Avesh Khan": {
+    "fact": "27 wickets · best 4 for 18",
+    "detail": "2022–2024 · 25 T20Is · Last played 2024",
+    "profile": "https://en.wikipedia.org/wiki/Avesh_Khan",
+    "image": "images/avesh-khan.webp"
+  },
+  "RP Singh": {
+    "fact": "15 wickets · best 4 for 13",
+    "detail": "2007–2009 · 10 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/R._P._Singh",
+    "image": "images/rp-singh.webp"
+  },
+  "S Sreesanth": {
+    "fact": "7 wickets · best 2 for 12",
+    "detail": "2006–2008 · 10 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/S._Sreesanth",
+    "image": "images/s-sreesanth.webp"
+  },
+  "Joginder Sharma": {
+    "fact": "4 wickets · best 2 for 20",
+    "detail": "2007 · 4 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Joginder_Sharma",
+    "image": "images/joginder-sharma.webp"
+  },
+  "Ravichandran Ashwin": {
+    "fact": "72 wickets · best 4 for 8",
+    "detail": "2010–2022 · 65 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Ravichandran_Ashwin",
+    "image": "images/ravichandran-ashwin.webp"
+  },
+  "Harbhajan Singh": {
+    "fact": "25 wickets · best 4 for 12",
+    "detail": "2006–2016 · 28 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Harbhajan_Singh",
+    "image": "images/harbhajan-singh.webp"
+  },
+  "Washington Sundar": {
+    "fact": "56 wickets · best 3 for 3",
+    "detail": "2017–2026 · 65 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Washington_Sundar",
+    "image": "images/washington-sundar.webp"
+  },
+  "Yuzvendra Chahal": {
+    "fact": "96 wickets · best 6 for 25",
+    "detail": "2016–2023 · 80 T20Is · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Yuzvendra_Chahal",
+    "image": "images/yuzvendra-chahal.webp"
+  },
+  "Ravi Bishnoi": {
+    "fact": "71 wickets · best 4 for 13",
+    "detail": "2022–2026 · 54 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Ravi_Bishnoi",
+    "image": "images/ravi-bishnoi.webp"
+  },
+  "Amit Mishra": {
+    "fact": "16 wickets · best 3 for 24",
+    "detail": "2010–2017 · 10 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Amit_Mishra",
+    "image": "images/amit-mishra.webp"
+  },
+  "Piyush Chawla": {
+    "fact": "4 wickets · best 2 for 13",
+    "detail": "2010–2012 · 7 T20Is · Retired from T20Is",
+    "profile": "https://en.wikipedia.org/wiki/Piyush_Chawla",
+    "image": "images/piyush-chawla.webp"
+  },
+  "Kuldeep Yadav": {
+    "fact": "98 wickets · best 5 for 17",
+    "detail": "2017–2026 · 56 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Kuldeep_Yadav",
+    "image": "images/kuldeep-yadav.webp"
+  },
+  "Varun Chakaravarthy": {
+    "fact": "76 wickets · best 5 for 17",
+    "detail": "2021–2026 · 50 T20Is · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Varun_Chakravarthy",
+    "image": "images/varun-chakaravarthy.webp"
+  }
+}

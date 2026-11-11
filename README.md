@@ -10,6 +10,10 @@ A card scores two points when correctly placed on its first move, one on its sec
 
 The project home links directly to Quick demo, the Singapore and soccer decks, and each cricket deck. Which Neighbourhood? has 30 Singapore landmarks across six neighbourhoods. Soccer - Premier League A has 50 players from 10 clubs. The four cricket decks contain 76 Test, 70 ODI, 58 T20I, and 99 IPL cards. The international decks cover India’s men’s team. The IPL deck includes Indian and overseas players. The Test deck includes selected players who debuted before the original 1971 cutoff. Each deck assigns one intended category per card. Use **Browse decks** to return to the project home and choose another deck.
 
+Share a deck using its short URL, such as [`tests.html`](tests.html) or [`singapore.html`](singapore.html). Each deck has a root-level `<deck-id>.html` page that opens it in the shared player.
+
+On decks with rewards, **Images** and **Facts** can be switched independently. Each control appears when the deck has that type of reward, and both default to on. The browser remembers each choice. The first correct placement reveals a reward above the board. A completed category opens Review on the first solve, and the full Review opens when all cards have been placed. Review shows card names when no reward is available or enabled. Misplaced cards appear under **To revisit**.
+
 ## Run locally
 
 Serve the extracted folder over HTTP so the page can load its JSON decks. From the folder containing `index.html`:
@@ -20,7 +24,7 @@ python3 -m http.server 8000
 
 Open [localhost:8000](http://localhost:8000/). The app and its data are static and have no third-party runtime dependencies.
 
-For a direct-open UI demo, generate one file and open it in a browser:
+For a direct-open text-only UI demo, generate one file and open it in a browser:
 
 ```sh
 python3 tools/build-demo.py ../constrained-sorting-demo.html
@@ -30,22 +34,28 @@ python3 tools/build-demo.py ../constrained-sorting-demo.html
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Project home with static links generated from the catalog |
+| `index.html` | Project home with static deck links and reward previews |
 | `play.html` | Game UI, scoring, interaction, and synthesized audio |
 | `decks.json` | Deck IDs, titles, descriptions, and directory sections |
 | `consort-mark.svg` | Sorting-card logo and browser icon |
 | `games/demo/deck.json` | Quick demo |
+| `games/game-animals-of-north-america/deck.json` | Four hunting-experience tiers |
+| `games/<deck>/rewards.json` | Optional facts and paths to external image files |
+| `games/<deck>/images/` | WebP illustrations used by that deck |
 | `games/singapore/deck.json` | Which Neighbourhood? Singapore landmarks |
 | `games/premier-league-a/deck.json` | Soccer - Premier League A |
 | `games/tests/deck.json`, `games/odi/deck.json`, `games/t20i/deck.json`, `games/ipl/deck.json` | Four cricket decks |
 | `tools/build-demo.py` | Generates the standalone demo from the app and demo JSON |
-| `tools/build-index.py` | Regenerates the deck links in the home page |
+| `tools/build-index.py` | Regenerates the deck links and previews in the home page |
 | `constrained-sorting-history.html` | Research background, design decisions, and technical checkpoints |
 | `constrained-sorting-first-release.jpg` | First-release screenshot displayed on the history page |
-| `constrained-sorting-tests.jpg` | India Tests screenshot displayed on the home page |
+| `constrained-sorting-tests.jpg` | Archived India Tests screenshot |
 | `constrained-sorting-git-diffs.zip` | Replayable prototype-to-release diffs and checksums |
 
 Each `deck.json` is an object whose keys are the category labels in display order. Each value is an array of unique card labels, written either as a single string or as a two-string name split for display. A card label belongs to one category per deck. Edit the relevant deck file to revise its answer key.
+
+To add rewards, give the catalog entry a `rewards` path such as `games/demo/rewards.json`. The file maps exact card labels to objects with optional `image`, `fact`, `detail` and `profile` fields. Image paths resolve relative to the reward file and point to assets served by this site. Profile links use HTTPS. Keep each deck’s images in its own `images/` folder. When two decks use the same portrait, each carries a copy so the deck folder can be moved or edited independently. Decks with no reward file use the same player. The older illustrated demo and wildlife URLs forward to the shared player. Set the catalog’s optional `preview` list to card names from that deck’s reward file. The home page shows the demo previews and the first preview for each other deck. Run `python3 tools/build-index.py` after changing the catalog or preview facts.
+
 
 ## Singapore deck sources
 

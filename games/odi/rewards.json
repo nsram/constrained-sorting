@@ -1,0 +1,422 @@
+{
+  "Sachin Tendulkar": {
+    "fact": "18,426 runs · first batter to score an ODI double century",
+    "detail": "1989–2012 · 463 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Sachin_Tendulkar",
+    "image": "images/sachin-tendulkar.webp"
+  },
+  "Sourav Ganguly": {
+    "fact": "11,221 runs · best 183",
+    "detail": "1992–2007 · 308 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Sourav_Ganguly",
+    "image": "images/sourav-ganguly.webp"
+  },
+  "Rohit Sharma": {
+    "fact": "264 against Sri Lanka · three ODI double centuries",
+    "detail": "2007–2026 · 293 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "image": "images/rohit-sharma.webp"
+  },
+  "Shikhar Dhawan": {
+    "fact": "6,793 runs · best 143",
+    "detail": "2010–2022 · 167 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Shikhar_Dhawan",
+    "image": "images/shikhar-dhawan.webp"
+  },
+  "Virender Sehwag": {
+    "fact": "7,995 runs · best 219",
+    "detail": "1999–2013 · 241 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Virender_Sehwag",
+    "image": "images/virender-sehwag.webp"
+  },
+  "Gautam Gambhir": {
+    "fact": "Made 97 in the 2011 World Cup final",
+    "detail": "2003–2013 · 147 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Gautam_Gambhir",
+    "image": "images/gautam-gambhir.webp"
+  },
+  "Sunil Gavaskar": {
+    "fact": "3,092 runs · best 103 not out",
+    "detail": "1974–1987 · 108 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Sunil_Gavaskar",
+    "image": "images/sunil-gavaskar.webp"
+  },
+  "Kris Srikkanth": {
+    "fact": "4,091 runs · best 123",
+    "detail": "1981–1992 · 146 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Krishnamachari_Srikkanth",
+    "image": "images/kris-srikkanth.webp"
+  },
+  "Shubman Gill": {
+    "fact": "3,750 runs · best 223 not out",
+    "detail": "2019–2026 · 72 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Shubman_Gill",
+    "image": "images/shubman-gill.webp"
+  },
+  "Navjot Singh Sidhu": {
+    "fact": "4,413 runs · best 134 not out",
+    "detail": "1987–1998 · 136 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Navjot_Singh_Sidhu",
+    "image": "images/navjot-singh-sidhu.webp"
+  },
+  "Virat Kohli": {
+    "fact": "15,190 runs · fastest to reach 15,000 ODI runs",
+    "detail": "2008–2026 · 319 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "image": "images/virat-kohli.webp"
+  },
+  "Mohammad Azharuddin": {
+    "fact": "9,378 runs · best 153 not out",
+    "detail": "1985–2000 · 334 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Mohammad_Azharuddin",
+    "image": "images/mohammad-azharuddin.webp"
+  },
+  "Rahul Dravid": {
+    "fact": "10,768 runs · best 153",
+    "detail": "1996–2011 · 340 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Rahul_Dravid",
+    "image": "images/rahul-dravid.webp"
+  },
+  "Suresh Raina": {
+    "fact": "5,615 runs · best 116 not out",
+    "detail": "2005–2018 · 226 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Suresh_Raina",
+    "image": "images/suresh-raina.webp"
+  },
+  "Shreyas Iyer": {
+    "fact": "3,181 runs · best 128 not out",
+    "detail": "2017–2026 · 84 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Shreyas_Iyer",
+    "image": "images/shreyas-iyer.webp"
+  },
+  "Mohammad Kaif": {
+    "fact": "2,753 runs · best 111 not out",
+    "detail": "2002–2006 · 125 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Mohammad_Kaif",
+    "image": "images/mohammad-kaif.webp"
+  },
+  "Ajay Jadeja": {
+    "fact": "5,359 runs · best 119",
+    "detail": "1992–2000 · 196 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Ajay_Jadeja",
+    "image": "images/ajay-jadeja.webp"
+  },
+  "Ambati Rayudu": {
+    "fact": "1,694 runs · best 124 not out",
+    "detail": "2013–2019 · 55 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Ambati_Rayudu",
+    "image": "images/ambati-rayudu.webp"
+  },
+  "Vinod Kambli": {
+    "fact": "2,477 runs · best 106",
+    "detail": "1991–2000 · 104 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Vinod_Kambli",
+    "image": "images/vinod-kambli.webp"
+  },
+  "VVS Laxman": {
+    "fact": "2,338 runs · best 131",
+    "detail": "1998–2006 · 86 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/V._V._S._Laxman",
+    "image": "images/vvs-laxman.webp"
+  },
+  "Mahendra Singh Dhoni": {
+    "fact": "10,599 runs for India · 91 not out in the 2011 World Cup final",
+    "detail": "2004–2019 · 347 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "image": "images/mahendra-singh-dhoni.webp"
+  },
+  "Nayan Mongia": {
+    "fact": "1,272 runs · 44 stumpings",
+    "detail": "1994–2000 · 140 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Nayan_Mongia",
+    "image": "images/nayan-mongia.webp"
+  },
+  "Syed Kirmani": {
+    "fact": "373 runs · 9 stumpings",
+    "detail": "1976–1986 · 49 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Syed_Kirmani",
+    "image": "images/syed-kirmani.webp"
+  },
+  "Kiran More": {
+    "fact": "563 runs · 27 stumpings",
+    "detail": "1984–1993 · 94 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Kiran_More",
+    "image": "images/kiran-more.webp"
+  },
+  "Dinesh Karthik": {
+    "fact": "1,752 runs · 7 stumpings",
+    "detail": "2004–2019 · 94 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Dinesh_Karthik",
+    "image": "images/dinesh-karthik.webp"
+  },
+  "Rishabh Pant": {
+    "fact": "871 runs · 1 stumpings",
+    "detail": "2018–2024 · 31 ODIs · Last played 2024",
+    "profile": "https://en.wikipedia.org/wiki/Rishabh_Pant",
+    "image": "images/rishabh-pant.webp"
+  },
+  "Parthiv Patel": {
+    "fact": "736 runs · 9 stumpings",
+    "detail": "2003–2012 · 38 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Parthiv_Patel",
+    "image": "images/parthiv-patel.webp"
+  },
+  "Lokesh Rahul": {
+    "fact": "3,570 runs · 9 stumpings",
+    "detail": "2016–2026 · 103 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/KL_Rahul",
+    "image": "images/lokesh-rahul.webp"
+  },
+  "Ishan Kishan": {
+    "fact": "1,107 runs · 2 stumpings",
+    "detail": "2021–2026 · 32 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Ishan_Kishan",
+    "image": "images/ishan-kishan.webp"
+  },
+  "Kapil Dev": {
+    "fact": "3,783 runs · 253 wickets",
+    "detail": "1978–1994 · 225 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Kapil_Dev",
+    "image": "images/kapil-dev.webp"
+  },
+  "Ravindra Jadeja": {
+    "fact": "2,905 runs · 234 wickets",
+    "detail": "2009–2026 · 212 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "image": "images/ravindra-jadeja.webp"
+  },
+  "Hardik Pandya": {
+    "fact": "1,904 runs · 91 wickets",
+    "detail": "2016–2025 · 94 ODIs · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Hardik_Pandya",
+    "image": "images/hardik-pandya.webp"
+  },
+  "Axar Patel": {
+    "fact": "918 runs · 82 wickets",
+    "detail": "2014–2026 · 76 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Axar_Patel",
+    "image": "images/axar-patel.webp"
+  },
+  "Irfan Pathan": {
+    "fact": "1,544 runs · 173 wickets",
+    "detail": "2004–2012 · 120 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Irfan_Pathan",
+    "image": "images/irfan-pathan.webp"
+  },
+  "Ravi Shastri": {
+    "fact": "3,108 runs · 129 wickets",
+    "detail": "1981–1992 · 150 ODIs · Retired",
+    "profile": "https://en.wikipedia.org/wiki/Ravi_Shastri",
+    "image": "images/ravi-shastri.webp"
+  },
+  "Yusuf Pathan": {
+    "fact": "810 runs · 33 wickets",
+    "detail": "2008–2012 · 57 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Yusuf_Pathan",
+    "image": "images/yusuf-pathan.webp"
+  },
+  "Roger Binny": {
+    "fact": "629 runs · 77 wickets",
+    "detail": "1980–1987 · 72 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Roger_Binny",
+    "image": "images/roger-binny.webp"
+  },
+  "Yuvraj Singh": {
+    "fact": "8,609 runs · 110 wickets",
+    "detail": "2000–2017 · 301 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Yuvraj_Singh",
+    "image": "images/yuvraj-singh.webp"
+  },
+  "Manoj Prabhakar": {
+    "fact": "1,858 runs · 157 wickets",
+    "detail": "1984–1996 · 130 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Manoj_Prabhakar",
+    "image": "images/manoj-prabhakar.webp"
+  },
+  "Madan Lal": {
+    "fact": "401 runs · 73 wickets",
+    "detail": "1974–1987 · 67 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Madan_Lal",
+    "image": "images/madan-lal.webp"
+  },
+  "Mohinder Amarnath": {
+    "fact": "1,924 runs · 46 wickets",
+    "detail": "1975–1989 · 85 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Mohinder_Amarnath",
+    "image": "images/mohinder-amarnath.webp"
+  },
+  "Robin Singh": {
+    "fact": "2,336 runs · 69 wickets",
+    "detail": "1989–2001 · 136 ODIs · Retired",
+    "profile": "https://en.wikipedia.org/wiki/Robin_Singh_(cricketer,_born_1963)",
+    "image": "images/robin-singh.webp"
+  },
+  "Jasprit Bumrah": {
+    "fact": "151 wickets · best 6 for 19",
+    "detail": "2016–2026 · 91 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "image": "images/jasprit-bumrah.webp"
+  },
+  "Mohammed Shami": {
+    "fact": "206 wickets · best 7 for 57",
+    "detail": "2013–2025 · 108 ODIs · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Mohammed_Shami",
+    "image": "images/mohammed-shami.webp"
+  },
+  "Zaheer Khan": {
+    "fact": "269 wickets · best 5 for 42",
+    "detail": "2000–2012 · 194 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Zaheer_Khan",
+    "image": "images/zaheer-khan.webp"
+  },
+  "Javagal Srinath": {
+    "fact": "315 wickets · best 5 for 23",
+    "detail": "1991–2003 · 229 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Javagal_Srinath",
+    "image": "images/javagal-srinath.webp"
+  },
+  "Venkatesh Prasad": {
+    "fact": "196 wickets · best 5 for 27",
+    "detail": "1994–2001 · 161 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Venkatesh_Prasad",
+    "image": "images/venkatesh-prasad.webp"
+  },
+  "Ajit Agarkar": {
+    "fact": "288 wickets · best 6 for 42",
+    "detail": "1998–2007 · 191 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Ajit_Agarkar",
+    "image": "images/ajit-agarkar.webp"
+  },
+  "Bhuvneshwar Kumar": {
+    "fact": "141 wickets · best 5 for 42",
+    "detail": "2012–2022 · 121 ODIs · Last played 2022",
+    "profile": "https://en.wikipedia.org/wiki/Bhuvneshwar_Kumar",
+    "image": "images/bhuvneshwar-kumar.webp"
+  },
+  "Mohammed Siraj": {
+    "fact": "77 wickets · best 6 for 21",
+    "detail": "2019–2026 · 51 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Mohammed_Siraj",
+    "image": "images/mohammed-siraj.webp"
+  },
+  "Ashish Nehra": {
+    "fact": "155 wickets · best 6 for 23",
+    "detail": "2001–2011 · 117 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Ashish_Nehra",
+    "image": "images/ashish-nehra.webp"
+  },
+  "Ishant Sharma": {
+    "fact": "115 wickets · best 4 for 34",
+    "detail": "2007–2016 · 80 ODIs · Last played 2016",
+    "profile": "https://en.wikipedia.org/wiki/Ishant_Sharma",
+    "image": "images/ishant-sharma.webp"
+  },
+  "Umesh Yadav": {
+    "fact": "106 wickets · best 4 for 31",
+    "detail": "2010–2018 · 75 ODIs · Last played 2018",
+    "profile": "https://en.wikipedia.org/wiki/Umesh_Yadav",
+    "image": "images/umesh-yadav.webp"
+  },
+  "Praveen Kumar": {
+    "fact": "77 wickets · best 4 for 31",
+    "detail": "2007–2012 · 68 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Praveen_Kumar_(cricketer)",
+    "image": "images/praveen-kumar.webp"
+  },
+  "Chetan Sharma": {
+    "fact": "Took the first World Cup hat-trick in 1987",
+    "detail": "1983–1994 · 65 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Chetan_Sharma",
+    "image": "images/chetan-sharma.webp"
+  },
+  "Munaf Patel": {
+    "fact": "86 wickets · best 4 for 29",
+    "detail": "2006–2011 · 70 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Munaf_Patel",
+    "image": "images/munaf-patel.webp"
+  },
+  "Ravichandran Ashwin": {
+    "fact": "156 wickets · best 4 for 25",
+    "detail": "2010–2023 · 116 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Ravichandran_Ashwin",
+    "image": "images/ravichandran-ashwin.webp"
+  },
+  "Harbhajan Singh": {
+    "fact": "265 wickets · best 5 for 31",
+    "detail": "1998–2015 · 234 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Harbhajan_Singh",
+    "image": "images/harbhajan-singh.webp"
+  },
+  "Rajesh Chauhan": {
+    "fact": "29 wickets · best 3 for 29",
+    "detail": "1993–1997 · 35 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Rajesh_Chauhan",
+    "image": "images/rajesh-chauhan.webp"
+  },
+  "Ramesh Powar": {
+    "fact": "34 wickets · best 3 for 24",
+    "detail": "2004–2007 · 31 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Ramesh_Powar",
+    "image": "images/ramesh-powar.webp"
+  },
+  "Nikhil Chopra": {
+    "fact": "46 wickets · best 5 for 21",
+    "detail": "1998–2000 · 39 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Nikhil_Chopra",
+    "image": "images/nikhil-chopra.webp"
+  },
+  "Arshad Ayub": {
+    "fact": "31 wickets · best 5 for 21",
+    "detail": "1987–1990 · 32 ODIs · Retired",
+    "profile": "https://en.wikipedia.org/wiki/Arshad_Ayub",
+    "image": "images/arshad-ayub.webp"
+  },
+  "Anil Kumble": {
+    "fact": "334 wickets · best 6 for 12",
+    "detail": "1990–2007 · 269 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Anil_Kumble",
+    "image": "images/anil-kumble.webp"
+  },
+  "Yuzvendra Chahal": {
+    "fact": "121 wickets · best 6 for 42",
+    "detail": "2016–2023 · 72 ODIs · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Yuzvendra_Chahal",
+    "image": "images/yuzvendra-chahal.webp"
+  },
+  "Amit Mishra": {
+    "fact": "64 wickets · best 6 for 48",
+    "detail": "2003–2016 · 36 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Amit_Mishra",
+    "image": "images/amit-mishra.webp"
+  },
+  "Piyush Chawla": {
+    "fact": "32 wickets · best 4 for 23",
+    "detail": "2007–2011 · 25 ODIs · Retired from ODIs",
+    "profile": "https://en.wikipedia.org/wiki/Piyush_Chawla",
+    "image": "images/piyush-chawla.webp"
+  },
+  "Narendra Hirwani": {
+    "fact": "23 wickets · best 4 for 43",
+    "detail": "1988–1992 · 18 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Narendra_Hirwani",
+    "image": "images/narendra-hirwani.webp"
+  },
+  "Laxman Sivaramakrishnan": {
+    "fact": "15 wickets · best 3 for 35",
+    "detail": "1985–1987 · 16 ODIs · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Laxman_Sivaramakrishnan",
+    "image": "images/laxman-sivaramakrishnan.webp"
+  },
+  "Kuldeep Yadav": {
+    "fact": "201 wickets · best 6 for 25",
+    "detail": "2017–2026 · 124 ODIs · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Kuldeep_Yadav",
+    "image": "images/kuldeep-yadav.webp"
+  },
+  "Varun Chakaravarthy": {
+    "fact": "10 wickets · best 5 for 42",
+    "detail": "2025 · 4 ODIs · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Varun_Chakravarthy",
+    "image": "images/varun-chakaravarthy.webp"
+  }
+}

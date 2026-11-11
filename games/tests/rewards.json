@@ -1,0 +1,458 @@
+{
+  "Sunil Gavaskar": {
+    "fact": "10,122 runs · 34 centuries",
+    "detail": "1971–1987 · 125 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Sunil_Gavaskar",
+    "image": "images/sunil-gavaskar.webp"
+  },
+  "Virender Sehwag": {
+    "fact": "8,503 runs · 23 centuries",
+    "detail": "2001–2013 · 103 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Virender_Sehwag",
+    "image": "images/virender-sehwag.webp"
+  },
+  "Gautam Gambhir": {
+    "fact": "4,154 runs · 9 centuries",
+    "detail": "2004–2016 · 58 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Gautam_Gambhir",
+    "image": "images/gautam-gambhir.webp"
+  },
+  "Rohit Sharma": {
+    "fact": "4,301 runs · 12 centuries",
+    "detail": "2013–2024 · 67 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Rohit_Sharma",
+    "image": "images/rohit-sharma.webp"
+  },
+  "Shikhar Dhawan": {
+    "fact": "2,315 runs · 7 centuries",
+    "detail": "2013–2018 · 34 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Shikhar_Dhawan",
+    "image": "images/shikhar-dhawan.webp"
+  },
+  "Murali Vijay": {
+    "fact": "3,982 runs · 12 centuries",
+    "detail": "2008–2018 · 61 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Murali_Vijay",
+    "image": "images/murali-vijay.webp"
+  },
+  "Navjot Singh Sidhu": {
+    "fact": "3,202 runs · 9 centuries",
+    "detail": "1983–1999 · 51 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Navjot_Singh_Sidhu",
+    "image": "images/navjot-singh-sidhu.webp"
+  },
+  "Wasim Jaffer": {
+    "fact": "1,944 runs · 5 centuries",
+    "detail": "2000–2008 · 31 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Wasim_Jaffer",
+    "image": "images/wasim-jaffer.webp"
+  },
+  "Anshuman Gaekwad": {
+    "fact": "1,985 runs · best 201",
+    "detail": "1974–1985 · 40 Tests · Died 2024",
+    "profile": "https://en.wikipedia.org/wiki/Anshuman_Gaekwad",
+    "image": "images/anshuman-gaekwad.webp"
+  },
+  "Lokesh Rahul": {
+    "fact": "4,288 runs · 12 centuries",
+    "detail": "2014–2026 · 70 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/KL_Rahul",
+    "image": "images/lokesh-rahul.webp"
+  },
+  "Yashasvi Jaiswal": {
+    "fact": "2,612 runs · 7 centuries",
+    "detail": "2023–2026 · 31 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Yashasvi_Jaiswal",
+    "image": "images/yashasvi-jaiswal.webp"
+  },
+  "Kris Srikkanth": {
+    "fact": "2,062 runs · best 123",
+    "detail": "1981–1992 · 43 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Krishnamachari_Srikkanth",
+    "image": "images/kris-srikkanth.webp"
+  },
+  "Mayank Agarwal": {
+    "fact": "1,488 runs · 4 centuries",
+    "detail": "2018–2022 · 21 Tests · Last played 2022",
+    "profile": "https://en.wikipedia.org/wiki/Mayank_Agarwal",
+    "image": "images/mayank-agarwal.webp"
+  },
+  "Sachin Tendulkar": {
+    "fact": "15,921 runs · 51 centuries",
+    "detail": "1989–2013 · 200 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Sachin_Tendulkar",
+    "image": "images/sachin-tendulkar.webp"
+  },
+  "Rahul Dravid": {
+    "fact": "13,265 runs · 36 centuries",
+    "detail": "1996–2012 · 163 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Rahul_Dravid",
+    "image": "images/rahul-dravid.webp"
+  },
+  "Virat Kohli": {
+    "fact": "9,230 runs · 30 centuries",
+    "detail": "2011–2025 · 123 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Virat_Kohli",
+    "image": "images/virat-kohli.webp"
+  },
+  "Mohammad Azharuddin": {
+    "fact": "6,215 runs · 22 centuries",
+    "detail": "1985–2000 · 99 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Mohammad_Azharuddin",
+    "image": "images/mohammad-azharuddin.webp"
+  },
+  "Dilip Vengsarkar": {
+    "fact": "6,868 runs · 17 centuries",
+    "detail": "1976–1992 · 116 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Dilip_Vengsarkar",
+    "image": "images/dilip-vengsarkar.webp"
+  },
+  "Cheteshwar Pujara": {
+    "fact": "7,195 runs · 19 centuries",
+    "detail": "2010–2023 · 103 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Cheteshwar_Pujara",
+    "image": "images/cheteshwar-pujara.webp"
+  },
+  "Ajinkya Rahane": {
+    "fact": "5,077 runs · 12 centuries",
+    "detail": "2013–2023 · 85 Tests · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Ajinkya_Rahane",
+    "image": "images/ajinkya-rahane.webp"
+  },
+  "Sourav Ganguly": {
+    "fact": "7,212 runs · 16 centuries",
+    "detail": "1996–2008 · 113 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Sourav_Ganguly",
+    "image": "images/sourav-ganguly.webp"
+  },
+  "VVS Laxman": {
+    "fact": "8,781 runs · 17 centuries",
+    "detail": "1996–2012 · 134 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/V._V._S._Laxman",
+    "image": "images/vvs-laxman.webp"
+  },
+  "Sanjay Manjrekar": {
+    "fact": "2,043 runs · 4 centuries",
+    "detail": "1987–1996 · 37 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Sanjay_Manjrekar",
+    "image": "images/sanjay-manjrekar.webp"
+  },
+  "Gundappa Viswanath": {
+    "fact": "6,080 runs · 14 centuries",
+    "detail": "1969–1983 · 91 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Gundappa_Viswanath",
+    "image": "images/gundappa-viswanath.webp"
+  },
+  "Mohinder Amarnath": {
+    "fact": "4,378 runs · 11 centuries",
+    "detail": "1969–1988 · 69 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Mohinder_Amarnath",
+    "image": "images/mohinder-amarnath.webp"
+  },
+  "Ajit Wadekar": {
+    "fact": "2,113 runs · best 143",
+    "detail": "1966–1974 · 37 Tests · Died 2018",
+    "profile": "https://en.wikipedia.org/wiki/Ajit_Wadekar",
+    "image": "images/ajit-wadekar.webp"
+  },
+  "MAK Pataudi": {
+    "fact": "2,793 runs · 6 centuries",
+    "detail": "1961–1975 · 46 Tests · Died 2011",
+    "profile": "https://en.wikipedia.org/wiki/Mansoor_Ali_Khan_Pataudi",
+    "image": "images/mak-pataudi.webp"
+  },
+  "Shubman Gill": {
+    "fact": "269 at Edgbaston · 430 runs across both innings",
+    "detail": "2020–2026 · 43 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Shubman_Gill",
+    "image": "images/shubman-gill.webp"
+  },
+  "Yuvraj Singh": {
+    "fact": "1,900 runs · 3 centuries",
+    "detail": "2003–2012 · 40 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Yuvraj_Singh",
+    "image": "images/yuvraj-singh.webp"
+  },
+  "Sandeep Patil": {
+    "fact": "1,588 runs · 4 centuries",
+    "detail": "1980–1984 · 29 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Sandeep_Patil",
+    "image": "images/sandeep-patil.webp"
+  },
+  "Mahendra Singh Dhoni": {
+    "fact": "4,876 runs · 38 stumpings",
+    "detail": "2005–2014 · 90 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/MS_Dhoni",
+    "image": "images/mahendra-singh-dhoni.webp"
+  },
+  "Rishabh Pant": {
+    "fact": "3,725 runs · 18 stumpings",
+    "detail": "2018–2026 · 52 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Rishabh_Pant",
+    "image": "images/rishabh-pant.webp"
+  },
+  "Wriddhiman Saha": {
+    "fact": "1,353 runs · 12 stumpings",
+    "detail": "2010–2021 · 40 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Wriddhiman_Saha",
+    "image": "images/wriddhiman-saha.webp"
+  },
+  "Syed Kirmani": {
+    "fact": "2,759 runs · 38 stumpings",
+    "detail": "1976–1986 · 88 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Syed_Kirmani",
+    "image": "images/syed-kirmani.webp"
+  },
+  "Nayan Mongia": {
+    "fact": "1,442 runs · 8 stumpings",
+    "detail": "1994–2001 · 44 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Nayan_Mongia",
+    "image": "images/nayan-mongia.webp"
+  },
+  "Kiran More": {
+    "fact": "1,285 runs · 20 stumpings",
+    "detail": "1986–1993 · 49 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Kiran_More",
+    "image": "images/kiran-more.webp"
+  },
+  "Dinesh Karthik": {
+    "fact": "1,025 runs · 6 stumpings",
+    "detail": "2004–2018 · 26 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Dinesh_Karthik",
+    "image": "images/dinesh-karthik.webp"
+  },
+  "Parthiv Patel": {
+    "fact": "934 runs · 10 stumpings",
+    "detail": "2002–2018 · 25 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Parthiv_Patel",
+    "image": "images/parthiv-patel.webp"
+  },
+  "Kapil Dev": {
+    "fact": "5,248 runs · 434 wickets",
+    "detail": "1978–1994 · 131 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Kapil_Dev",
+    "image": "images/kapil-dev.webp"
+  },
+  "Ravindra Jadeja": {
+    "fact": "4,160 runs · 356 wickets",
+    "detail": "2012–2026 · 91 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Ravindra_Jadeja",
+    "image": "images/ravindra-jadeja.webp"
+  },
+  "Axar Patel": {
+    "fact": "688 runs · 57 wickets",
+    "detail": "2021–2025 · 15 Tests · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Axar_Patel",
+    "image": "images/axar-patel.webp"
+  },
+  "Ravi Shastri": {
+    "fact": "3,830 runs · 151 wickets",
+    "detail": "1981–1992 · 80 Tests · Retired",
+    "profile": "https://en.wikipedia.org/wiki/Ravi_Shastri",
+    "image": "images/ravi-shastri.webp"
+  },
+  "Roger Binny": {
+    "fact": "830 runs · 47 wickets",
+    "detail": "1979–1987 · 27 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Roger_Binny",
+    "image": "images/roger-binny.webp"
+  },
+  "Irfan Pathan": {
+    "fact": "1,105 runs · 100 wickets",
+    "detail": "2003–2008 · 29 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Irfan_Pathan",
+    "image": "images/irfan-pathan.webp"
+  },
+  "Washington Sundar": {
+    "fact": "937 runs · 41 wickets",
+    "detail": "2021–2026 · 18 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Washington_Sundar",
+    "image": "images/washington-sundar.webp"
+  },
+  "Jayant Yadav": {
+    "fact": "248 runs · 16 wickets",
+    "detail": "2016–2022 · 6 Tests · Last played 2022",
+    "profile": "https://en.wikipedia.org/wiki/Jayant_Yadav",
+    "image": "images/jayant-yadav.webp"
+  },
+  "Manoj Prabhakar": {
+    "fact": "1,600 runs · 96 wickets",
+    "detail": "1984–1995 · 39 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Manoj_Prabhakar",
+    "image": "images/manoj-prabhakar.webp"
+  },
+  "Madan Lal": {
+    "fact": "1,042 runs · 71 wickets",
+    "detail": "1974–1986 · 39 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Madan_Lal",
+    "image": "images/madan-lal.webp"
+  },
+  "Jasprit Bumrah": {
+    "fact": "234 wickets · best 6 for 27",
+    "detail": "2018–2025 · 52 Tests · Last played 2025",
+    "profile": "https://en.wikipedia.org/wiki/Jasprit_Bumrah",
+    "image": "images/jasprit-bumrah.webp"
+  },
+  "Mohammed Shami": {
+    "fact": "229 wickets · best 6 for 56",
+    "detail": "2013–2023 · 64 Tests · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Mohammed_Shami",
+    "image": "images/mohammed-shami.webp"
+  },
+  "Zaheer Khan": {
+    "fact": "311 wickets · best 7 for 87",
+    "detail": "2000–2014 · 92 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Zaheer_Khan",
+    "image": "images/zaheer-khan.webp"
+  },
+  "Javagal Srinath": {
+    "fact": "236 wickets · best 8 for 86",
+    "detail": "1991–2002 · 67 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Javagal_Srinath",
+    "image": "images/javagal-srinath.webp"
+  },
+  "Ishant Sharma": {
+    "fact": "311 wickets · best 7 for 74",
+    "detail": "2007–2021 · 105 Tests · Last played 2021",
+    "profile": "https://en.wikipedia.org/wiki/Ishant_Sharma",
+    "image": "images/ishant-sharma.webp"
+  },
+  "Umesh Yadav": {
+    "fact": "170 wickets · best 6 for 88",
+    "detail": "2011–2023 · 57 Tests · Last played 2023",
+    "profile": "https://en.wikipedia.org/wiki/Umesh_Yadav",
+    "image": "images/umesh-yadav.webp"
+  },
+  "Bhuvneshwar Kumar": {
+    "fact": "63 wickets · best 6 for 82",
+    "detail": "2013–2018 · 21 Tests · Last played 2018",
+    "profile": "https://en.wikipedia.org/wiki/Bhuvneshwar_Kumar",
+    "image": "images/bhuvneshwar-kumar.webp"
+  },
+  "Venkatesh Prasad": {
+    "fact": "96 wickets · best 6 for 33",
+    "detail": "1996–2001 · 33 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Venkatesh_Prasad",
+    "image": "images/venkatesh-prasad.webp"
+  },
+  "Mohammed Siraj": {
+    "fact": "144 wickets · best 6 for 15",
+    "detail": "2020–2026 · 48 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Mohammed_Siraj",
+    "image": "images/mohammed-siraj.webp"
+  },
+  "Ashish Nehra": {
+    "fact": "44 wickets · best 4 for 72",
+    "detail": "1999–2004 · 17 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Ashish_Nehra",
+    "image": "images/ashish-nehra.webp"
+  },
+  "Ajit Agarkar": {
+    "fact": "58 wickets · best 6 for 41",
+    "detail": "1998–2006 · 26 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Ajit_Agarkar",
+    "image": "images/ajit-agarkar.webp"
+  },
+  "Chetan Sharma": {
+    "fact": "61 wickets · best 6 for 58",
+    "detail": "1984–1989 · 23 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Chetan_Sharma",
+    "image": "images/chetan-sharma.webp"
+  },
+  "Karsan Ghavri": {
+    "fact": "109 wickets · best 5 for 33",
+    "detail": "1975–1981 · 39 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Karsan_Ghavri",
+    "image": "images/karsan-ghavri.webp"
+  },
+  "Ravichandran Ashwin": {
+    "fact": "537 wickets · best 7 for 59",
+    "detail": "2011–2024 · 106 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Ravichandran_Ashwin",
+    "image": "images/ravichandran-ashwin.webp"
+  },
+  "Harbhajan Singh": {
+    "fact": "417 wickets · best 8 for 84",
+    "detail": "1998–2015 · 103 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Harbhajan_Singh",
+    "image": "images/harbhajan-singh.webp"
+  },
+  "Shivlal Yadav": {
+    "fact": "102 wickets · best 5 for 76",
+    "detail": "1979–1987 · 35 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Shivlal_Yadav",
+    "image": "images/shivlal-yadav.webp"
+  },
+  "Rajesh Chauhan": {
+    "fact": "47 wickets · best 4 for 48",
+    "detail": "1993–1998 · 21 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Rajesh_Chauhan",
+    "image": "images/rajesh-chauhan.webp"
+  },
+  "Arshad Ayub": {
+    "fact": "41 wickets · best 5 for 50",
+    "detail": "1987–1989 · 13 Tests · Retired",
+    "profile": "https://en.wikipedia.org/wiki/Arshad_Ayub",
+    "image": "images/arshad-ayub.webp"
+  },
+  "Erapalli Prasanna": {
+    "fact": "189 wickets · best 8 for 76",
+    "detail": "1962–1978 · 49 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/E._A._S._Prasanna",
+    "image": "images/erapalli-prasanna.webp"
+  },
+  "Srinivas Venkataraghavan": {
+    "fact": "156 wickets · best 8 for 72",
+    "detail": "1965–1983 · 57 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Srinivasaraghavan_Venkataraghavan",
+    "image": "images/srinivas-venkataraghavan.webp"
+  },
+  "Bishan Singh Bedi": {
+    "fact": "266 wickets · 14 five-wicket innings",
+    "detail": "1966–1979 · 67 Tests · Died 2023",
+    "profile": "https://en.wikipedia.org/wiki/Bishan_Singh_Bedi",
+    "image": "images/bishan-singh-bedi.webp"
+  },
+  "Venkatapathy Raju": {
+    "fact": "93 wickets · best 6 for 12",
+    "detail": "1990–2001 · 28 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Venkatapathy_Raju",
+    "image": "images/venkatapathy-raju.webp"
+  },
+  "Anil Kumble": {
+    "fact": "619 wickets · took all 10 in an innings against Pakistan",
+    "detail": "1990–2008 · 132 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Anil_Kumble",
+    "image": "images/anil-kumble.webp"
+  },
+  "Narendra Hirwani": {
+    "fact": "Took 16 wickets on Test debut against West Indies",
+    "detail": "1988–1996 · 17 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Narendra_Hirwani",
+    "image": "images/narendra-hirwani.webp"
+  },
+  "Laxman Sivaramakrishnan": {
+    "fact": "26 wickets · best 6 for 64",
+    "detail": "1983–1986 · 9 Tests · Former player",
+    "profile": "https://en.wikipedia.org/wiki/Laxman_Sivaramakrishnan",
+    "image": "images/laxman-sivaramakrishnan.webp"
+  },
+  "Amit Mishra": {
+    "fact": "76 wickets · best 5 for 71",
+    "detail": "2008–2016 · 22 Tests · Retired from Tests",
+    "profile": "https://en.wikipedia.org/wiki/Amit_Mishra",
+    "image": "images/amit-mishra.webp"
+  },
+  "Bhagwat Chandrasekhar": {
+    "fact": "242 wickets · best 8 for 79",
+    "detail": "1964–1979 · 58 Tests · Retired",
+    "profile": "https://en.wikipedia.org/wiki/B._S._Chandrasekhar",
+    "image": "images/bhagwat-chandrasekhar.webp"
+  },
+  "Kuldeep Yadav": {
+    "fact": "80 wickets · best 5 for 40",
+    "detail": "2017–2026 · 19 Tests · Played in 2026",
+    "profile": "https://en.wikipedia.org/wiki/Kuldeep_Yadav",
+    "image": "images/kuldeep-yadav.webp"
+  }
+}

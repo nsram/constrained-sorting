@@ -367,6 +367,44 @@
       .play-field { row-gap: 6px; padding-top: 6px; }
       .wide-card-board #tray-cards { row-gap: 4px; }
     }
+    .reward-controls { display: flex; flex-wrap: wrap; gap: 4px; }
+    .rewards-toggle { padding: 5px 8px; font-size: .78rem; }
+    .rewards-toggle[aria-pressed="true"] { background: #e8eee4; }
+    .category-description { color: #d5e0d7; font-size: .68rem; line-height: 1.3; }
+    .wildlife-board .category {
+      width: max(9rem, calc(var(--card-count) * var(--card-width) + 6px));
+    }
+    .reward-card { display: flex; align-items: center; gap: 8px; min-height: 60px; font-size: .85rem; }
+    .reward-card img { flex: none; border-radius: 6px; }
+    .reward-card:not(.has-preview) .reward-zoom-label { display: none; }
+    .reward-detail { font-size: .78rem; }
+    .reward-preview { display: none; }
+    @media (hover: hover) {
+      #reward-peek:not([hidden]) { display: flex; align-items: center; gap: 16px; }
+      #reward-peek .reward-card { min-width: 0; }
+      #reward-peek .has-preview { cursor: zoom-in; }
+      #reward-peek .has-preview .reward-caption::after {
+        content: "";
+        display: inline-block;
+        width: .9em;
+        height: .9em;
+        margin-inline-start: 4px;
+        vertical-align: super;
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23173831' stroke-width='1.5' stroke-linecap='round'%3E%3Ccircle cx='7' cy='7' r='3.5'/%3E%3Cpath d='m9.5 9.5 3 3'/%3E%3C/svg%3E")
+          center / contain no-repeat;
+      }
+      .reward-preview { display: block; flex: none; width: clamp(80px, 24vw, 128px); height: auto; visibility: hidden; }
+      #reward-peek .has-preview:hover + .reward-preview { visibility: visible; }
+    }
+    #reward-review { margin-top: 12px; }
+    #reward-review-hint, #reward-revisit { margin-block: 4px 8px; }
+    #reward-mismatches { margin: 4px 0; padding-inline-start: 1.25em; font-size: .85rem; }
+    #reward-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 8px 12px; }
+    .reward-thumbnails { display: flex; flex-wrap: wrap; gap: 4px; }
+    .reward-thumbnails button { padding: 4px 6px; border: 1px solid #ccc; border-radius: 6px; background: transparent; }
+    .reward-thumbnails .reward-thumbnail { display: grid; place-items: center; width: 44px; height: 44px; padding: 0; }
+    .reward-thumbnails img { border-radius: 4px; }
+    .review-card-name { padding: 4px 6px; font-size: .85rem; }
   </style>
 </head>
 <body>
@@ -399,6 +437,10 @@
             <p class="stat-label">Time</p>
             <p class="stat-value" id="elapsed">0:00</p>
           </div>
+          <div class="reward-controls" id="reward-controls" role="group" aria-label="Rewards" hidden>
+            <button class="button rewards-toggle" id="reward-images" type="button" aria-pressed="true" hidden>Images</button>
+            <button class="button rewards-toggle" id="reward-facts" type="button" aria-pressed="true" hidden>Facts</button>
+          </div>
           <button class="button sound-toggle" id="sound" type="button" aria-label="Sound" aria-pressed="true" title="Sound on">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M3 9h4l5-4v14l-5-4H3z"/>
@@ -409,6 +451,7 @@
         </div>
       </div>
       <p class="detail deck-status" id="deck-status" role="status"></p>
+      <div id="reward-peek" role="status" aria-atomic="true" hidden></div>
       <div id="field" class="play-field" role="group" aria-label="Sorting cards">
         <section class="pool" id="tray" aria-label="Card tray" hidden>
           <button class="box-target" type="button" data-destination="-1" aria-label="Move selected cards to Tray" disabled></button>
@@ -424,6 +467,15 @@
         </div>
         <div class="categories" id="categories"></div>
       </div>
+      <details id="reward-review" hidden>
+        <summary>Review</summary>
+        <p class="detail" id="reward-review-hint" hidden>Select a card to see its reward.</p>
+        <section id="reward-revisit" aria-labelledby="reward-revisit-title" hidden>
+          <h3 id="reward-revisit-title">To revisit</h3>
+          <ul id="reward-mismatches"></ul>
+        </section>
+        <div id="reward-gallery"></div>
+      </details>
       <details class="detail rules">
         <summary>Rules</summary>
         <p>Pick one or more items in the tray, then tap a category box to put them there. Each item belongs in exactly one category.</p>
@@ -458,6 +510,13 @@
       mixed: [[196, 0, .072, .067, .85], [523.25, .06, .09, .048]],
       match: [[523.25, 0, .08, .07], [659.25, .055, .115, .075]],
       correct: [[392, 0, .07, .052], [523.25, .055, .105, .058]],
+      group: [[587.33, 0, .10, .047], [739.99, .055, .12, .048], [880, .11, .17, .044]],
+      finishIncomplete: [
+        [659.25, 0, .25, .065], [587.33, .16, .25, .062],
+        [523.25, .32, .26, .057], [440, .49, .24, .056],
+        [293.66, .68, .71, .068], [174.61, .68, .75, .049],
+        [220, .68, .68, .037]
+      ],
       // A rising arpeggio resolves into a sustained C-major chord.
       finish: [
         [261.63, 0, .22, .067], [392, .09, .2, .069], [523.25, .18, .21, .072],
@@ -549,6 +608,242 @@
       return item;
     }
 
+    const rewardToggles = { images: $("reward-images"), facts: $("reward-facts") };
+    const rewardPeek = $("reward-peek");
+    const rewardReview = $("reward-review");
+    const rewardGallery = $("reward-gallery");
+    const rewardsPreferenceKey = "constrained-sorting:rewards";
+    const rewards = new Map();
+    const rewardPreferences = { images: true, facts: true };
+    let categoryDescriptions = {};
+    let rewardGalleryKey;
+
+    try {
+      const previous = localStorage.getItem(rewardsPreferenceKey);
+      for (const kind of Object.keys(rewardToggles)) {
+        rewardPreferences[kind] = (localStorage.getItem(`${rewardsPreferenceKey}:${kind}`) ?? previous) !== "off";
+      }
+    } catch {
+      // The setting still applies until the page closes.
+    }
+
+    function rewardLabel(name) {
+      return name[0].toUpperCase() + name.slice(1);
+    }
+
+    async function loadRewards(path) {
+      try {
+        const response = await fetch(path);
+        if (!response.ok) return;
+        const records = await response.json();
+        const base = new URL(response.url);
+        for (const name of cardDetails.keys()) {
+          if (!Object.hasOwn(records, name)) continue;
+          const record = records[name];
+          if (!record || typeof record !== "object") continue;
+          let image;
+          let profile;
+          try {
+            if (typeof record.image === "string" && record.image) {
+              const url = new URL(record.image, base);
+              if (url.origin === location.origin && /^https?:$/.test(url.protocol)) image = url.href;
+            }
+          } catch {
+            // A fact can still be shown when its image path is invalid.
+          }
+          try {
+            if (typeof record.profile === "string") {
+              const url = new URL(record.profile);
+              if (url.protocol === "https:") profile = url.href;
+            }
+          } catch {
+            // A profile link is optional.
+          }
+          const fact = typeof record.fact === "string" ? record.fact.trim() : "";
+          const detail = typeof record.detail === "string" ? record.detail.trim() : "";
+          if (image || fact || detail) rewards.set(name, { image, fact, detail, profile });
+        }
+      } catch {
+        return;
+      }
+      if (!rewards.size) return;
+      const entries = [...rewards.values()];
+      rewardToggles.images.hidden = !entries.some(({ image }) => image);
+      rewardToggles.facts.hidden = !entries.some(({ fact, detail }) => fact || detail);
+      for (const [kind, button] of Object.entries(rewardToggles)) {
+        button.setAttribute("aria-pressed", rewardPreferences[kind]);
+      }
+      $("reward-controls").hidden = false;
+      rewardGalleryKey = undefined;
+      renderReview(solvedCategories());
+    }
+
+    function visibleReward(name) {
+      const entry = rewards.get(name);
+      if (!entry) return null;
+      const image = rewardPreferences.images ? entry.image : undefined;
+      const fact = rewardPreferences.facts ? entry.fact : "";
+      const detail = rewardPreferences.facts ? entry.detail : "";
+      return image || fact || detail ? { image, fact, detail, profile: fact || detail ? entry.profile : undefined } : null;
+    }
+
+    function rewardImage(src, size, className, onError, lazy = false) {
+      const image = new Image(size, size);
+      if (className) image.className = className;
+      image.alt = "";
+      image.decoding = "async";
+      if (lazy) image.loading = "lazy";
+      image.addEventListener("error", onError ?? (() => image.remove()), { once: true });
+      image.src = src;
+      return image;
+    }
+
+    function rewardCard(name, { image, fact, detail, profile }, { review = false, zoom = false } = {}) {
+      const row = element("div", "reward-card");
+      if (image) row.append(rewardImage(image, review && !fact && !detail ? 128 : 56));
+      const label = element("div");
+      const title = element("strong", "", rewardLabel(name));
+      if (review && profile) {
+        const link = element("a", "", rewardLabel(name));
+        link.href = profile;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        title.replaceChildren(link);
+      }
+      const caption = element("span", "reward-caption");
+      caption.append(title);
+      if (fact) caption.append(document.createTextNode(" · " + (zoom ? fact.replace(/\.$/, "") : fact)));
+      if (zoom && !fact && !detail) caption.append(element("span", "reward-zoom-label", " · Zoom"));
+      label.append(caption);
+      if (detail) label.append(element("p", "detail reward-detail", detail));
+      row.append(label);
+      return row;
+    }
+
+    function clearRewardPeek() {
+      rewardPeek.hidden = true;
+      rewardPeek.replaceChildren();
+    }
+
+    function showReward(name, scroll) {
+      const reward = visibleReward(name);
+      if (!reward) {
+        clearRewardPeek();
+        return;
+      }
+      const { image } = reward;
+      const zoom = Boolean(image && window.matchMedia("(hover: hover)").matches);
+      const row = rewardCard(name, reward, { zoom });
+      rewardPeek.replaceChildren(row);
+      rewardPeek.hidden = false;
+      if (zoom) {
+        row.classList.add("has-preview");
+        const preview = rewardImage(image, 128, "reward-preview", () => {
+          row.classList.remove("has-preview");
+          preview.remove();
+        });
+        rewardPeek.append(preview);
+      }
+      if (!scroll) return;
+      const { top, bottom } = rewardPeek.getBoundingClientRect();
+      const stickyHeight = document.querySelector(".sticky-bar").getBoundingClientRect().height;
+      if (top < stickyHeight || bottom > window.innerHeight) {
+        window.scrollBy({
+          top: top - stickyHeight - 8,
+          behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"
+        });
+      }
+    }
+
+    function solvedCategories() {
+      const unsolved = new Set();
+      for (const [name, { category }] of cardDetails) {
+        const placed = state.assigned.get(name);
+        if (placed === category) continue;
+        unsolved.add(category);
+        if (placed !== undefined) unsolved.add(placed);
+      }
+      return [...categories.keys()].filter(category => !unsolved.has(category));
+    }
+
+    function reviewGroup(category) {
+      const group = element("section");
+      const buttons = element("div", "reward-thumbnails");
+      const preview = element("div");
+      preview.setAttribute("role", "status");
+      preview.setAttribute("aria-atomic", "true");
+
+      for (const [name, card] of cardDetails) {
+        if (card.category !== category) continue;
+        const reward = visibleReward(name);
+        if (!reward) {
+          buttons.append(element("span", "review-card-name", rewardLabel(name)));
+          continue;
+        }
+        const button = element("button", "", rewardLabel(name));
+        button.type = "button";
+        if (reward.image) {
+          button.setAttribute("aria-label", rewardLabel(name));
+          button.classList.add("reward-thumbnail");
+          const image = rewardImage(reward.image, 40, "", () => {
+            button.classList.remove("reward-thumbnail");
+            button.textContent = rewardLabel(name);
+          }, true);
+          button.replaceChildren(image);
+        }
+        button.addEventListener("click", () => {
+          state.reviewSelection.set(category, name);
+          preview.replaceChildren(rewardCard(name, reward, { review: true }));
+        });
+        buttons.append(button);
+      }
+      const selected = state.reviewSelection.get(category);
+      const reward = visibleReward(selected);
+      if (reward) preview.replaceChildren(rewardCard(selected, reward, { review: true }));
+      group.append(element("h3", "", categories[category]), buttons, preview);
+      return group;
+    }
+
+    function renderReview(solved, openSolved = false) {
+      const roundComplete = state.allPlacedAt !== null;
+      const groups = roundComplete ? [...categories.keys()] : solved;
+      const key = `${rewardPreferences.images}:${rewardPreferences.facts}:${groups.join(",")}`;
+      if (key !== rewardGalleryKey) {
+        rewardGallery.replaceChildren(...groups.map(reviewGroup));
+        rewardGalleryKey = key;
+      }
+
+      const mismatches = [];
+      if (roundComplete) {
+        for (const [name, { category }] of cardDetails) {
+          const placed = state.assigned.get(name);
+          if (placed === category) continue;
+          mismatches.push(element("li", "", `${rewardLabel(name)} · ${categories[placed] ?? "Tray"} → ${categories[category]}`));
+        }
+      }
+      $("reward-mismatches").replaceChildren(...mismatches);
+      $("reward-revisit").hidden = !mismatches.length;
+      $("reward-review-hint").hidden = !roundComplete || !rewardGallery.querySelector("button");
+      const wasHidden = rewardReview.hidden;
+      rewardReview.hidden = !rewardGallery.childElementCount && !mismatches.length;
+      if (!rewardReview.hidden && (openSolved || (wasHidden && roundComplete))) rewardReview.open = true;
+    }
+
+    for (const [kind, button] of Object.entries(rewardToggles)) {
+      button.addEventListener("click", () => {
+        const enabled = !rewardPreferences[kind];
+        rewardPreferences[kind] = enabled;
+        button.setAttribute("aria-pressed", enabled);
+        try {
+          localStorage.setItem(`${rewardsPreferenceKey}:${kind}`, enabled ? "on" : "off");
+        } catch {
+          // The setting still applies until the page closes.
+        }
+        if (state.allPlacedAt === null && state.lastReward) showReward(state.lastReward, false);
+        renderReview(solvedCategories());
+      });
+    }
+
     function shuffledDeck() {
       const deck = [...cardDetails.keys()];
       for (let index = deck.length - 1; index > 0; index--) {
@@ -572,8 +867,15 @@
         moves: 0,
         startedAt: null,
         allPlacedAt: null,
-        celebrated: false
+        celebrated: false,
+        rewarded: new Set(),
+        lastReward: null,
+        completedGroups: new Set(),
+        reviewSelection: new Map()
       };
+      clearRewardPeek();
+      rewardReview.open = false;
+      renderReview([]);
       paintTimer();
       renderBoard();
     }
@@ -585,6 +887,7 @@
         let deckId = "demo";
         let title;
         let target;
+        let rewardsPath;
         if (embeddedDemo) {
           ({ title, deck: target } = JSON.parse(embeddedDemo.textContent));
         } else {
@@ -595,6 +898,8 @@
           if (requestedDeck && Object.hasOwn(decks, requestedDeck)) deckId = requestedDeck;
           const entry = decks[deckId];
           title = entry.playTitle ?? entry.title;
+          rewardsPath = entry.rewards;
+          categoryDescriptions = entry.categoryDescriptions ?? {};
           const response = await fetch(`games/${deckId}/deck.json`);
           if (!response.ok) throw new Error("Deck request failed");
           target = await response.json();
@@ -619,10 +924,13 @@
         cardDetails = cards;
         $("deck-title").textContent = title;
         $("deck-title").hidden = false;
-        $("board").classList.toggle("wide-card-board", deckId !== "demo");
+        const wildlife = deckId === "game-animals-of-north-america";
+        $("board").classList.toggle("wide-card-board", deckId !== "demo" && !wildlife);
+        $("board").classList.toggle("wildlife-board", wildlife);
         $("points-max").textContent = `/ ${cards.size * maxPointsPerCard}`;
         $("points-meter").max = cards.size * maxPointsPerCard;
         newPlay();
+        if (rewardsPath) void loadRewards(rewardsPath);
       } catch {
         status.textContent = location.protocol === "file:"
           ? "Serve the project over HTTP to load its decks. The standalone demo opens directly."
@@ -737,6 +1045,9 @@
       target.dataset.destination = index;
       const heading = element("div", "category-heading");
       heading.append(element("h2", "category-name", name));
+      if (Object.hasOwn(categoryDescriptions, name)) {
+        heading.append(element("p", "category-description", categoryDescriptions[name]));
+      }
       section.append(target, heading, cardList(cards));
       return section;
     }
@@ -793,7 +1104,8 @@
       }
       state.moves += moved.length;
       state.selected.clear();
-      if (state.allPlacedAt === null && state.assigned.size === cardDetails.size) {
+      const completedRound = state.allPlacedAt === null && state.assigned.size === cardDetails.size;
+      if (completedRound) {
         state.allPlacedAt = performance.now();
         clearInterval(clock);
         paintTimer();
@@ -806,10 +1118,35 @@
           : target;
         focus?.focus();
       }
+      const solved = solvedCategories();
+      const groupCompleted = solved.some(category => !state.completedGroups.has(category));
+      const firstGroup = groupCompleted && !state.completedGroups.size;
+      for (const category of solved) state.completedGroups.add(category);
+
+      if (state.allPlacedAt !== null) {
+        clearRewardPeek();
+      } else {
+        let latest;
+        for (const name of moved) {
+          if (cardDetails.get(name).category !== destination || state.rewarded.has(name) || !visibleReward(name)) continue;
+          state.rewarded.add(name);
+          latest = name;
+        }
+        if (latest) {
+          state.lastReward = latest;
+          showReward(latest, !focusAfterMove);
+        }
+      }
+      renderReview(solved, completedRound || firstGroup);
+
       if (!state.celebrated && state.assigned.size === cardDetails.size &&
           state.deck.every(card => destinationOf(card) === cardDetails.get(card).category)) {
         state.celebrated = true;
         playCue("finish");
+      } else if (completedRound) {
+        playCue("finishIncomplete");
+      } else if (groupCompleted) {
+        playCue("group");
       } else if (destination === unassigned) {
         playCue("tray");
       } else {

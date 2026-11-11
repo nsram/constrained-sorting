@@ -1,0 +1,596 @@
+{
+  "Rohit Sharma": {
+    "fact": "7,329 runs · best 109 not out",
+    "detail": "2008–2026 · 281 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rohit-sharma",
+    "image": "images/rohit-sharma.webp"
+  },
+  "Shikhar Dhawan": {
+    "fact": "6,769 runs · best 106 not out",
+    "detail": "2008–2024 · 222 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/shikhar-dhawan",
+    "image": "images/shikhar-dhawan.webp"
+  },
+  "Gautam Gambhir": {
+    "fact": "4,217 runs · best 93",
+    "detail": "2008–2018 · 154 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/gautam-gambhir",
+    "image": "images/gautam-gambhir.webp"
+  },
+  "Virender Sehwag": {
+    "fact": "2,728 runs · best 122",
+    "detail": "2008–2015 · 104 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/virender-sehwag",
+    "image": "images/virender-sehwag.webp"
+  },
+  "Shubman Gill": {
+    "fact": "4,598 runs · best 129",
+    "detail": "2018–2026 · 134 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/shubman-gill",
+    "image": "images/shubman-gill.webp"
+  },
+  "Yashasvi Jaiswal": {
+    "fact": "2,593 runs · best 124",
+    "detail": "2020–2026 · 83 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/yashasvi-jaiswal",
+    "image": "images/yashasvi-jaiswal.webp"
+  },
+  "Ruturaj Gaikwad": {
+    "fact": "2,839 runs · best 108 not out",
+    "detail": "2020–2026 · 85 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/ruturaj-gaikwad",
+    "image": "images/ruturaj-gaikwad.webp"
+  },
+  "Abhishek Sharma": {
+    "fact": "2,379 runs · best 141",
+    "detail": "2018–2026 · 92 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/abhishek-sharma",
+    "image": "images/abhishek-sharma.webp"
+  },
+  "Sachin Tendulkar": {
+    "fact": "2,334 runs · best 100 not out",
+    "detail": "2008–2013 · 78 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/sachin-tendulkar",
+    "image": "images/sachin-tendulkar.webp"
+  },
+  "Virat Kohli": {
+    "fact": "9,336 runs · best 113 not out",
+    "detail": "2008–2026 · 283 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/virat-kohli",
+    "image": "images/virat-kohli.webp"
+  },
+  "Lokesh Rahul": {
+    "fact": "5,815 runs · best 152 not out",
+    "detail": "2013–2026 · 159 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/kl-rahul",
+    "image": "images/lokesh-rahul.webp"
+  },
+  "Ajinkya Rahane": {
+    "fact": "5,367 runs · best 105 not out",
+    "detail": "2008–2026 · 212 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/ajinkya-rahane",
+    "image": "images/ajinkya-rahane.webp"
+  },
+  "Mayank Agarwal": {
+    "fact": "2,756 runs · best 106",
+    "detail": "2011–2025 · 130 recorded matches · Last played 2025",
+    "profile": "https://www.runz.live/players/mayank-agarwal",
+    "image": "images/mayank-agarwal.webp"
+  },
+  "Chris Gayle": {
+    "fact": "175 not out · six IPL centuries",
+    "detail": "2009–2021 · 142 matches · Last played 2021",
+    "profile": "https://www.runz.live/players/chris-gayle",
+    "image": "images/chris-gayle.webp"
+  },
+  "David Warner": {
+    "fact": "6,565 runs · best 126",
+    "detail": "2009–2024 · 184 recorded matches · Last played 2024",
+    "profile": "https://www.runz.live/players/david-warner",
+    "image": "images/david-warner.webp"
+  },
+  "Faf du Plessis": {
+    "fact": "4,773 runs · best 96",
+    "detail": "2012–2025 · 154 recorded matches · Last played 2025",
+    "profile": "https://www.runz.live/players/faf-du-plessis",
+    "image": "images/faf-du-plessis.webp"
+  },
+  "Travis Head": {
+    "fact": "1,556 runs · best 102",
+    "detail": "2016–2026 · 53 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/travis-head",
+    "image": "images/travis-head.webp"
+  },
+  "Dwayne Smith": {
+    "fact": "2,385 runs · best 87 not out",
+    "detail": "2008–2017 · 91 recorded matches · Last played 2017",
+    "profile": "https://www.runz.live/players/dwayne-smith",
+    "image": "images/dwayne-smith.webp"
+  },
+  "Suryakumar Yadav": {
+    "fact": "4,581 runs · best 103 not out",
+    "detail": "2012–2026 · 179 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/suryakumar-yadav",
+    "image": "images/suryakumar-yadav.webp"
+  },
+  "Suresh Raina": {
+    "fact": "5,528 runs · best 100 not out",
+    "detail": "2008–2021 · 204 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/suresh-raina",
+    "image": "images/suresh-raina.webp"
+  },
+  "Shreyas Iyer": {
+    "fact": "4,229 runs · best 101 not out",
+    "detail": "2015–2026 · 147 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/shreyas-iyer",
+    "image": "images/shreyas-iyer.webp"
+  },
+  "Rinku Singh": {
+    "fact": "1,394 runs · best 83 not out",
+    "detail": "2018–2026 · 73 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rinku-singh",
+    "image": "images/rinku-singh.webp"
+  },
+  "Tilak Varma": {
+    "fact": "1,858 runs · best 101 not out",
+    "detail": "2022–2026 · 68 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/tilak-varma",
+    "image": "images/tilak-varma.webp"
+  },
+  "Manish Pandey": {
+    "fact": "4,012 runs · best 114 not out",
+    "detail": "2008–2026 · 180 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/manish-pandey",
+    "image": "images/manish-pandey.webp"
+  },
+  "Ambati Rayudu": {
+    "fact": "4,348 runs · best 100 not out",
+    "detail": "2010–2023 · 204 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/ambati-rayudu",
+    "image": "images/ambati-rayudu.webp"
+  },
+  "Yuvraj Singh": {
+    "fact": "2,750 runs · best 83",
+    "detail": "2008–2019 · 132 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/yuvraj-singh",
+    "image": "images/yuvraj-singh.webp"
+  },
+  "Rajat Patidar": {
+    "fact": "1,612 runs · best 112 not out",
+    "detail": "2021–2026 · 57 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rajat-patidar",
+    "image": "images/rajat-patidar.webp"
+  },
+  "Abraham Benjamin de Villiers": {
+    "fact": "5,162 runs · best 133 not out",
+    "detail": "2008–2021 · 183 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/ab-de-villiers",
+    "image": "images/abraham-benjamin-de-villiers.webp"
+  },
+  "David Miller": {
+    "fact": "3,288 runs · best 101 not out",
+    "detail": "2012–2026 · 152 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/david-miller",
+    "image": "images/david-miller.webp"
+  },
+  "Shimron Hetmyer": {
+    "fact": "1,560 runs · best 75",
+    "detail": "2019–2026 · 94 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/shimron-hetmyer",
+    "image": "images/shimron-hetmyer.webp"
+  },
+  "Eoin Morgan": {
+    "fact": "1,405 runs · best 68 not out",
+    "detail": "2010–2021 · 83 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/eoin-morgan",
+    "image": "images/eoin-morgan.webp"
+  },
+  "Steven Smith": {
+    "fact": "2,485 runs · best 101",
+    "detail": "2012–2021 · 103 recorded matches · Last played 2021",
+    "profile": "https://www.runz.live/players/steven-smith",
+    "image": "images/steven-smith.webp"
+  },
+  "Kane Williamson": {
+    "fact": "2,128 runs · best 89",
+    "detail": "2015–2024 · 79 recorded matches · Last played 2024",
+    "profile": "https://www.runz.live/players/kane-williamson",
+    "image": "images/kane-williamson.webp"
+  },
+  "Mahendra Singh Dhoni": {
+    "fact": "5,439 runs · 47 stumpings",
+    "detail": "2008–2025 · 278 matches · Last played 2025",
+    "profile": "https://www.runz.live/players/ms-dhoni",
+    "image": "images/mahendra-singh-dhoni.webp"
+  },
+  "Dinesh Karthik": {
+    "fact": "4,842 runs · 37 stumpings",
+    "detail": "2008–2024 · 257 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/dinesh-karthik",
+    "image": "images/dinesh-karthik.webp"
+  },
+  "Rishabh Pant": {
+    "fact": "3,865 runs · 24 stumpings",
+    "detail": "2016–2026 · 139 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rishabh-pant",
+    "image": "images/rishabh-pant.webp"
+  },
+  "Sanju Samson": {
+    "fact": "5,181 runs · 19 stumpings",
+    "detail": "2013–2026 · 191 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/sanju-samson",
+    "image": "images/sanju-samson.webp"
+  },
+  "Ishan Kishan": {
+    "fact": "3,600 runs · 6 stumpings",
+    "detail": "2016–2026 · 134 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/ishan-kishan",
+    "image": "images/ishan-kishan.webp"
+  },
+  "Wriddhiman Saha": {
+    "fact": "2,934 runs · 26 stumpings",
+    "detail": "2008–2024 · 169 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/wriddhiman-saha",
+    "image": "images/wriddhiman-saha.webp"
+  },
+  "Parthiv Patel": {
+    "fact": "2,848 runs · 16 stumpings",
+    "detail": "2008–2019 · 139 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/parthiv-patel",
+    "image": "images/parthiv-patel.webp"
+  },
+  "Jitesh Sharma": {
+    "fact": "1,107 runs · 7 stumpings",
+    "detail": "2022–2026 · 71 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/jitesh-sharma",
+    "image": "images/jitesh-sharma.webp"
+  },
+  "Robin Uthappa": {
+    "fact": "4,952 runs · 32 stumpings",
+    "detail": "2008–2022 · 205 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/robin-uthappa",
+    "image": "images/robin-uthappa.webp"
+  },
+  "Jos Buttler": {
+    "fact": "4,646 runs · 4 stumpings",
+    "detail": "2016–2026 · 138 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/jos-buttler",
+    "image": "images/jos-buttler.webp"
+  },
+  "Quinton de Kock": {
+    "fact": "3,441 runs · 17 stumpings",
+    "detail": "2013–2026 · 118 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/quinton-de-kock",
+    "image": "images/quinton-de-kock.webp"
+  },
+  "Nicholas Pooran": {
+    "fact": "2,527 runs · 4 stumpings",
+    "detail": "2019–2026 · 104 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/nicholas-pooran",
+    "image": "images/nicholas-pooran.webp"
+  },
+  "Heinrich Klaasen": {
+    "fact": "2,104 runs · 7 stumpings",
+    "detail": "2018–2026 · 64 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/heinrich-klaasen",
+    "image": "images/heinrich-klaasen.webp"
+  },
+  "Adam Gilchrist": {
+    "fact": "2,069 runs · 16 stumpings",
+    "detail": "2008–2013 · 80 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/adam-gilchrist",
+    "image": "images/adam-gilchrist.webp"
+  },
+  "Hardik Pandya": {
+    "fact": "2,955 runs · 82 wickets",
+    "detail": "2015–2026 · 162 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/hardik-pandya",
+    "image": "images/hardik-pandya.webp"
+  },
+  "Ravindra Jadeja": {
+    "fact": "3,526 runs · 180 wickets",
+    "detail": "2008–2026 · 268 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/ravindra-jadeja",
+    "image": "images/ravindra-jadeja.webp"
+  },
+  "Axar Patel": {
+    "fact": "2,089 runs · 139 wickets",
+    "detail": "2014–2026 · 176 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/axar-patel",
+    "image": "images/axar-patel.webp"
+  },
+  "Yusuf Pathan": {
+    "fact": "Scored a 37-ball century against Mumbai in 2010",
+    "detail": "2008–2019 · 174 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/yusuf-pathan",
+    "image": "images/yusuf-pathan.webp"
+  },
+  "Irfan Pathan": {
+    "fact": "1,139 runs · 80 wickets",
+    "detail": "2008–2017 · 103 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/irfan-pathan",
+    "image": "images/irfan-pathan.webp"
+  },
+  "Krunal Pandya": {
+    "fact": "1,982 runs · 107 wickets",
+    "detail": "2016–2026 · 158 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/krunal-pandya",
+    "image": "images/krunal-pandya.webp"
+  },
+  "Shivam Dube": {
+    "fact": "2,129 runs · 6 wickets",
+    "detail": "2019–2026 · 92 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/shivam-dube",
+    "image": "images/shivam-dube.webp"
+  },
+  "Rahul Tewatia": {
+    "fact": "1,302 runs · 32 wickets",
+    "detail": "2014–2026 · 124 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rahul-tewatia",
+    "image": "images/rahul-tewatia.webp"
+  },
+  "Riyan Parag": {
+    "fact": "1,875 runs · 9 wickets",
+    "detail": "2019–2026 · 98 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/riyan-parag",
+    "image": "images/riyan-parag.webp"
+  },
+  "Andre Russell": {
+    "fact": "2,651 runs · 123 wickets",
+    "detail": "2012–2025 · 139 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/andre-russell",
+    "image": "images/andre-russell.webp"
+  },
+  "Shane Watson": {
+    "fact": "3,874 runs · 92 wickets",
+    "detail": "2008–2020 · 145 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/shane-watson",
+    "image": "images/shane-watson.webp"
+  },
+  "Kieron Pollard": {
+    "fact": "3,412 runs · 69 wickets",
+    "detail": "2010–2022 · 189 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/kieron-pollard",
+    "image": "images/kieron-pollard.webp"
+  },
+  "Dwayne Bravo": {
+    "fact": "1,560 runs · 183 wickets",
+    "detail": "2008–2022 · 160 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/dwayne-bravo",
+    "image": "images/dwayne-bravo.webp"
+  },
+  "Ben Stokes": {
+    "fact": "935 runs · 28 wickets",
+    "detail": "2017–2023 · 45 recorded matches · Last played 2023",
+    "profile": "https://www.runz.live/players/ben-stokes",
+    "image": "images/ben-stokes.webp"
+  },
+  "Glenn Maxwell": {
+    "fact": "2,819 runs · 41 wickets",
+    "detail": "2012–2025 · 141 recorded matches · Last played 2025",
+    "profile": "https://www.runz.live/players/glenn-maxwell",
+    "image": "images/glenn-maxwell.webp"
+  },
+  "Jacques Kallis": {
+    "fact": "2,427 runs · 65 wickets",
+    "detail": "2008–2014 · 98 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/jacques-kallis",
+    "image": "images/jacques-kallis.webp"
+  },
+  "Jasprit Bumrah": {
+    "fact": "187 wickets · best 5 for 10",
+    "detail": "2013–2026 · 158 recorded matches · Played in 2026",
+    "profile": "https://www.runz.live/players/jasprit-bumrah",
+    "image": "images/jasprit-bumrah.webp"
+  },
+  "Bhuvneshwar Kumar": {
+    "fact": "226 wickets · best 5 for 19",
+    "detail": "2011–2026 · 206 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/bhuvneshwar-kumar",
+    "image": "images/bhuvneshwar-kumar.webp"
+  },
+  "Mohammed Shami": {
+    "fact": "145 wickets · best 4 for 11",
+    "detail": "2013–2026 · 132 recorded matches · Played in 2026",
+    "profile": "https://www.runz.live/players/mohammed-shami",
+    "image": "images/mohammed-shami.webp"
+  },
+  "Arshdeep Singh": {
+    "fact": "111 wickets · best 5 for 32",
+    "detail": "2019–2026 · 96 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/arshdeep-singh",
+    "image": "images/arshdeep-singh.webp"
+  },
+  "Ashish Nehra": {
+    "fact": "106 wickets · best 4 for 10",
+    "detail": "2008–2017 · 88 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/ashish-nehra",
+    "image": "images/ashish-nehra.webp"
+  },
+  "Deepak Chahar": {
+    "fact": "96 wickets · best 4 for 13",
+    "detail": "2016–2026 · 103 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/deepak-chahar",
+    "image": "images/deepak-chahar.webp"
+  },
+  "Harshal Patel": {
+    "fact": "151 wickets · best 5 for 27",
+    "detail": "2012–2026 · 124 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/harshal-patel",
+    "image": "images/harshal-patel.webp"
+  },
+  "Mohammed Siraj": {
+    "fact": "128 wickets · best 4 for 17",
+    "detail": "2017–2026 · 125 recorded matches · Played in 2026",
+    "profile": "https://www.runz.live/players/mohammed-siraj",
+    "image": "images/mohammed-siraj.webp"
+  },
+  "Umesh Yadav": {
+    "fact": "144 wickets · best 4 for 23",
+    "detail": "2010–2024 · 148 recorded matches · Last played 2024",
+    "profile": "https://www.runz.live/players/umesh-yadav",
+    "image": "images/umesh-yadav.webp"
+  },
+  "Sandeep Sharma": {
+    "fact": "151 wickets · best 5 for 18",
+    "detail": "2013–2026 · 143 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/sandeep-sharma",
+    "image": "images/sandeep-sharma.webp"
+  },
+  "Zaheer Khan": {
+    "fact": "102 wickets · best 4 for 17",
+    "detail": "2008–2017 · 99 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/zaheer-khan",
+    "image": "images/zaheer-khan.webp"
+  },
+  "Praveen Kumar": {
+    "fact": "90 wickets · best 3 for 18",
+    "detail": "2008–2017 · 119 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/praveen-kumar",
+    "image": "images/praveen-kumar.webp"
+  },
+  "Shardul Thakur": {
+    "fact": "119 wickets · best 4 for 34",
+    "detail": "2015–2026 · 114 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/shardul-thakur",
+    "image": "images/shardul-thakur.webp"
+  },
+  "Mohit Sharma": {
+    "fact": "134 wickets · best 5 for 10",
+    "detail": "2013–2025 · 120 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/mohit-sharma",
+    "image": "images/mohit-sharma.webp"
+  },
+  "Lasith Malinga": {
+    "fact": "170 wickets · best 5 for 13",
+    "detail": "2009–2019 · 122 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/lasith-malinga",
+    "image": "images/lasith-malinga.webp"
+  },
+  "Dale Steyn": {
+    "fact": "97 wickets · best 3 for 8",
+    "detail": "2008–2020 · 95 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/dale-steyn",
+    "image": "images/dale-steyn.webp"
+  },
+  "Trent Boult": {
+    "fact": "145 wickets · best 4 for 18",
+    "detail": "2015–2026 · 125 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/trent-boult",
+    "image": "images/trent-boult.webp"
+  },
+  "Mitchell Starc": {
+    "fact": "76 wickets · best 5 for 35",
+    "detail": "2014–2026 · 58 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/mitchell-starc",
+    "image": "images/mitchell-starc.webp"
+  },
+  "Pat Cummins": {
+    "fact": "87 wickets · best 4 for 34",
+    "detail": "2014–2026 · 80 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/pat-cummins",
+    "image": "images/pat-cummins.webp"
+  },
+  "Kagiso Rabada": {
+    "fact": "148 wickets · best 4 for 21",
+    "detail": "2017–2026 · 101 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/kagiso-rabada",
+    "image": "images/kagiso-rabada.webp"
+  },
+  "Jofra Archer": {
+    "fact": "84 wickets · best 3 for 15",
+    "detail": "2018–2026 · 68 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/jofra-archer",
+    "image": "images/jofra-archer.webp"
+  },
+  "Ravichandran Ashwin": {
+    "fact": "187 wickets · best 4 for 34",
+    "detail": "2009–2025 · 219 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/ravichandran-ashwin",
+    "image": "images/ravichandran-ashwin.webp"
+  },
+  "Harbhajan Singh": {
+    "fact": "150 wickets · best 5 for 18",
+    "detail": "2008–2021 · 163 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/harbhajan-singh",
+    "image": "images/harbhajan-singh.webp"
+  },
+  "Washington Sundar": {
+    "fact": "40 wickets · best 3 for 16",
+    "detail": "2017–2026 · 83 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/washington-sundar",
+    "image": "images/washington-sundar.webp"
+  },
+  "Sunil Narine": {
+    "fact": "207 wickets · best 5 for 19",
+    "detail": "2012–2026 · 202 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/sunil-narine",
+    "image": "images/sunil-narine.webp"
+  },
+  "Muttiah Muralitharan": {
+    "fact": "63 wickets · best 3 for 11",
+    "detail": "2008–2014 · 66 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/muttiah-muralitharan",
+    "image": "images/muttiah-muralitharan.webp"
+  },
+  "Maheesh Theekshana": {
+    "fact": "36 wickets · best 4 for 33",
+    "detail": "2022–2025 · 38 recorded matches · Last played 2025",
+    "profile": "https://www.runz.live/players/maheesh-theekshana",
+    "image": "images/maheesh-theekshana.webp"
+  },
+  "Yuzvendra Chahal": {
+    "fact": "233 wickets · best 5 for 40",
+    "detail": "2013–2026 · 188 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/yuzvendra-chahal",
+    "image": "images/yuzvendra-chahal.webp"
+  },
+  "Amit Mishra": {
+    "fact": "174 wickets · best 5 for 17",
+    "detail": "2008–2024 · 162 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/amit-mishra",
+    "image": "images/amit-mishra.webp"
+  },
+  "Piyush Chawla": {
+    "fact": "192 wickets · best 4 for 17",
+    "detail": "2008–2024 · 192 recorded matches · Retired from IPL",
+    "profile": "https://www.runz.live/players/piyush-chawla",
+    "image": "images/piyush-chawla.webp"
+  },
+  "Ravi Bishnoi": {
+    "fact": "83 wickets · best 4 for 41",
+    "detail": "2020–2026 · 86 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/ravi-bishnoi",
+    "image": "images/ravi-bishnoi.webp"
+  },
+  "Rahul Chahar": {
+    "fact": "75 wickets · best 4 for 27",
+    "detail": "2017–2026 · 80 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rahul-chahar",
+    "image": "images/rahul-chahar.webp"
+  },
+  "Karn Sharma": {
+    "fact": "83 wickets · best 4 for 16",
+    "detail": "2009–2025 · 90 recorded matches · Last played 2025",
+    "profile": "https://www.runz.live/players/karn-sharma",
+    "image": "images/karn-sharma.webp"
+  },
+  "Shane Warne": {
+    "fact": "57 wickets · captained Rajasthan to the inaugural IPL title",
+    "detail": "2008–2011 · 55 recorded matches · Died 2022",
+    "profile": "https://www.runz.live/players/shane-warne",
+    "image": "images/shane-warne.webp"
+  },
+  "Rashid Khan": {
+    "fact": "179 wickets · best 4 for 24",
+    "detail": "2017–2026 · 153 matches · Played in 2026",
+    "profile": "https://www.runz.live/players/rashid-khan",
+    "image": "images/rashid-khan.webp"
+  },
+  "Imran Tahir": {
+    "fact": "82 wickets · best 4 for 12",
+    "detail": "2014–2021 · 59 recorded matches · Last played 2021",
+    "profile": "https://www.runz.live/players/imran-tahir",
+    "image": "images/imran-tahir.webp"
+  }
+}
