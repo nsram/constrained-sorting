@@ -497,7 +497,7 @@
             <p class="stat-label">Time</p>
             <p class="stat-value" id="elapsed">0:00</p>
           </div>
-          <div class="reward-controls" id="reward-controls" role="group" aria-label="Rewards" hidden>
+          <div class="reward-controls" id="reward-controls" role="group" aria-label="Card details" hidden>
             <button class="button rewards-toggle" id="reward-images" type="button" aria-pressed="true" hidden>Images</button>
             <button class="button rewards-toggle" id="reward-facts" type="button" aria-pressed="true" hidden>Facts</button>
           </div>
@@ -530,7 +530,7 @@
       </div>
       <details id="reward-review" hidden>
         <summary>Review</summary>
-        <p class="detail" id="reward-review-hint" hidden>Select a card to see its reward.</p>
+        <p class="detail" id="reward-review-hint" hidden>Select a card to see its facts.</p>
         <section id="reward-revisit" aria-labelledby="reward-revisit-title" hidden>
           <h3 id="reward-revisit-title">To revisit</h3>
           <ul id="reward-mismatches"></ul>
@@ -883,7 +883,13 @@
       }
       $("reward-mismatches").replaceChildren(...mismatches);
       $("reward-revisit").hidden = !mismatches.length;
-      $("reward-review-hint").hidden = !roundComplete || !rewardGallery.querySelector("button");
+      const reviewHint = $("reward-review-hint");
+      reviewHint.hidden = !roundComplete || !rewardGallery.querySelector("button");
+      if (!reviewHint.hidden) {
+        reviewHint.textContent = rewardPreferences.facts && !rewardToggles.facts.hidden
+          ? "Select a card to see its facts."
+          : "Select a card to see its image.";
+      }
       const wasHidden = rewardReview.hidden;
       rewardReview.hidden = !rewardGallery.childElementCount && !mismatches.length;
       if (!rewardReview.hidden && (openSolved || (wasHidden && roundComplete))) rewardReview.open = true;
