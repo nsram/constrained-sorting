@@ -9,6 +9,7 @@
     "demo": {
       "title": "Quick demo",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/demo/rewards.json",
       "preview": [
         "bass",
@@ -22,6 +23,7 @@
       "section": "singapore",
       "description": "Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods.",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/singapore/rewards.json",
       "preview": [
         "Dragon Playground (Lorong 6)"
@@ -54,6 +56,7 @@
       "section": "cricket",
       "description": "76 players",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/tests/rewards.json",
       "preview": [
         "Sunil Gavaskar"
@@ -64,6 +67,7 @@
       "section": "cricket",
       "description": "70 players",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/odi/rewards.json",
       "preview": [
         "Kapil Dev"
@@ -74,6 +78,7 @@
       "section": "cricket",
       "description": "58 players",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/t20i/rewards.json",
       "preview": [
         "Jasprit Bumrah"
@@ -84,6 +89,7 @@
       "section": "cricket",
       "description": "99 Indian and overseas players",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/ipl/rewards.json",
       "preview": [
         "Chris Gayle"
@@ -94,6 +100,7 @@
       "section": "wildlife",
       "description": "Sort 43 game animals across four hunting-experience tiers.",
       "cardImages": true,
+      "quickPlacement": true,
       "categoryDescriptions": {
         "Beginner": "Common, approachable pursuits",
         "Core": "Mainstays of North American hunting",
