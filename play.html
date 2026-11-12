@@ -205,6 +205,85 @@
     }
     .card-list, .categories { display: flex; flex-wrap: wrap; gap: 8px var(--group-gap); }
     .categories { gap: 10px; align-items: flex-start; }
+    .category-area { display: contents; }
+    .placement-dock {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 4px;
+      padding: 6px;
+      border: 1px solid #bdc9bd;
+      background: var(--page);
+    }
+    .placement-dock button {
+      min-height: 2.75rem;
+      padding: 4px 2px;
+      border: 1px solid #426758;
+      border-radius: 6px;
+      background: var(--green);
+      color: var(--paper);
+      font-size: .78rem;
+      font-weight: 700;
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+    }
+    .placement-dock button:hover:not(:disabled) { background: #305747; }
+    .placement-dock button:disabled { background: #e4e9de; color: var(--quiet); border-color: #becbbf; }
+    .placement-dock button[data-destination="-1"] { background: var(--gold-soft); color: var(--ink); }
+    @media (width < 900px) {
+      .quick-placement-board { --dock-space: 13rem; }
+      .quick-placement-board:has(.placement-dock:not([hidden])) .play-field {
+        padding-bottom: calc(var(--dock-space) + env(safe-area-inset-bottom));
+      }
+      .placement-dock {
+        position: fixed;
+        inset: auto 0 0;
+        z-index: 4;
+        padding: 6px max(8px, env(safe-area-inset-right)) max(6px, env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+        max-height: 50dvh;
+        overflow-y: auto;
+        border-radius: 10px 10px 0 0;
+        box-shadow: 0 -3px 12px #1e352f26;
+      }
+    }
+    @media (620px <= width < 900px) {
+      .quick-placement-board { --dock-space: 7rem; }
+      .placement-dock { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    }
+    @media (min-width: 900px) {
+      .quick-placement-board .play-field {
+        grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+        grid-template-areas: "tray clubs" "result clubs";
+        grid-template-rows: auto 1fr;
+        align-items: start;
+      }
+      .quick-placement-board #tray { grid-area: tray; }
+      .quick-placement-board #round-result { grid-area: result; }
+      .quick-placement-board .category-area {
+        --category-top: 6.25rem;
+        grid-area: clubs;
+        position: sticky;
+        top: var(--category-top);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        max-height: calc(100dvh - var(--category-top) - 8px);
+      }
+      .quick-placement-board .placement-dock {
+        flex: none;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        border-radius: 8px;
+      }
+      .quick-placement-board .categories {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-content: start;
+        padding: 3px;
+        overflow-y: auto;
+        scrollbar-gutter: stable;
+      }
+      .quick-placement-board .category { width: 100%; }
+      .quick-placement-board .category .card { width: min(50%, var(--card-width)); }
+    }
     .category-name { font-size: 1rem; margin-bottom: 6px; }
     .pool, .category {
       position: relative;
@@ -479,7 +558,10 @@
           <p class="round-message" id="round-message" role="status"></p>
           <button class="button replay" id="retry" type="button">Play again</button>
         </div>
-        <div class="categories" id="categories"></div>
+        <div class="category-area">
+          <div class="categories" id="categories"></div>
+          <div class="placement-dock" id="placement-dock" role="group" aria-label="Place selected cards" hidden></div>
+        </div>
       </div>
       <details id="reward-review" hidden>
         <summary>Review</summary>
@@ -512,6 +594,7 @@
     const unassigned = -1;
     const maxPointsPerCard = 2;
     const field = $("field");
+    const placementDock = $("placement-dock");
     let categories;
     let cardDetails;
     const soundButton = $("sound");
@@ -735,15 +818,12 @@
       return row;
     }
 
-    function clearRewardPeek() {
-      rewardPeek.hidden = true;
-      rewardPeek.replaceChildren();
-    }
-
-    function showReward(name, scroll) {
+    function showReward(name, scroll = false) {
+      state.previewedCard = name;
       const reward = visibleReward(name);
       if (!reward) {
-        clearRewardPeek();
+        rewardPeek.hidden = true;
+        rewardPeek.replaceChildren();
         return;
       }
       const { image } = reward;
@@ -855,7 +935,7 @@
           // The setting still applies until the page closes.
         }
         if (kind === "images" && cardImages) renderBoard();
-        if (state.allPlacedAt === null && state.lastReward) showReward(state.lastReward, false);
+        if (state.previewedCard) showReward(state.previewedCard);
         renderReview(solvedCategories());
       });
     }
@@ -885,11 +965,11 @@
         allPlacedAt: null,
         celebrated: false,
         rewarded: new Set(),
-        lastReward: null,
+        previewedCard: null,
         completedGroups: new Set(),
         reviewSelection: new Map()
       };
-      clearRewardPeek();
+      showReward(null);
       rewardReview.open = false;
       renderReview([]);
       paintTimer();
@@ -904,6 +984,7 @@
         let title;
         let target;
         let rewardsPath;
+        let quickPlacement = false;
         if (embeddedDemo) {
           ({ title, deck: target } = JSON.parse(embeddedDemo.textContent));
         } else {
@@ -916,6 +997,7 @@
           title = entry.playTitle ?? entry.title;
           rewardsPath = entry.rewards;
           cardImages = entry.cardImages === true;
+          quickPlacement = entry.quickPlacement === true;
           categoryDescriptions = entry.categoryDescriptions ?? {};
           const response = await fetch(`games/${deckId}/deck.json`);
           if (!response.ok) throw new Error("Deck request failed");
@@ -944,6 +1026,15 @@
         const wildlife = deckId === "game-animals-of-north-america";
         $("board").classList.toggle("wide-card-board", deckId !== "demo" && !wildlife);
         $("board").classList.toggle("wildlife-board", wildlife);
+        if (quickPlacement) {
+          $("board").classList.add("quick-placement-board");
+          for (const [index, name] of [...categories, "Return to tray"].entries()) {
+            const button = element("button", "", name);
+            button.type = "button";
+            button.dataset.destination = index === categories.length ? unassigned : index;
+            placementDock.append(button);
+          }
+        }
         $("points-max").textContent = `/ ${cards.size * maxPointsPerCard}`;
         $("points-meter").max = cards.size * maxPointsPerCard;
         if (cardImages && rewardsPath) await loadRewards(rewardsPath);
@@ -995,6 +1086,7 @@
         card.setAttribute("aria-pressed", state.selected.has(card.dataset.card));
       }
       const selected = [...state.selected];
+      placementDock.hidden = !selected.length || !placementDock.childElementCount;
       const emptyTray = state.assigned.size === cardDetails.size;
       $("tray").hidden = emptyTray && !selected.length;
       $("tray-title").textContent = emptyTray ? "Return to tray" : "Tray";
@@ -1004,6 +1096,12 @@
         const name = categories[destination] ?? "Tray";
         const canPlace = selected.some(card => destinationOf(card) !== destination);
         button.toggleAttribute("data-can-place", canPlace);
+        if (button.parentElement === placementDock) {
+          button.disabled = !canPlace;
+          button.hidden = destination === unassigned && !canPlace;
+          button.setAttribute("aria-label", `Move selected cards to ${name}`);
+          continue;
+        }
         if (canPlace || destination === unassigned) {
           button.disabled = !canPlace;
           button.removeAttribute("aria-pressed");
@@ -1106,7 +1204,7 @@
       }
     }
 
-    function assignSelection(destination, focusAfterMove = false) {
+    function assignSelection(destination, { focusAfterMove = false, fromDock = false } = {}) {
       const moved = [...state.selected].filter(card => destinationOf(card) !== destination);
       if (!moved.length) return;
       const previous = new Map();
@@ -1135,10 +1233,9 @@
       }
       renderBoard(previous);
       if (focusAfterMove) {
-        const target = field.querySelector(`[data-destination="${destination}"]`);
-        const focus = target?.disabled
-          ? field.querySelector(`[data-card="${CSS.escape(moved[0])}"]`)
-          : target;
+        let focus = fromDock ? $("tray-cards").querySelector("[data-card]") :
+          field.querySelector(`.box-target[data-destination="${destination}"]`);
+        if (!focus || focus.disabled) focus = field.querySelector(`[data-card="${CSS.escape(moved[0])}"]`);
         focus?.focus();
       }
       const solved = solvedCategories();
@@ -1146,19 +1243,15 @@
       const firstGroup = groupCompleted && !state.completedGroups.size;
       for (const category of solved) state.completedGroups.add(category);
 
-      if (state.allPlacedAt !== null) {
-        clearRewardPeek();
-      } else {
+      if (state.allPlacedAt !== null || moved.includes(state.previewedCard)) showReward(null);
+      if (state.allPlacedAt === null) {
         let latest;
         for (const name of moved) {
           if (cardDetails.get(name).category !== destination || state.rewarded.has(name) || !visibleReward(name)) continue;
           state.rewarded.add(name);
           latest = name;
         }
-        if (latest) {
-          state.lastReward = latest;
-          showReward(latest, !focusAfterMove);
-        }
+        if (latest) showReward(latest, !focusAfterMove && !fromDock);
       }
       renderReview(solved, completedRound || firstGroup);
 
@@ -1193,18 +1286,26 @@
       const card = event.target.closest("[data-card]");
       const target = event.target.closest("[data-destination]");
       if (!card && (!target || target.disabled)) return;
+      const selectedPreview = state.selected.has(state.previewedCard) ? state.previewedCard : null;
       if (card) {
         const name = card.dataset.card;
         if (state.selected.has(name)) state.selected.delete(name);
-        else state.selected.add(name);
+        else {
+          state.selected.add(name);
+          if (card.dataset.placement === "correct" && rewards.has(name)) showReward(name);
+        }
       } else {
         const destination = Number(target.dataset.destination);
         if (target.hasAttribute("data-can-place")) {
-          assignSelection(destination, event.detail === 0);
+          assignSelection(destination, {
+            focusAfterMove: event.detail === 0,
+            fromDock: target.parentElement === placementDock
+          });
           return;
         }
         toggleCategory(destination);
       }
+      if (selectedPreview && !state.selected.has(selectedPreview)) showReward(null);
       paintSelection(card ? [card] : target.closest(".category").querySelectorAll("[data-card]"));
       playCue("pick");
     });

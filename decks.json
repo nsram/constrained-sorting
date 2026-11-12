@@ -27,6 +27,7 @@
       "section": "soccer",
       "description": "Sort 50 players into 10 clubs. Use the colors and patterns of their kits as clues.",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/premier-league-a/rewards.json",
       "preview": [
         "Bukayo Saka"
@@ -37,6 +38,7 @@
       "section": "soccer",
       "description": "The same 50 players in plain shirts. How many can you match to their clubs from memory?",
       "cardImages": true,
+      "quickPlacement": true,
       "rewards": "games/premier-league-a-monochrome/rewards.json",
       "preview": [
         "Bukayo Saka"
