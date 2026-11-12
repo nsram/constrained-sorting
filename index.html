@@ -74,7 +74,6 @@
     .deck-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.55rem 1rem; margin-top: 1.25rem; }
     .deck-section { min-width: 0; scroll-margin-top: .8rem; }
     .deck-section--wide { grid-column: 1 / -1; }
-    #singapore { grid-column: 1 / -1; }
     .deck-section h3 { font-size: 1.55rem; margin-bottom: .55rem; letter-spacing: -.022em; }
     .deck-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
     .deck-tile {
@@ -223,12 +222,14 @@
             <span class="tile-arrow" aria-hidden="true">↗</span>
           </a>
         </section>
-        <section class="deck-section" id="singapore" aria-labelledby="singapore-title">
+        <section class="deck-section deck-section--wide" id="singapore" aria-labelledby="singapore-title">
           <h3 id="singapore-title">Singapore</h3>
           <a class="deck-tile" href="play.html?deck=singapore">
+            <img class="tile-art" src="games/singapore/images/lorong-6-dragon-playground.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
             <div>
               <h4>Which Neighbourhood?</h4>
               <p class="description">Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods.</p>
+              <p><span class="preview-name">Dragon Playground (Lorong 6)</span><span class="preview-fact">Khor Ean Ghee’s 1979 dragon still stands in its sand pit.</span></p>
             </div>
             <span class="tile-arrow" aria-hidden="true">↗</span>
           </a>

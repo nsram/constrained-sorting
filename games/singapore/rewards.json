@@ -1,0 +1,152 @@
+{
+  "Fengshan Food Centre": {
+    "image": "images/fengshan-food-centre.webp",
+    "fact": "At the hawker centre locals call “85,” Xing Ji serves its minced pork noodles only in soup.",
+    "profile": "https://www.hdb.gov.sg/cs/infoweb/-/media/doc/PLG/bedokbedok.ashx"
+  },
+  "Kaki Bukit 511 Market": {
+    "image": "images/kaki-bukit-511-market.webp",
+    "fact": "At Block 511, the evening hawker stalls include Zhong Newton, which grills satay and chicken wings.",
+    "profile": "https://wheretoeat.com.sg/bedok-reservoir-mrt-food-guide/"
+  },
+  "Masjid Al-Ansar": {
+    "image": "images/masjid-al-ansar.webp",
+    "fact": "The 2015 rebuild kept the original minaret and added more prayer space and a lift.",
+    "profile": "https://isomer-user-content.by.gov.sg/50/4cd07597-f88d-44a1-8df2-9da981146b4a/uss-religious-harmony-in-singapore.pdf"
+  },
+  "Former Princess Theatre": {
+    "image": "images/former-princess-theatre.webp",
+    "fact": "It opened with twin screens, Princess and Raja, in 1983. The last film was Painted Skin in 2008.",
+    "profile": "https://remembersingapore.org/2018/07/16/bedok-princess-cinema-memories/"
+  },
+  "Block 216 Market & Food Centre": {
+    "image": "images/block-216-market-and-food-centre.webp",
+    "fact": "By 2024, Lee Teck Lee had spent 42 years making you tiao and other fried dough snacks by hand here.",
+    "profile": "https://cnalifestyle.channelnewsasia.com/dining/you-tiao-hawker-you-zha-kueh-bedok-394796"
+  },
+  "Former Commonwealth Avenue Wet Market": {
+    "image": "images/former-commonwealth-avenue-wet-market.webp",
+    "fact": "The last surviving market built by the Singapore Improvement Trust reopened as Margaret Market in 2023.",
+    "profile": "https://www.mti.gov.sg/newsroom/speech-by-mos-low-yen-ling-at-the-official-launch-of-margaret-market/"
+  },
+  "Princess House": {
+    "image": "images/princess-house.webp",
+    "fact": "Opened in 1957, Princess House became the Housing & Development Board’s first dedicated headquarters.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/my-queenstown-trail/queenstowntrail9-brochure.pdf"
+  },
+  "Tiong Ghee Temple": {
+    "image": "images/tiong-ghee-temple.webp",
+    "fact": "The 1973 temple replaced one in Boh Beh Kang village, whose Hokkien name means “river without a tail.”",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/my-queenstown-trail/queenstowntrail9-brochure.pdf"
+  },
+  "Mujahidin Mosque": {
+    "image": "images/mujahidin-mosque.webp",
+    "fact": "Opened in 1977, it was the second mosque completed under Singapore’s Mosque Building Fund.",
+    "profile": "https://www.nas.gov.sg/archivesonline/data/pdfdoc/1115-1977-10-06.pdf"
+  },
+  "Former Venus & Golden City Theatres": {
+    "image": "images/former-venus-and-golden-city-theatres.webp",
+    "fact": "The neighbourhood’s first two cinemas opened in 1965. Venus could seat about 1,200 people.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/my-queenstown-trail/queenstowntrail9-brochure.pdf"
+  },
+  "Chomp Chomp Food Centre": {
+    "image": "images/chomp-chomp-food-centre.webp",
+    "fact": "The centre opened in 1972. “Chomp Chomp” is an English adaptation of the older Teochew name “Tiong Tiong.”",
+    "profile": "https://www.nas.gov.sg/archivesonline/data/pdfdoc/MSE_20190329001.pdf"
+  },
+  "myVillage": {
+    "image": "images/myvillage.webp",
+    "fact": "Paramount Theatre once stood here. After its screens went dark in 1983, the cinema became a Fitzpatrick’s supermarket.",
+    "profile": "https://remembersingapore.org/2012/08/02/singapore-cinemas-history/"
+  },
+  "Church of St Francis Xavier": {
+    "image": "images/church-of-st-francis-xavier.webp",
+    "fact": "Father Philippe Meisonnier carried a cloth bag on his evening fundraising rounds for the church, which opened in 1959.",
+    "profile": "https://www.sfxchurch.sg/welcome/"
+  },
+  "Kensington Park Condominium": {
+    "image": "images/kensington-park-condominium.webp",
+    "fact": "The condominium was completed in 1990 on a 999-year lease that dates back to 1878.",
+    "profile": "https://www.edgeprop.sg/index.php?option=com_analytica&p=kensington-park-condominium-292555&page=residential&task=pdf&uid=0"
+  },
+  "Chartwell Drive Park": {
+    "image": "images/chartwell-drive-park.webp",
+    "fact": "A community garden shares this pocket park with a playground and a fitness corner.",
+    "profile": "https://www.nparks.gov.sg/visit/parks/park-detail/chartwell-drive-park"
+  },
+  "Round Market (Block 137)": {
+    "image": "images/round-market-block-137.webp",
+    "fact": "When it opened in 1983, planners expected it to be one of the last wet markets HDB would build.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tampines-heritage-trail/nhb_tampines_trail-booklet.pdf"
+  },
+  "Sun Plaza Park": {
+    "image": "images/sun-plaza-park.webp",
+    "fact": "Seen from above, the paths meet to form a sun at the centre of the park.",
+    "profile": "https://www.nparks.gov.sg/visit/parks/park-detail/sun-plaza-park"
+  },
+  "Masjid Darul Ghufran": {
+    "image": "images/masjid-darul-ghufran.webp",
+    "fact": "The mosque’s blue cladding earned it the nickname Menara Biru, Malay for “Blue Minaret.”",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tampines-heritage-trail/nhb_tampines_trail-booklet.pdf"
+  },
+  "World Habitat Award Sculpture": {
+    "image": "images/world-habitat-award-sculpture.webp",
+    "fact": "The three-metre sculpture copies the trophy for the 1991 World Habitat Award, which recognised innovative town planning.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tampines-heritage-trail/nhb_tampines_trail-booklet.pdf"
+  },
+  "Church of the Holy Trinity": {
+    "image": "images/church-of-the-holy-trinity.webp",
+    "fact": "The church’s design evokes a fish, an early Christian symbol. Its stained glass came from Milan.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tampines-heritage-trail/nhb_tampines_trail-booklet.pdf"
+  },
+  "Block 78 Air-Raid Shelter": {
+    "image": "images/block-78-air-raid-shelter.webp",
+    "fact": "Built into the pre-war flats, the air-raid shelter could hold about 1,600 people.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tiong-bahru-heritage-trail/tiong-bahru-ht-booklet-updated19July2022.pdf"
+  },
+  "Monkey God Temple (Eng Hoon Street)": {
+    "image": "images/monkey-god-temple-eng-hoon-street.webp",
+    "fact": "The temple began in 1920 in a thatched hut in a taro garden across the street.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tiong-bahru-heritage-trail/nhb_tiong-bahru-heritage-trail_2018.pdf"
+  },
+  "Dancing Girl Sculpture": {
+    "image": "images/dancing-girl-sculpture.webp",
+    "fact": "Lim Nang Seng sculpted this 1.2-metre dancer in an Orchard Road car park, finishing it in two weeks.",
+    "profile": "https://www.roots.gov.sg/~/media/Roots/Files/tiong-bahru-heritage-trail/tiong-bahru-roots-02.pdf"
+  },
+  "Bird Corner (Seng Poh Road)": {
+    "image": "images/bird-corner-seng-poh-road.webp",
+    "fact": "In 1984, jazz flautist Herbie Mann played here to the sound of the songbirds.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Files/tiong-bahru-heritage-trail/tiong-bahru-ht-booklet-updated19July2022.pdf"
+  },
+  "Seng Poh Road Market": {
+    "image": "images/seng-poh-road-market.webp",
+    "fact": "The original market opened in 1951 to give street hawkers a permanent home. The rebuilt market reopened in 2006.",
+    "profile": "https://www.nhb.gov.sg/-/media/nhb/images/nhb-2021/unesco-hawker-culture/fmas-hawkers-associations-jul-2019.pdf"
+  },
+  "Dragon Playground (Lorong 6)": {
+    "image": "images/lorong-6-dragon-playground.webp",
+    "fact": "Khor Ean Ghee’s 1979 dragon still stands in its sand pit.",
+    "profile": "https://www.sg101.gov.sg/resources/archives/heritage-dragon-playgrounds-in-singapore/"
+  },
+  "Lian Shan Shuang Lin Monastery": {
+    "image": "images/lian-shan-shuang-lin-monastery.webp",
+    "fact": "Founded in 1898, Singapore’s oldest Buddhist monastery takes its name from the “Twin Groves of the Lotus Mountain.”",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Images/landmarks/Toa-Payoh-Heritage-Trail/Toa-Payoh-Heritage-Trail_Booklet.pdf"
+  },
+  "Chung Hwa Medical Institution": {
+    "image": "images/chung-hwa-medical-institution.webp",
+    "fact": "At its 1978 opening, more than 400 patients received treatment and medicine for a token consultation fee.",
+    "profile": "https://www.roots.gov.sg/places/places-landing/Places/landmarks/Toa-Payoh-Heritage-Trail/Chung-Hwa-Medical-Institution"
+  },
+  "Kim Keat Palm Market": {
+    "image": "images/kim-keat-palm-market.webp",
+    "fact": "LiXin makes its Teochew fishballs by hand and serves dry noodles with chilli and crisp cracklings.",
+    "profile": "https://guide.michelin.com/en/singapore-region/singapore/restaurant/lixin-teochew-fishball-noodles"
+  },
+  "Bat-Shaped Block 116": {
+    "image": "images/bat-shaped-block-116.webp",
+    "fact": "The bat-shaped footprint was an HDB experiment. Its long shared corridors are a feature of early public housing.",
+    "profile": "https://www.roots.gov.sg/-/media/Roots/Images/landmarks/Toa-Payoh-Heritage-Trail/Toa-Payoh-Heritage-Trail_Booklet.pdf"
+  }
+}

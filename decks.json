@@ -20,7 +20,12 @@
       "title": "Which Neighbourhood?",
       "playTitle": "Singapore · Which Neighbourhood?",
       "section": "singapore",
-      "description": "Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods."
+      "description": "Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods.",
+      "cardImages": true,
+      "rewards": "games/singapore/rewards.json",
+      "preview": [
+        "Dragon Playground (Lorong 6)"
+      ]
     },
     "premier-league-a": {
       "title": "Premier League A · Club Colors",
