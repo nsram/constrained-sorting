@@ -56,6 +56,8 @@ Each `deck.json` is an object whose keys are the category labels in display orde
 
 To add rewards, give the catalog entry a `rewards` path such as `games/demo/rewards.json`. The file maps exact card labels to objects with optional `image`, `fact`, `detail` and `profile` fields. Image paths resolve relative to the reward file and point to assets served by this site. Profile links use HTTPS. Keep each deck’s images in its own `images/` folder. When two decks use the same portrait, each carries a copy so the deck folder can be moved or edited independently. Decks with no reward file use the same player. The older illustrated demo and wildlife URLs forward to the shared player. Set the catalog’s optional `preview` list to card names from that deck’s reward file. The home page shows the demo previews and the first preview for each other deck. Run `python3 tools/build-index.py` after changing the catalog or preview facts.
 
+Set `cardImages` to `true` in a catalog entry when pictures are part of the sorting task. The Images control then applies to the cards as well as the reward and Review.
+
 
 ## Singapore deck sources
 

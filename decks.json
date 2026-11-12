@@ -22,9 +22,24 @@
       "description": "Sort 30 hawker centres, landmarks, and local favourites across six neighbourhoods."
     },
     "premier-league-a": {
-      "title": "Soccer - Premier League A",
+      "title": "Premier League A · Club Colors",
       "section": "soccer",
-      "description": "Sort 50 players into the top 10 clubs after Matchweek 10 of the 2026–27 season."
+      "description": "Sort 50 players into 10 clubs. Use the colors and patterns of their kits as clues.",
+      "cardImages": true,
+      "rewards": "games/premier-league-a/rewards.json",
+      "preview": [
+        "Bukayo Saka"
+      ]
+    },
+    "premier-league-a-monochrome": {
+      "title": "Premier League A · Monochrome",
+      "section": "soccer",
+      "description": "The same 50 players in plain shirts. How many can you match to their clubs from memory?",
+      "cardImages": true,
+      "rewards": "games/premier-league-a-monochrome/rewards.json",
+      "preview": [
+        "Bukayo Saka"
+      ]
     },
     "tests": {
       "title": "India · Tests",

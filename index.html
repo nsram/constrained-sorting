@@ -74,6 +74,7 @@
     .deck-directory { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.55rem 1rem; margin-top: 1.25rem; }
     .deck-section { min-width: 0; scroll-margin-top: .8rem; }
     .deck-section--wide { grid-column: 1 / -1; }
+    #singapore { grid-column: 1 / -1; }
     .deck-section h3 { font-size: 1.55rem; margin-bottom: .55rem; letter-spacing: -.022em; }
     .deck-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
     .deck-tile {
@@ -232,15 +233,28 @@
             <span class="tile-arrow" aria-hidden="true">↗</span>
           </a>
         </section>
-        <section class="deck-section" id="soccer" aria-labelledby="soccer-title">
+        <section class="deck-section deck-section--wide" id="soccer" aria-labelledby="soccer-title">
           <h3 id="soccer-title">Soccer</h3>
-          <a class="deck-tile" href="play.html?deck=premier-league-a">
-            <div>
-              <h4>Soccer - Premier League A</h4>
-              <p class="description">Sort 50 players into the top 10 clubs after Matchweek 10 of the 2026–27 season.</p>
-            </div>
-            <span class="tile-arrow" aria-hidden="true">↗</span>
-          </a>
+          <div class="deck-grid">
+            <a class="deck-tile" href="play.html?deck=premier-league-a">
+              <img class="tile-art" src="games/premier-league-a/images/bukayo-saka.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+              <div>
+                <h4>Premier League A · Club Colors</h4>
+                <p class="description">Sort 50 players into 10 clubs. Use the colors and patterns of their kits as clues.</p>
+                <p><span class="preview-name">Bukayo Saka</span><span class="preview-fact">63 goals · 50 assists</span></p>
+              </div>
+              <span class="tile-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="deck-tile" href="play.html?deck=premier-league-a-monochrome">
+              <img class="tile-art" src="games/premier-league-a-monochrome/images/bukayo-saka.webp" width="128" height="128" alt="" loading="lazy" decoding="async">
+              <div>
+                <h4>Premier League A · Monochrome</h4>
+                <p class="description">The same 50 players in plain shirts. How many can you match to their clubs from memory?</p>
+                <p><span class="preview-name">Bukayo Saka</span><span class="preview-fact">63 goals · 50 assists</span></p>
+              </div>
+              <span class="tile-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
         </section>
         <!-- deck-sections:end -->
       </div>

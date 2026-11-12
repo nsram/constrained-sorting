@@ -308,6 +308,14 @@
       pointer-events: none;
       transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
     }
+    .card-face.card-face--portrait { gap: 2px; padding-block: 4px; }
+    .card-portrait {
+      display: block;
+      width: min(100%, 3.5rem);
+      height: auto;
+      aspect-ratio: 1;
+      border-radius: 3px;
+    }
     .pool .card[aria-pressed="true"] .card-face {
       background: var(--gold-soft);
       border-color: #976420;
@@ -358,6 +366,7 @@
     @media (max-width: 660px) {
       .shell { width: calc(100% - 16px); }
       main { padding-top: 12px; }
+      .card-portrait { width: min(100%, 2.75rem); }
     }
     @media (orientation: landscape) and (max-height: 500px) {
       .masthead { padding-block: 6px; }
@@ -620,6 +629,7 @@
     const rewardsPreferenceKey = "constrained-sorting:rewards";
     const rewards = new Map();
     const rewardPreferences = { images: true, facts: true };
+    let cardImages = false;
     let categoryDescriptions = {};
     let rewardGalleryKey;
 
@@ -680,7 +690,7 @@
       }
       $("reward-controls").hidden = false;
       rewardGalleryKey = undefined;
-      renderReview(solvedCategories());
+      if (state) renderReview(solvedCategories());
     }
 
     function visibleReward(name) {
@@ -844,6 +854,7 @@
         } catch {
           // The setting still applies until the page closes.
         }
+        if (kind === "images" && cardImages) renderBoard();
         if (state.allPlacedAt === null && state.lastReward) showReward(state.lastReward, false);
         renderReview(solvedCategories());
       });
@@ -904,6 +915,7 @@
           const entry = decks[deckId];
           title = entry.playTitle ?? entry.title;
           rewardsPath = entry.rewards;
+          cardImages = entry.cardImages === true;
           categoryDescriptions = entry.categoryDescriptions ?? {};
           const response = await fetch(`games/${deckId}/deck.json`);
           if (!response.ok) throw new Error("Deck request failed");
@@ -934,8 +946,9 @@
         $("board").classList.toggle("wildlife-board", wildlife);
         $("points-max").textContent = `/ ${cards.size * maxPointsPerCard}`;
         $("points-meter").max = cards.size * maxPointsPerCard;
+        if (cardImages && rewardsPath) await loadRewards(rewardsPath);
         newPlay();
-        if (rewardsPath) void loadRewards(rewardsPath);
+        if (!cardImages && rewardsPath) void loadRewards(rewardsPath);
       } catch {
         status.textContent = location.protocol === "file:"
           ? "Serve the project over HTTP to load its decks. The standalone demo opens directly."
@@ -1023,6 +1036,11 @@
         button.setAttribute("aria-label", card);
       } else {
         face.textContent = card;
+      }
+      const portrait = cardImages && rewardPreferences.images ? rewards.get(card)?.image : undefined;
+      if (portrait) {
+        face.classList.add("card-face--portrait");
+        face.prepend(rewardImage(portrait, 56, "card-portrait", undefined, true));
       }
       const destination = destinationOf(card);
       if (destination !== unassigned) {
