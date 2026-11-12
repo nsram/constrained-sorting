@@ -8,6 +8,7 @@
   "decks": {
     "demo": {
       "title": "Quick demo",
+      "cardImages": true,
       "rewards": "games/demo/rewards.json",
       "preview": [
         "bass",
@@ -45,6 +46,7 @@
       "title": "India · Tests",
       "section": "cricket",
       "description": "76 players",
+      "cardImages": true,
       "rewards": "games/tests/rewards.json",
       "preview": [
         "Sunil Gavaskar"
@@ -54,6 +56,7 @@
       "title": "India · ODIs",
       "section": "cricket",
       "description": "70 players",
+      "cardImages": true,
       "rewards": "games/odi/rewards.json",
       "preview": [
         "Kapil Dev"
@@ -63,6 +66,7 @@
       "title": "India · T20Is",
       "section": "cricket",
       "description": "58 players",
+      "cardImages": true,
       "rewards": "games/t20i/rewards.json",
       "preview": [
         "Jasprit Bumrah"
@@ -72,6 +76,7 @@
       "title": "IPL",
       "section": "cricket",
       "description": "99 Indian and overseas players",
+      "cardImages": true,
       "rewards": "games/ipl/rewards.json",
       "preview": [
         "Chris Gayle"
@@ -81,6 +86,7 @@
       "title": "Game Animals of North America",
       "section": "wildlife",
       "description": "Sort 43 game animals across four hunting-experience tiers.",
+      "cardImages": true,
       "categoryDescriptions": {
         "Beginner": "Common, approachable pursuits",
         "Core": "Mainstays of North American hunting",
